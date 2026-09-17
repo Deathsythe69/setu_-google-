@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            glacier: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+              950: '#082f49'
+            },
+            slatebg: {
+              900: '#0b1329',
+              850: '#0f172a',
+              800: '#1e293b',
+              750: '#26354a',
+              700: '#334155'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.25s ease, color 0.25s ease;
+      }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    .focus-ring {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+    .focus-ring:focus-visible {
+      outline: 2px solid #0284c7;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="bg-[#f8fafc] dark:bg-slatebg-900 font-sans text-slate-800 dark:text-slate-100 antialiased selection:bg-glacier-500 selection:text-white min-h-screen flex flex-col">
+<!-- Universal Top Utility & Accessibility Bar -->
+<aside aria-label="Accessibility &amp; Sovereign Affiliation Bar" class="w-full bg-glacier-100/70 dark:bg-slatebg-850/90 border-b border-glacier-200/60 dark:border-slate-800 backdrop-blur-md px-4 sm:px-8 py-1.5 text-xs text-slate-700 dark:text-slate-300 z-50">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2.5">
+<!-- Left: Sovereign DPG Affiliation Badges -->
+<div class="flex items-center gap-3 flex-wrap">
+<span class="inline-flex items-center gap-1.5 font-semibold text-glacier-800 dark:text-glacier-300">
+<span class="material-symbols-outlined text-[15px] text-glacier-600 dark:text-glacier-400">public</span>
+          BRICS Sovereign DPG Network
+        </span>
+<span class="hidden md:inline text-slate-400 dark:text-slate-600">|</span>
+<span class="hidden md:inline-flex items-center gap-1 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-[14px] text-emerald-600 dark:text-emerald-400">shield</span>
+          Sovereign Data Residency &amp; PII Safe Enclave
+        </span>
+<span class="hidden lg:inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 font-mono text-[11px] font-medium border border-emerald-300 dark:border-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          WCAG 2.1 AA Compliant
+        </span>
+</div>
+<!-- Right: Live Accessibility & Theme Switchers -->
+<div class="flex items-center gap-2 sm:gap-3 ml-auto flex-wrap">
+<!-- Interactive Light / Dark Mode Toggle Switch -->
+<button aria-label="Toggle between Light and Dark mode" class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white dark:bg-slatebg-800 border border-glacier-200 dark:border-slate-700 shadow-sm hover:border-glacier-400 dark:hover:border-glacier-500 transition-all text-slate-700 dark:text-slate-200 font-medium focus-ring" id="theme-toggle" type="button">
+<span class="material-symbols-outlined text-[16px] text-amber-500 dark:hidden">light_mode</span>
+<span class="material-symbols-outlined text-[16px] text-glacier-300 hidden dark:inline">dark_mode</span>
+<span class="text-xs font-semibold" id="theme-status-label">Theme</span>
+</button>
+<!-- Font Scaling Utility -->
+<div aria-label="Font scale adjustments" class="inline-flex items-center bg-white dark:bg-slatebg-800 rounded-full border border-glacier-200 dark:border-slate-700 p-0.5 shadow-sm text-xs font-medium" role="group">
+<button class="px-2 py-0.5 rounded-full hover:bg-glacier-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors focus-ring" id="btn-text-decrease" title="Decrease font scale" type="button">A-</button>
+<button class="px-2 py-0.5 rounded-full font-mono text-[11px] text-slate-600 dark:text-slate-400 hover:bg-glacier-50 dark:hover:bg-slate-700 transition-colors focus-ring" id="btn-text-reset" title="Reset font scale" type="button">100%</button>
+<button class="px-2 py-0.5 rounded-full hover:bg-glacier-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors focus-ring" id="btn-text-increase" title="Increase font scale" type="button">A+</button>
+</div>
+<!-- High Contrast Mode Toggle -->
+<button class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white dark:bg-slatebg-800 border border-glacier-200 dark:border-slate-700 hover:border-glacier-400 dark:hover:border-glacier-500 transition-colors text-slate-700 dark:text-slate-200 focus-ring" id="toggle-contrast" type="button">
+<span class="material-symbols-outlined text-[15px] text-glacier-600 dark:text-glacier-400">contrast</span>
+<span class="text-xs" id="contrast-label">Contrast</span>
+</button>
+<!-- Audio Briefing Button -->
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-glacier-600 hover:bg-glacier-700 dark:bg-glacier-500 dark:hover:bg-glacier-600 text-white transition-colors shadow-sm focus-ring" type="button">
+<span class="material-symbols-outlined text-[14px]">volume_up</span>
+<span class="text-xs font-semibold hidden md:inline">Listen to Briefing</span>
+</button>
+<!-- Sovereign Script / Language Selector -->
+<div class="relative inline-flex items-center pl-2 border-l border-glacier-300 dark:border-slate-700">
+<span class="material-symbols-outlined text-[16px] text-glacier-600 dark:text-glacier-400 mr-1">translate</span>
+<select aria-label="Select platform language" class="bg-transparent text-slate-700 dark:text-slate-200 text-xs font-semibold focus:outline-none cursor-pointer pr-1 py-0.5" id="script-selector">
+<option class="bg-white dark:bg-slatebg-800 text-slate-800 dark:text-slate-200" value="en">English (Global)</option>
+<option class="bg-white dark:bg-slatebg-800 text-slate-800 dark:text-slate-200" value="hi">हिन्दी (Hindi)</option>
+<option class="bg-white dark:bg-slatebg-800 text-slate-800 dark:text-slate-200" value="zh">中文 (Mandarin)</option>
+<option class="bg-white dark:bg-slatebg-800 text-slate-800 dark:text-slate-200" value="ru">Русский (Russian)</option>
+<option class="bg-white dark:bg-slatebg-800 text-slate-800 dark:text-slate-200" value="pt">Português (Brasil)</option>
+<option class="bg-white dark:bg-slatebg-800 text-slate-800 dark:text-slate-200" value="ar">العربية (Arabic)</option>
+</select>
+</div>
+</div>
+</div>
+</aside>
+<!-- Sticky Main Navigation Header -->
+<header class="sticky top-0 w-full z-40 bg-white/95 dark:bg-slatebg-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors shadow-[0_4px_20px_-4px_rgba(2,132,199,0.06)] dark:shadow-none">
+<div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
+<!-- Brand & DPG Badge -->
+<a class="flex items-center gap-3.5 focus-ring rounded-lg p-1" href="#">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-glacier-700 to-glacier-500 dark:from-glacier-600 dark:to-glacier-400 flex items-center justify-center text-white shadow-md shadow-glacier-500/20">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-heading font-extrabold text-2xl text-slate-900 dark:text-white tracking-tight">Setu</span>
+<span class="px-2 py-0.5 bg-glacier-100 dark:bg-glacier-950/80 text-glacier-800 dark:text-glacier-300 font-mono text-[11px] font-bold rounded-md uppercase tracking-wider border border-glacier-200 dark:border-glacier-800">DPG</span>
+</div>
+<span class="hidden sm:inline text-xs font-medium text-slate-500 dark:text-slate-400 -mt-0.5">Citizen-to-Infrastructure Intelligence</span>
+</div>
+</a>
+<!-- Clean Decongested Dropdown Navigation -->
+<nav aria-label="Primary Navigation" class="hidden lg:flex items-center gap-1.5">
+<!-- Menu Item 1: Citizen Voice -->
+<div class="relative group">
+<button aria-expanded="false" aria-haspopup="true" class="px-3.5 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 font-semibold text-sm transition-colors flex items-center gap-1.5 focus-ring" type="button">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400">mic</span>
+<span>Citizen Voice</span>
+<span class="material-symbols-outlined text-[16px] text-slate-400 group-hover:rotate-180 transition-transform duration-200">expand_more</span>
+</button>
+<div class="absolute left-0 mt-2 w-72 p-2 bg-white dark:bg-slatebg-850 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col gap-1 z-50">
+<a class="px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 transition-colors flex items-start gap-2.5" href="#">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400 mt-0.5">graphic_eq</span>
+<div>
+<div class="font-semibold text-sm">Voice &amp; WhatsApp Intake</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Dial toll-free or voice snippet</div>
+</div>
+</a>
+<a class="px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 transition-colors flex items-start gap-2.5" href="#">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400 mt-0.5">receipt_long</span>
+<div>
+<div class="font-semibold text-sm">Track Report Status</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Anonymous 6-digit public hash</div>
+</div>
+</a>
+<a class="px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 transition-colors flex items-start gap-2.5" href="#">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400 mt-0.5">wifi_off</span>
+<div>
+<div class="font-semibold text-sm">Offline PWA Sync</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Store offline until 2G/3G lock</div>
+</div>
+</a>
+</div>
+</div>
+<!-- Menu Item 2: Policymaker Intelligence -->
+<div class="relative group">
+<button aria-expanded="false" aria-haspopup="true" class="px-3.5 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 font-semibold text-sm transition-colors flex items-center gap-1.5 focus-ring" type="button">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400">insights</span>
+<span>Policymaker Intel</span>
+<span class="material-symbols-outlined text-[16px] text-slate-400 group-hover:rotate-180 transition-transform duration-200">expand_more</span>
+</button>
+<div class="absolute left-0 mt-2 w-72 p-2 bg-white dark:bg-slatebg-850 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col gap-1 z-50">
+<a class="px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 transition-colors flex items-start gap-2.5" href="#">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400 mt-0.5">map</span>
+<div>
+<div class="font-semibold text-sm">National Hotspot Map</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Live spatial clustering</div>
+</div>
+</a>
+<a class="px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 transition-colors flex items-start gap-2.5" href="#">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400 mt-0.5">format_list_numbered</span>
+<div>
+<div class="font-semibold text-sm">Ranked Priority Queue</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Weighted municipal scoring</div>
+</div>
+</a>
+<a class="px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 transition-colors flex items-start gap-2.5" href="#">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400 mt-0.5">tune</span>
+<div>
+<div class="font-semibold text-sm">Budget Allocation Simulator</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Population relief models</div>
+</div>
+</a>
+</div>
+</div>
+<!-- Menu Item 3: Architecture & System -->
+<div class="relative group">
+<button aria-expanded="false" aria-haspopup="true" class="px-3.5 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 font-semibold text-sm transition-colors flex items-center gap-1.5 focus-ring" type="button">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400">hub</span>
+<span>Architecture &amp; System</span>
+<span class="material-symbols-outlined text-[16px] text-slate-400 group-hover:rotate-180 transition-transform duration-200">expand_more</span>
+</button>
+<div class="absolute left-0 mt-2 w-80 p-2 bg-white dark:bg-slatebg-850 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col gap-1 z-50">
+<a class="px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 transition-colors flex items-start gap-2.5" href="#">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400 mt-0.5">account_tree</span>
+<div>
+<div class="font-semibold text-sm">Federated Sovereign Arch</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Multi-cluster regional mesh</div>
+</div>
+</a>
+<a class="px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 transition-colors flex items-start gap-2.5" href="#">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400 mt-0.5">lock_reset</span>
+<div>
+<div class="font-semibold text-sm">Zero-PII Ingestion Pipeline</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Kafka redaction &amp; salt</div>
+</div>
+</a>
+<a class="px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 transition-colors flex items-start gap-2.5" href="#">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400 mt-0.5">code</span>
+<div>
+<div class="font-semibold text-sm">DPG &amp; Open Source Stack</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Standard 508 &amp; OpenAPI v3</div>
+</div>
+</a>
+</div>
+</div>
+<!-- Menu Item 4: Impact & Governance -->
+<div class="relative group">
+<button aria-expanded="false" aria-haspopup="true" class="px-3.5 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 font-semibold text-sm transition-colors flex items-center gap-1.5 focus-ring" type="button">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400">policy</span>
+<span>Public Transparency</span>
+<span class="material-symbols-outlined text-[16px] text-slate-400 group-hover:rotate-180 transition-transform duration-200">expand_more</span>
+</button>
+<div class="absolute right-0 mt-2 w-72 p-2 bg-white dark:bg-slatebg-850 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col gap-1 z-50">
+<a class="px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 transition-colors flex items-start gap-2.5" href="#">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400 mt-0.5">model_training</span>
+<div>
+<div class="font-semibold text-sm">Priority Scoring Algorithm</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Auditable formulas</div>
+</div>
+</a>
+<a class="px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 transition-colors flex items-start gap-2.5" href="#">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400 mt-0.5">history_edu</span>
+<div>
+<div class="font-semibold text-sm">Public Audit Ledger</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Verifiable milestone trail</div>
+</div>
+</a>
+<a class="px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-glacier-50 dark:hover:bg-slatebg-800 transition-colors flex items-start gap-2.5" href="#">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400 mt-0.5">flag</span>
+<div>
+<div class="font-semibold text-sm">UN SDG 9 &amp; 11 Metrics</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Equitable municipal reach</div>
+</div>
+</a>
+</div>
+</div>
+</nav>
+<!-- Right Action CTAs -->
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center gap-2 h-11 px-5 rounded-xl bg-gradient-to-r from-glacier-600 to-glacier-700 hover:from-glacier-500 hover:to-glacier-600 text-white font-semibold text-sm transition-all shadow-md shadow-glacier-600/25 focus-ring" href="#">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+<span class="hidden sm:inline">Report Infrastructure Issue</span>
+<span class="sm:hidden">Report</span>
+</a>
+<div class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slatebg-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200" title="Officer Enclave">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Platform Content -->
+<main class="w-full flex-grow">
+<!-- Hero / Decongested Universal Navigation Showcase -->
+<section class="w-full bg-gradient-to-b from-glacier-50/70 to-white dark:from-slatebg-850 dark:to-slatebg-900 border-b border-slate-200 dark:border-slate-800 py-10 lg:py-14">
+<div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col gap-10">
+<!-- Universal Headline Banner -->
+<div class="max-w-4xl flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 self-start px-3.5 py-1.5 bg-white dark:bg-slatebg-800 border border-glacier-200 dark:border-slate-700 rounded-full shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-glacier-500 animate-pulse"></span>
+<span class="font-mono text-xs font-semibold text-glacier-800 dark:text-glacier-300 uppercase tracking-wider">Universal Civic Technology Standard</span>
+</div>
+<h1 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-slate-950 dark:text-white tracking-tight leading-[1.15]">
+            Democratizing Infrastructure Planning Through <span class="text-transparent bg-clip-text bg-gradient-to-r from-glacier-600 to-glacier-400">Multilingual Citizen Intelligence</span>
+</h1>
+<p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed">
+            Setu translates unstructured citizen voice notes and community reports across 40+ dialects into mathematically prioritized, transparent public works budgets. Built for low-connectivity environments, sovereign data control, and public auditability.
+          </p>
+</div>
+<!-- Interactive Navigation Hub: 4 Key Columns for Quick Intake -->
+<div class="bg-white dark:bg-slatebg-850 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-6 border-b border-slate-100 dark:border-slate-800 mb-6">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-glacier-100 dark:bg-glacier-950/80 text-glacier-700 dark:text-glacier-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">hub</span>
+</div>
+<div>
+<h2 class="font-heading font-bold text-lg sm:text-xl text-slate-900 dark:text-white">Interactive Navigation Hub &amp; Live Menus</h2>
+<p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Instant non-blocking navigation structure optimized for low-bandwidth terminals</p>
+</div>
+</div>
+<span class="self-start sm:self-auto font-mono text-xs font-semibold px-3 py-1 rounded-full bg-glacier-100 dark:bg-slatebg-800 text-glacier-800 dark:text-glacier-300 border border-glacier-200 dark:border-slate-700">
+              Zero Cognitive Burden
+            </span>
+</div>
+<!-- 4 Fast Pathways Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+<!-- Pathway 1: Citizen Voice -->
+<div class="bg-glacier-50/50 dark:bg-slatebg-800/60 rounded-xl p-5 border border-glacier-100 dark:border-slate-800 flex flex-col justify-between hover:border-glacier-300 dark:hover:border-slate-700 transition-all">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="inline-flex items-center gap-1.5 font-heading font-bold text-glacier-800 dark:text-glacier-300 text-sm">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400">mic</span>
+                    Citizen Voice
+                  </span>
+<span class="px-2 py-0.5 rounded bg-glacier-200/70 dark:bg-glacier-900 text-glacier-900 dark:text-glacier-200 text-[10px] font-bold font-mono">Primary</span>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Multi-dialect voice memos, low-bandwidth queues, and zero-PII tracking.</p>
+<ul class="space-y-2">
+<li>
+<a class="flex items-center gap-2 p-2 rounded-lg bg-white dark:bg-slatebg-750 hover:bg-glacier-600 hover:text-white dark:hover:bg-glacier-600 group transition-all text-xs font-medium text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-700" href="#">
+<span class="material-symbols-outlined text-[16px] text-glacier-600 dark:text-glacier-400 group-hover:text-white">graphic_eq</span>
+<span>Voice &amp; WhatsApp Intake</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-2 p-2 rounded-lg bg-white dark:bg-slatebg-750 hover:bg-glacier-600 hover:text-white dark:hover:bg-glacier-600 group transition-all text-xs font-medium text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-700" href="#">
+<span class="material-symbols-outlined text-[16px] text-glacier-600 dark:text-glacier-400 group-hover:text-white">receipt_long</span>
+<span>Track Report Status</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-2 p-2 rounded-lg bg-white dark:bg-slatebg-750 hover:bg-glacier-600 hover:text-white dark:hover:bg-glacier-600 group transition-all text-xs font-medium text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-700" href="#">
+<span class="material-symbols-outlined text-[16px] text-glacier-600 dark:text-glacier-400 group-hover:text-white">wifi_off</span>
+<span>2G Offline Queue</span>
+</a>
+</li>
+</ul>
+</div>
+<a class="mt-4 inline-flex items-center justify-center gap-2 h-11 w-full rounded-xl bg-glacier-600 hover:bg-glacier-700 text-white font-semibold text-xs tracking-wide transition-colors shadow-sm focus-ring" href="#">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+<span>Report Infrastructure Issue</span>
+</a>
+</div>
+<!-- Pathway 2: Policymaker Intel -->
+<div class="bg-glacier-50/50 dark:bg-slatebg-800/60 rounded-xl p-5 border border-glacier-100 dark:border-slate-800 flex flex-col justify-between hover:border-glacier-300 dark:hover:border-slate-700 transition-all">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="inline-flex items-center gap-1.5 font-heading font-bold text-glacier-800 dark:text-glacier-300 text-sm">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400">insights</span>
+                    Policymaker Intel
+                  </span>
+<span class="px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-[10px] font-bold font-mono">Admin</span>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Spatial aggregation, systemic clusters, and multi-criteria priority scoring.</p>
+<ul class="space-y-2">
+<li>
+<a class="flex items-center gap-2 p-2 rounded-lg bg-white dark:bg-slatebg-750 hover:bg-glacier-600 hover:text-white dark:hover:bg-glacier-600 group transition-all text-xs font-medium text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-700" href="#">
+<span class="material-symbols-outlined text-[16px] text-glacier-600 dark:text-glacier-400 group-hover:text-white">map</span>
+<span>National Hotspot Map</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-2 p-2 rounded-lg bg-white dark:bg-slatebg-750 hover:bg-glacier-600 hover:text-white dark:hover:bg-glacier-600 group transition-all text-xs font-medium text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-700" href="#">
+<span class="material-symbols-outlined text-[16px] text-glacier-600 dark:text-glacier-400 group-hover:text-white">format_list_numbered</span>
+<span>Ranked Priority Queue</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-2 p-2 rounded-lg bg-white dark:bg-slatebg-750 hover:bg-glacier-600 hover:text-white dark:hover:bg-glacier-600 group transition-all text-xs font-medium text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-700" href="#">
+<span class="material-symbols-outlined text-[16px] text-glacier-600 dark:text-glacier-400 group-hover:text-white">tune</span>
+<span>Scenario Simulator</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="mt-4 p-2.5 bg-white dark:bg-slatebg-750 rounded-lg border border-slate-200/60 dark:border-slate-700 flex items-center justify-between">
+<span class="text-xs font-bold text-glacier-700 dark:text-glacier-300 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-emerald-500">sensors</span>
+                  4,892 Live Reports Active
+                </span>
+</div>
+</div>
+<!-- Pathway 3: Architecture & System -->
+<div class="bg-glacier-50/50 dark:bg-slatebg-800/60 rounded-xl p-5 border border-glacier-100 dark:border-slate-800 flex flex-col justify-between hover:border-glacier-300 dark:hover:border-slate-700 transition-all">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="inline-flex items-center gap-1.5 font-heading font-bold text-glacier-800 dark:text-glacier-300 text-sm">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400">hub</span>
+                    Architecture &amp; System
+                  </span>
+<span class="px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-[10px] font-bold font-mono">Tech</span>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Sovereignty guarantees, local server parity, and Apache 2.0 open-source code.</p>
+<ul class="space-y-2">
+<li>
+<a class="flex items-center gap-2 p-2 rounded-lg bg-white dark:bg-slatebg-750 hover:bg-glacier-600 hover:text-white dark:hover:bg-glacier-600 group transition-all text-xs font-medium text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-700" href="#">
+<span class="material-symbols-outlined text-[16px] text-glacier-600 dark:text-glacier-400 group-hover:text-white">account_tree</span>
+<span>Federated Sovereign Arch</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-2 p-2 rounded-lg bg-white dark:bg-slatebg-750 hover:bg-glacier-600 hover:text-white dark:hover:bg-glacier-600 group transition-all text-xs font-medium text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-700" href="#">
+<span class="material-symbols-outlined text-[16px] text-glacier-600 dark:text-glacier-400 group-hover:text-white">lock_reset</span>
+<span>Zero-PII Ingestion Pipeline</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-2 p-2 rounded-lg bg-white dark:bg-slatebg-750 hover:bg-glacier-600 hover:text-white dark:hover:bg-glacier-600 group transition-all text-xs font-medium text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-700" href="#">
+<span class="material-symbols-outlined text-[16px] text-glacier-600 dark:text-glacier-400 group-hover:text-white">code</span>
+<span>Digital Public Good Docs</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="mt-4 p-2.5 bg-white dark:bg-slatebg-750 rounded-lg border border-slate-200/60 dark:border-slate-700 flex items-center">
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-glacier-600 dark:text-glacier-400">terminal</span>
+                  Zero-Vendor Lock-in
+                </span>
+</div>
+</div>
+<!-- Pathway 4: Public Transparency -->
+<div class="bg-glacier-50/50 dark:bg-slatebg-800/60 rounded-xl p-5 border border-glacier-100 dark:border-slate-800 flex flex-col justify-between hover:border-glacier-300 dark:hover:border-slate-700 transition-all">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="inline-flex items-center gap-1.5 font-heading font-bold text-glacier-800 dark:text-glacier-300 text-sm">
+<span class="material-symbols-outlined text-[18px] text-glacier-600 dark:text-glacier-400">policy</span>
+                    Public Transparency
+                  </span>
+<span class="px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-[10px] font-bold font-mono">Auditor</span>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Closed-loop citizen verification, tamper-proof logs, and measurable SDG milestones.</p>
+<ul class="space-y-2">
+<li>
+<a class="flex items-center gap-2 p-2 rounded-lg bg-white dark:bg-slatebg-750 hover:bg-glacier-600 hover:text-white dark:hover:bg-glacier-600 group transition-all text-xs font-medium text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-700" href="#">
+<span class="material-symbols-outlined text-[16px] text-glacier-600 dark:text-glacier-400 group-hover:text-white">model_training</span>
+<span>Explainable Priority Score</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-2 p-2 rounded-lg bg-white dark:bg-slatebg-750 hover:bg-glacier-600 hover:text-white dark:hover:bg-glacier-600 group transition-all text-xs font-medium text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-700" href="#">
+<span class="material-symbols-outlined text-[16px] text-glacier-600 dark:text-glacier-400 group-hover:text-white">history_edu</span>
+<span>Public Audit Ledger</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-2 p-2 rounded-lg bg-white dark:bg-slatebg-750 hover:bg-glacier-600 hover:text-white dark:hover:bg-glacier-600 group transition-all text-xs font-medium text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-700" href="#">
+<span class="material-symbols-outlined text-[16px] text-glacier-600 dark:text-glacier-400 group-hover:text-white">flag</span>
+<span>UN SDG Alignment</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="mt-4 p-2.5 bg-white dark:bg-slatebg-750 rounded-lg border border-slate-200/60 dark:border-slate-700 flex items-center">
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-emerald-500">check_circle</span>
+                  100% Open Data Enclave
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- 3 Persona Action Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1: Citizens -->
+<div class="bg-white dark:bg-slatebg-850 rounded-2xl p-6 sm:p-7 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-glacier-600 text-white flex items-center justify-center mb-5 shadow-md shadow-glacier-600/20">
+<span class="material-symbols-outlined text-[26px]">mic</span>
+</div>
+<span class="px-2.5 py-1 rounded-md bg-glacier-100 dark:bg-glacier-950/80 text-glacier-800 dark:text-glacier-300 font-mono text-xs font-semibold">Direct Voice Channel</span>
+<h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white mt-3 mb-2">Citizens: Speak Your Issue</h3>
+<p class="text-sm text-slate-600 dark:text-slate-300 mb-5 leading-relaxed">
+                No forms or high-speed data required. Dial our free IVR hotline, transmit a quick WhatsApp voice snippet in your local dialect, or log through offline PWA.
+              </p>
+<div class="bg-glacier-50/70 dark:bg-slatebg-800/80 rounded-xl p-3.5 space-y-2 mb-6 border border-glacier-100 dark:border-slate-700 text-xs font-medium">
+<div class="flex items-center justify-between text-slate-700 dark:text-slate-300">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-glacier-600">phone_in_talk</span> Toll-Free Hotline:</span>
+<span class="font-bold text-glacier-700 dark:text-glacier-300 font-mono">1-800-SETU-CIVIC</span>
+</div>
+<div class="flex items-center justify-between text-slate-700 dark:text-slate-300">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-glacier-600">chat</span> WhatsApp Mesh:</span>
+<span class="font-mono text-slate-800 dark:text-slate-200">+91 800-248-4242</span>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 h-12 w-full rounded-xl bg-glacier-600 hover:bg-glacier-700 text-white font-semibold text-sm transition-colors shadow-sm focus-ring" href="#">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+<span>Record Voice Memo Now</span>
+</a>
+</div>
+<!-- Card 2: Officials -->
+<div class="bg-white dark:bg-slatebg-850 rounded-2xl p-6 sm:p-7 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-glacier-700 text-white flex items-center justify-center mb-5 shadow-md shadow-glacier-700/20">
+<span class="material-symbols-outlined text-[26px]">analytics</span>
+</div>
+<span class="px-2.5 py-1 rounded-md bg-sky-100 dark:bg-sky-950/80 text-sky-800 dark:text-sky-300 font-mono text-xs font-semibold">Policymaker Suite</span>
+<h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white mt-3 mb-2">Officials: Explore Hotspots</h3>
+<p class="text-sm text-slate-600 dark:text-slate-300 mb-5 leading-relaxed">
+                Data-driven transparent triage. Replace subjective contractor lobbying with an open multi-dimensional priority queue assessing safety, density, and cost.
+              </p>
+<div class="bg-glacier-50/70 dark:bg-slatebg-800/80 rounded-xl p-3.5 space-y-2 mb-6 border border-glacier-100 dark:border-slate-700 text-xs font-medium">
+<div class="flex items-center justify-between text-slate-700 dark:text-slate-300">
+<span>Active Clustered Nodes:</span>
+<span class="font-bold text-glacier-700 dark:text-glacier-300 font-mono">3,420 Wards</span>
+</div>
+<div class="flex items-center justify-between text-slate-700 dark:text-slate-300">
+<span>Avg Triage Latency:</span>
+<span class="font-bold text-glacier-700 dark:text-glacier-300 font-mono">2.4 Minutes</span>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 h-12 w-full rounded-xl bg-slate-100 dark:bg-slatebg-750 text-glacier-800 dark:text-glacier-200 hover:bg-glacier-600 hover:text-white dark:hover:bg-glacier-600 font-semibold text-sm transition-colors border border-slate-200 dark:border-slate-700 focus-ring" href="#">
+<span class="material-symbols-outlined text-[18px]">dashboard</span>
+<span>Launch Hotspot Explorer</span>
+</a>
+</div>
+<!-- Card 3: Auditors -->
+<div class="bg-white dark:bg-slatebg-850 rounded-2xl p-6 sm:p-7 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-slate-800 dark:bg-slatebg-750 text-white flex items-center justify-center mb-5 shadow-md">
+<span class="material-symbols-outlined text-[26px]">verified</span>
+</div>
+<span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 font-mono text-xs font-semibold">Public Ledger</span>
+<h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white mt-3 mb-2">Auditors: Trace Spend &amp; Impact</h3>
+<p class="text-sm text-slate-600 dark:text-slate-300 mb-5 leading-relaxed">
+                Closed-loop citizen verification. Cross-check municipal contract milestones directly against geo-tagged follow-up photos submitted by the local community.
+              </p>
+<div class="bg-glacier-50/70 dark:bg-slatebg-800/80 rounded-xl p-3.5 space-y-2 mb-6 border border-glacier-100 dark:border-slate-700 text-xs font-medium">
+<div class="flex items-center justify-between text-slate-700 dark:text-slate-300">
+<span>Public Audit Ledger:</span>
+<span class="font-mono font-semibold text-emerald-600 dark:text-emerald-400">SHA-256 Verifiable</span>
+</div>
+<div class="flex items-center justify-between text-slate-700 dark:text-slate-300">
+<span>Citizen Sign-offs:</span>
+<span class="font-bold text-glacier-700 dark:text-glacier-300 font-mono">94.1% Validated</span>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 h-12 w-full rounded-xl bg-slate-100 dark:bg-slatebg-750 text-glacier-800 dark:text-glacier-200 hover:bg-glacier-600 hover:text-white dark:hover:bg-glacier-600 font-semibold text-sm transition-colors border border-slate-200 dark:border-slate-700 focus-ring" href="#">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+<span>Open Public Ledger</span>
+</a>
+</div>
+</div>
+<!-- Real-World Field Verification Snapshot -->
+<div class="w-full bg-white dark:bg-slatebg-850 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-5 flex flex-col gap-3">
+<span class="font-mono text-xs font-bold uppercase tracking-wider text-glacier-600 dark:text-glacier-400 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">spatial_tracking</span> Field Verification Node
+            </span>
+<h4 class="font-heading font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">
+              Bridging Voice Signals to Municipal Works Teams
+            </h4>
+<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Reports logged via voice memo pass through autonomous speech-to-text diarization, strip all identifying PII in transit, extract GPS coordinates from verbal landmarks, and surface directly inside district triage queues within seconds.
+            </p>
+<div class="flex items-center gap-6 pt-3">
+<div>
+<div class="font-heading font-extrabold text-2xl text-glacier-700 dark:text-glacier-300">100%</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Audio Anonymized</div>
+</div>
+<div class="w-px h-8 bg-slate-200 dark:bg-slate-700"></div>
+<div>
+<div class="font-heading font-extrabold text-2xl text-glacier-600 dark:text-glacier-400">&lt; 350ms</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Kafka Latency</div>
+</div>
+<div class="w-px h-8 bg-slate-200 dark:bg-slate-700"></div>
+<div>
+<div class="font-heading font-extrabold text-2xl text-slate-900 dark:text-white">42</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Local Dialects</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slatebg-800">
+<img alt="Municipal engineers collaborating with village elders holding low-bandwidth mobile phones" class="w-full h-44 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw9bLHHdYGOC-hvgpnEUY2Zxt1Ejs4Q18QGYrUbkoF1EoGuisIzUGz9jIS14nXtnMjOgaln5Ks-NtUDVBOHtBYYuov8pc39JaPg6_0azHCsGUxR6uVrov2pgj-3eY_g67m5oZTjxGptLe24cbJvkBay9qSZMkmF5GhonR-iEIyWg9FefOJ3AHFDTyvPWjjMRhm_wfVWUDP0XRy7eEnDdjE1HEnQPPYkEJ-ERBMPSrf9vs8HGPnbWYk"/>
+<div class="p-3 bg-white dark:bg-slatebg-800">
+<div class="text-xs font-bold text-slate-900 dark:text-white">Culvert Rebuild - Sector 12</div>
+<div class="text-[11px] text-slate-500 dark:text-slate-400">Triggered via 34 citizen voice memos</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slatebg-800">
+<img alt="Civic engineering control room reviewing digital public good dashboards" class="w-full h-44 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANkvrVxOVviyGiqPf9X1fxcxb4B02tquSo8306FvdF-A9mMMreqcOUhKVvqvjSq8lCFYT399qhruDZxo9lXRwFH9PUYtZXYro3arS91y86gZpg9GCE8_nDPgFL7gGBcxr1L7wcDH9tUq7th_RS15ALkizApO8bdJRCDcijwmFSKU52ERWiLOhI-4qgyEKbW8gvStc57di827eGtOP7w4pr3NzzyatFimKGfT9JHPKt20S7gE5yV-Rn"/>
+<div class="p-3 bg-white dark:bg-slatebg-800">
+<div class="text-xs font-bold text-slate-900 dark:text-white">Regional Triage Operations</div>
+<div class="text-[11px] text-slate-500 dark:text-slate-400">Real-time unblocking of water main grid</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Persona Decongested Navigation Matrix Section -->
+<section class="w-full py-12 lg:py-16 px-4 sm:px-8">
+<div class="max-w-7xl mx-auto flex flex-col gap-8">
+<!-- Section Header with Tabs -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="max-w-3xl">
+<span class="font-mono text-xs font-bold uppercase tracking-wider text-glacier-600 dark:text-glacier-400">Decentralized System Architecture</span>
+<h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white mt-1">
+              Decongested Navigation Matrix by User Persona
+            </h2>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1.5">
+              Every user group reaches their designated public mission in zero unnecessary clicks, preventing civic decision fatigue and guaranteeing universal access.
+            </p>
+</div>
+<!-- Persona Filter Tabs -->
+<div class="flex items-center gap-1.5 p-1 bg-glacier-100/80 dark:bg-slatebg-800 rounded-xl border border-glacier-200/70 dark:border-slate-700 overflow-x-auto self-start md:self-auto" role="tablist">
+<button class="persona-tab px-3.5 py-1.5 rounded-lg bg-glacier-600 text-white font-semibold text-xs shadow-sm transition-all focus-ring" data-persona="all" type="button">All Channels</button>
+<button class="persona-tab px-3.5 py-1.5 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-white/60 dark:hover:bg-slatebg-750 font-semibold text-xs transition-all focus-ring" data-persona="citizen" type="button">Citizens</button>
+<button class="persona-tab px-3.5 py-1.5 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-white/60 dark:hover:bg-slatebg-750 font-semibold text-xs transition-all focus-ring" data-persona="official" type="button">Officials</button>
+<button class="persona-tab px-3.5 py-1.5 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-white/60 dark:hover:bg-slatebg-750 font-semibold text-xs transition-all focus-ring" data-persona="auditor" type="button">Auditors</button>
+<button class="persona-tab px-3.5 py-1.5 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-white/60 dark:hover:bg-slatebg-750 font-semibold text-xs transition-all focus-ring" data-persona="integrator" type="button">Integrators</button>
+</div>
+</div>
+<!-- 6 Matrix Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="matrix-container">
+<!-- Persona 1: Citizen -->
+<div class="persona-card bg-white dark:bg-slatebg-850 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between" data-category="citizen">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-glacier-100 dark:bg-glacier-950/80 text-glacier-800 dark:text-glacier-300 text-xs font-semibold">
+<span class="material-symbols-outlined text-[15px]">record_voice_over</span> Citizen Persona
+                </span>
+<span class="font-mono text-[11px] text-slate-500 dark:text-slate-400">Low Cognitive Load</span>
+</div>
+<h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white mb-2">Voice &amp; Low-Spec Intake</h3>
+<p class="text-xs text-slate-600 dark:text-slate-300 mb-4">Targeted towards everyday citizens with basic mobile handsets or offline conditions.</p>
+<div class="space-y-2 text-xs">
+<div class="p-3 bg-glacier-50/60 dark:bg-slatebg-800/60 rounded-xl border border-glacier-100/80 dark:border-slate-800">
+<div class="font-bold text-slate-900 dark:text-white">Voice Memo Ingestion</div>
+<div class="text-slate-500 dark:text-slate-400 mt-0.5">Send a 30-sec audio note via WhatsApp bot or toll-free hotline.</div>
+</div>
+<div class="p-3 bg-glacier-50/60 dark:bg-slatebg-800/60 rounded-xl border border-glacier-100/80 dark:border-slate-800">
+<div class="font-bold text-slate-900 dark:text-white">Receipt Token Tracker</div>
+<div class="text-slate-500 dark:text-slate-400 mt-0.5">Enter numeric code or telephone hash to hear resolution updates.</div>
+</div>
+<div class="p-3 bg-glacier-50/60 dark:bg-slatebg-800/60 rounded-xl border border-glacier-100/80 dark:border-slate-800">
+<div class="font-bold text-slate-900 dark:text-white">Offline 2G Local Storage</div>
+<div class="text-slate-500 dark:text-slate-400 mt-0.5">Draft reports without signal; syncs automatically once in range.</div>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<span class="text-xs font-semibold text-glacier-600 dark:text-glacier-400">3 Direct Routes</span>
+<a class="text-xs font-bold text-glacier-700 dark:text-glacier-300 hover:text-glacier-600 inline-flex items-center gap-1 focus-ring" href="#">Open Flow <span class="material-symbols-outlined text-[15px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Persona 2: Local Official -->
+<div class="persona-card bg-white dark:bg-slatebg-850 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between" data-category="official">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-sky-100 dark:bg-sky-950/80 text-sky-800 dark:text-sky-300 text-xs font-semibold">
+<span class="material-symbols-outlined text-[15px]">apartment</span> Ward Engineer
+                </span>
+<span class="font-mono text-[11px] text-slate-500 dark:text-slate-400">Field Triage Focus</span>
+</div>
+<h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white mb-2">Ward Triage &amp; Work Orders</h3>
+<p class="text-xs text-slate-600 dark:text-slate-300 mb-4">Targeted towards ward engineers, district magistrates, and field commissioners.</p>
+<div class="space-y-2 text-xs">
+<div class="p-3 bg-glacier-50/60 dark:bg-slatebg-800/60 rounded-xl border border-glacier-100/80 dark:border-slate-800">
+<div class="font-bold text-slate-900 dark:text-white">Spatial Incident Clusters</div>
+<div class="text-slate-500 dark:text-slate-400 mt-0.5">Co-located water breaks and pothole clusters grouped into one order.</div>
+</div>
+<div class="p-3 bg-glacier-50/60 dark:bg-slatebg-800/60 rounded-xl border border-glacier-100/80 dark:border-slate-800">
+<div class="font-bold text-slate-900 dark:text-white">Contractor Dispatch Dispatcher</div>
+<div class="text-slate-500 dark:text-slate-400 mt-0.5">Dispatch public works units with automated milestone deadlines.</div>
+</div>
+<div class="p-3 bg-glacier-50/60 dark:bg-slatebg-800/60 rounded-xl border border-glacier-100/80 dark:border-slate-800">
+<div class="font-bold text-slate-900 dark:text-white">Field Proof Verification</div>
+<div class="text-slate-500 dark:text-slate-400 mt-0.5">Review geo-stamped before-and-after work evidence before payout.</div>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<span class="text-xs font-semibold text-glacier-600 dark:text-glacier-400">Action-Oriented View</span>
+<a class="text-xs font-bold text-glacier-700 dark:text-glacier-300 hover:text-glacier-600 inline-flex items-center gap-1 focus-ring" href="#">Open Triage <span class="material-symbols-outlined text-[15px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Persona 3: National Policymaker -->
+<div class="persona-card bg-white dark:bg-slatebg-850 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between" data-category="official">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 text-xs font-semibold">
+<span class="material-symbols-outlined text-[15px]">account_balance</span> Macro Policymaker
+                </span>
+<span class="font-mono text-[11px] text-slate-500 dark:text-slate-400">Strategic Macro</span>
+</div>
+<h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white mb-2">Macro Allocator &amp; Hotspots</h3>
+<p class="text-xs text-slate-600 dark:text-slate-300 mb-4">Targeted towards national planning commissions and infrastructure ministries.</p>
+<div class="space-y-2 text-xs">
+<div class="p-3 bg-glacier-50/60 dark:bg-slatebg-800/60 rounded-xl border border-glacier-100/80 dark:border-slate-800">
+<div class="font-bold text-slate-900 dark:text-white">National Hotspot Map</div>
+<div class="text-slate-500 dark:text-slate-400 mt-0.5">Macro-view of recurring failure corridors across national grids.</div>
+</div>
+<div class="p-3 bg-glacier-50/60 dark:bg-slatebg-800/60 rounded-xl border border-glacier-100/80 dark:border-slate-800">
+<div class="font-bold text-slate-900 dark:text-white">Budget Allocation Simulator</div>
+<div class="text-slate-500 dark:text-slate-400 mt-0.5">Simulate capital allocation yield per million spent.</div>
+</div>
+<div class="p-3 bg-glacier-50/60 dark:bg-slatebg-800/60 rounded-xl border border-glacier-100/80 dark:border-slate-800">
+<div class="font-bold text-slate-900 dark:text-white">Equity Parity Indicators</div>
+<div class="text-slate-500 dark:text-slate-400 mt-0.5">Audit distribution so underserved wards receive balanced funds.</div>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<span class="text-xs font-semibold text-glacier-600 dark:text-glacier-400">Strategic Tools</span>
+<a class="text-xs font-bold text-glacier-700 dark:text-glacier-300 hover:text-glacier-600 inline-flex items-center gap-1 focus-ring" href="#">Open Simulator <span class="material-symbols-outlined text-[15px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Persona 4: Auditor -->
+<div class="persona-card bg-white dark:bg-slatebg-850 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between" data-category="auditor">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-100 dark:bg-amber-950/80 text-amber-900 dark:text-amber-300 text-xs font-semibold">
+<span class="material-symbols-outlined text-[15px]">fact_check</span> Civil Society Auditor
+                </span>
+<span class="font-mono text-[11px] text-slate-500 dark:text-slate-400">Public Oversight</span>
+</div>
+<h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white mb-2">Auditing &amp; Integrity Logs</h3>
+<p class="text-xs text-slate-600 dark:text-slate-300 mb-4">Targeted towards investigative journalists, community advocates, and watchdogs.</p>
+<div class="space-y-2 text-xs">
+<div class="p-3 bg-glacier-50/60 dark:bg-slatebg-800/60 rounded-xl border border-glacier-100/80 dark:border-slate-800">
+<div class="font-bold text-slate-900 dark:text-white">Explainable Scoring Weights</div>
+<div class="text-slate-500 dark:text-slate-400 mt-0.5">Audit why Project A was funded over Project B mathematically.</div>
+</div>
+<div class="p-3 bg-glacier-50/60 dark:bg-slatebg-800/60 rounded-xl border border-glacier-100/80 dark:border-slate-800">
+<div class="font-bold text-slate-900 dark:text-white">Public Expenditure Ledger</div>
+<div class="text-slate-500 dark:text-slate-400 mt-0.5">Immutable changelogs of contractor payments and milestones.</div>
+</div>
+<div class="p-3 bg-glacier-50/60 dark:bg-slatebg-800/60 rounded-xl border border-glacier-100/80 dark:border-slate-800">
+<div class="font-bold text-slate-900 dark:text-white">Citizen Audit Trail</div>
+<div class="text-slate-500 dark:text-slate-400 mt-0.5">Direct community feedback confirming if completed works hold up.</div>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">100% Transparent</span>
+<a class="text-xs font-bold text-glacier-700 dark:text-glacier-300 hover:text-glacier-600 inline-flex items-center gap-1 focus-ring" href="#">Open Ledger <span class="material-symbols-outlined text-[15px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Persona 5: Integrator -->
+<div class="persona-card bg-white dark:bg-slatebg-850 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between" data-category="integrator">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 text-xs font-semibold">
+<span class="material-symbols-outlined text-[15px]">code_blocks</span> Platform Integrator
+                </span>
+<span class="font-mono text-[11px] text-slate-500 dark:text-slate-400">DPG Standard</span>
+</div>
+<h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white mb-2">Open-Source &amp; Sovereign Core</h3>
+<p class="text-xs text-slate-600 dark:text-slate-300 mb-4">Targeted towards sovereign IT teams deploying regional on-prem nodes &amp; APIs.</p>
+<div class="space-y-2 text-xs">
+<div class="p-3 bg-glacier-50/60 dark:bg-slatebg-800/60 rounded-xl border border-glacier-100/80 dark:border-slate-800">
+<div class="font-bold text-slate-900 dark:text-white">Kafka Stream Topology</div>
+<div class="text-slate-500 dark:text-slate-400 mt-0.5">High-throughput audio streaming with zero in-memory retention.</div>
+</div>
+<div class="p-3 bg-glacier-50/60 dark:bg-slatebg-800/60 rounded-xl border border-glacier-100/80 dark:border-slate-800">
+<div class="font-bold text-slate-900 dark:text-white">PII Redaction Engine</div>
+<div class="text-slate-500 dark:text-slate-400 mt-0.5">Regex and named entity recognizers stripping national IDs and phone numbers.</div>
+</div>
+<div class="p-3 bg-glacier-50/60 dark:bg-slatebg-800/60 rounded-xl border border-glacier-100/80 dark:border-slate-800">
+<div class="font-bold text-slate-900 dark:text-white">OpenAPI 3.1 Schemas</div>
+<div class="text-slate-500 dark:text-slate-400 mt-0.5">Federated schemas compliant with sovereign data exchange protocols.</div>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<span class="text-xs font-semibold text-glacier-600 dark:text-glacier-400">Apache 2.0 Docs</span>
+<a class="text-xs font-bold text-glacier-700 dark:text-glacier-300 hover:text-glacier-600 inline-flex items-center gap-1 focus-ring" href="#">View Repos <span class="material-symbols-outlined text-[15px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Quick Access Emergency Dispatch Card -->
+<div class="bg-gradient-to-br from-glacier-700 to-glacier-900 dark:from-slatebg-800 dark:to-glacier-950 text-white rounded-2xl p-6 border border-glacier-600/50 dark:border-slate-700 shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-glacier-500/30 text-glacier-200 text-xs font-semibold border border-glacier-400/30">
+<span class="material-symbols-outlined text-[14px]">speed</span> Fast Route
+                </span>
+<span class="font-mono text-[11px] text-glacier-200">Instant Escalation</span>
+</div>
+<h3 class="font-heading font-bold text-lg text-white mb-2">Need Immediate Support?</h3>
+<p class="text-xs text-glacier-100/90 mb-4 leading-relaxed">
+                If an infrastructure breakdown poses imminent risk to life, clean water supply, or electrical safety, initiate emergency routing immediately.
+              </p>
+<div class="bg-black/20 rounded-xl p-3.5 space-y-2 text-xs font-medium border border-white/10">
+<div class="flex items-center gap-2 text-glacier-100">
+<span class="material-symbols-outlined text-[16px] text-amber-300">call</span>
+<span>Emergency Civic Dispatch: 112 / 108</span>
+</div>
+<div class="flex items-center gap-2 text-glacier-100">
+<span class="material-symbols-outlined text-[16px] text-emerald-300">crisis_alert</span>
+<span>Automated Hazard Escalation Active</span>
+</div>
+</div>
+</div>
+<button class="mt-5 inline-flex items-center justify-center gap-2 h-11 w-full rounded-xl bg-white hover:bg-glacier-50 text-glacier-900 font-bold text-xs tracking-wide transition-colors shadow-sm focus-ring" type="button">
+<span class="material-symbols-outlined text-[18px] text-amber-600">warning</span>
+<span>Flag Critical Safety Hazard</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Institutional Trust & Governance Charter -->
+<section class="w-full pb-16 px-4 sm:px-8">
+<div class="max-w-7xl mx-auto">
+<div class="bg-white dark:bg-slatebg-850 rounded-2xl p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col gap-8">
+<!-- Charter Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-glacier-100 dark:bg-glacier-950/80 text-glacier-700 dark:text-glacier-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">gavel</span>
+</div>
+<div>
+<h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white">Institutional Trust &amp; Governance Charter</h3>
+<p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Rigorous sovereign compliance, data privacy guarantees, and open-access standards.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slatebg-800 text-slate-700 dark:text-slate-300 font-mono text-xs font-semibold border border-slate-200 dark:border-slate-700">
+                Registry: DPG-0841
+              </span>
+<span class="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 font-mono text-xs font-semibold border border-emerald-300 dark:border-emerald-800">
+                Apache 2.0 Open Source
+              </span>
+</div>
+</div>
+<!-- 4 Pillars Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+<div class="bg-glacier-50/50 dark:bg-slatebg-800/60 p-5 rounded-xl border border-glacier-100 dark:border-slate-800 flex flex-col gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-glacier-100 dark:bg-glacier-900 text-glacier-700 dark:text-glacier-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<h4 class="font-heading font-bold text-sm text-slate-900 dark:text-white">Zero-PII Storage</h4>
+<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Audio voiceprints and raw caller numbers are stripped in memory before storage. Only anonymized vectors persist.
+              </p>
+<span class="font-mono text-xs font-bold text-glacier-700 dark:text-glacier-300 mt-auto flex items-center gap-1 pt-2">
+<span class="material-symbols-outlined text-[14px]">check</span> Hardware Salting
+              </span>
+</div>
+<div class="bg-glacier-50/50 dark:bg-slatebg-800/60 p-5 rounded-xl border border-glacier-100 dark:border-slate-800 flex flex-col gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-glacier-100 dark:bg-glacier-900 text-glacier-700 dark:text-glacier-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</div>
+<h4 class="font-heading font-bold text-sm text-slate-900 dark:text-white">Sovereign Data Residency</h4>
+<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Zero foreign cloud transmission. All compute nodes operate strictly within in-country boundaries with judicial oversight.
+              </p>
+<span class="font-mono text-xs font-bold text-glacier-700 dark:text-glacier-300 mt-auto flex items-center gap-1 pt-2">
+<span class="material-symbols-outlined text-[14px]">check</span> In-Country Enclaves
+              </span>
+</div>
+<div class="bg-glacier-50/50 dark:bg-slatebg-800/60 p-5 rounded-xl border border-glacier-100 dark:border-slate-800 flex flex-col gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-glacier-100 dark:bg-glacier-900 text-glacier-700 dark:text-glacier-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">accessibility_new</span>
+</div>
+<h4 class="font-heading font-bold text-sm text-slate-900 dark:text-white">WCAG 2.1 AA Compliant</h4>
+<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Engineered with 4.5:1 minimum color contrast, screen reader labels, keyboard tab traps, and 48px+ touch targets.
+              </p>
+<span class="font-mono text-xs font-bold text-glacier-700 dark:text-glacier-300 mt-auto flex items-center gap-1 pt-2">
+<span class="material-symbols-outlined text-[14px]">check</span> Universal Usability
+              </span>
+</div>
+<div class="bg-glacier-50/50 dark:bg-slatebg-800/60 p-5 rounded-xl border border-glacier-100 dark:border-slate-800 flex flex-col gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-glacier-100 dark:bg-glacier-900 text-glacier-700 dark:text-glacier-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">handshake</span>
+</div>
+<h4 class="font-heading font-bold text-sm text-slate-900 dark:text-white">Open Public Ledger</h4>
+<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Every stage of municipal prioritization and expenditure verification is published openly as machine-readable data.
+              </p>
+<span class="font-mono text-xs font-bold text-glacier-700 dark:text-glacier-300 mt-auto flex items-center gap-1 pt-2">
+<span class="material-symbols-outlined text-[14px]">check</span> Verifiable Ledger
+              </span>
+</div>
+</div>
+<!-- UN SDG Alignment Banner -->
+<div class="bg-glacier-100/60 dark:bg-slatebg-800 p-4 sm:p-5 rounded-xl border border-glacier-200 dark:border-slate-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-600 dark:text-emerald-400 text-[26px]">eco</span>
+<div>
+<div class="font-bold text-sm text-slate-900 dark:text-white">United Nations Sustainable Development Goals Alignment</div>
+<div class="text-xs text-slate-600 dark:text-slate-400">Direct operational adherence to SDG 9 (Resilient Infrastructure) and SDG 11 (Sustainable Cities).</div>
+</div>
+</div>
+<a class="px-4 py-2 rounded-lg bg-white dark:bg-slatebg-750 text-glacier-700 dark:text-glacier-300 hover:bg-glacier-600 hover:text-white dark:hover:bg-glacier-600 font-semibold text-xs transition-colors whitespace-nowrap shadow-sm border border-slate-200 dark:border-slate-700 focus-ring" href="#">
+              Read SDG Audit Report
+            </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Universal Footer -->
+<footer class="w-full bg-white dark:bg-slatebg-850 border-t border-slate-200 dark:border-slate-800 transition-colors">
+<div class="max-w-7xl mx-auto px-4 sm:px-8 py-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-slate-200 dark:border-slate-800">
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<span class="font-heading font-extrabold text-xl text-slate-900 dark:text-white">Setu</span>
+<span class="px-2 py-0.5 bg-glacier-100 dark:bg-glacier-900 text-glacier-800 dark:text-glacier-300 font-mono text-[10px] font-bold rounded">Public Infrastructure</span>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            Decentralized, sovereign civic intelligence bridging grassroots voice to proactive public works allocation across BRICS partner nations.
+          </p>
+</div>
+<div>
+<h4 class="font-heading font-bold text-sm text-slate-900 dark:text-white mb-3">Trust &amp; Governance</h4>
+<ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400">
+<li>Apache 2.0 Open Source License</li>
+<li>WCAG 2.1 AA Accessibility Certified</li>
+<li>Local Data Residency Guarantee</li>
+<li>Zero Untracked PII Retention</li>
+</ul>
+</div>
+<div>
+<h4 class="font-heading font-bold text-sm text-slate-900 dark:text-white mb-3">Sustainable Impact</h4>
+<div class="flex flex-col gap-2 text-xs">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slatebg-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-[16px] text-glacier-600">domain</span>
+              UN SDG 9: Infrastructure
+            </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slatebg-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-[16px] text-glacier-600">location_city</span>
+              UN SDG 11: Sustainable Cities
+            </span>
+</div>
+</div>
+<div>
+<h4 class="font-heading font-bold text-sm text-slate-900 dark:text-white mb-3">Rapid Intake</h4>
+<p class="text-xs text-slate-600 dark:text-slate-400 mb-3">
+            Submit multi-dialect voice memos via telecom-agnostic toll-free channels.
+          </p>
+<a class="inline-flex items-center gap-2 text-xs font-bold text-glacier-600 dark:text-glacier-400 hover:underline focus-ring" href="#">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span>Dial Civic Hotlines</span>
+</a>
+</div>
+</div>
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+<div class="flex items-center gap-2">
+<span>© 2025 Setu Open Source Initiative. DPG Registry ID: #DPG-0841.</span>
+</div>
+<div class="flex items-center gap-4 flex-wrap">
+<span>Sovereign Data Storage: In-Country Nodes</span>
+<span class="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            All Systems Operational
+          </span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Script for Theme Toggle & Universal Interactivity -->
+<script>
+    (function() {
+      // 1. Interactive Light / Dark Mode Toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeLabel = document.getElementById('theme-status-label');
+      const htmlEl = document.documentElement;
+
+      function updateThemeUI(isDark) {
+        if (isDark) {
+          htmlEl.classList.add('dark');
+          htmlEl.classList.remove('light');
+          if (themeLabel) themeLabel.textContent = 'Dark';
+        } else {
+          htmlEl.classList.remove('dark');
+          htmlEl.classList.add('light');
+          if (themeLabel) themeLabel.textContent = 'Light';
+        }
+      }
+
+      // Check system preference or default to light
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      updateThemeUI(prefersDark);
+
+      if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+          const isCurrentlyDark = htmlEl.classList.contains('dark');
+          updateThemeUI(!isCurrentlyDark);
+        });
+      }
+
+      // 2. High Contrast Mode Toggle
+      const contrastBtn = document.getElementById('toggle-contrast');
+      const contrastLabel = document.getElementById('contrast-label');
+      let highContrast = false;
+
+      if (contrastBtn) {
+        contrastBtn.addEventListener('click', function() {
+          highContrast = !highContrast;
+          if (highContrast) {
+            document.body.style.filter = 'contrast(125%)';
+            contrastLabel.textContent = 'Contrast: High';
+            contrastBtn.classList.add('ring-2', 'ring-glacier-500');
+          } else {
+            document.body.style.filter = '';
+            contrastLabel.textContent = 'Contrast';
+            contrastBtn.classList.remove('ring-2', 'ring-glacier-500');
+          }
+        });
+      }
+
+      // 3. Text Resizing Controls
+      let currentScale = 100;
+      const btnDec = document.getElementById('btn-text-decrease');
+      const btnInc = document.getElementById('btn-text-increase');
+      const btnReset = document.getElementById('btn-text-reset');
+
+      function setScale(scale) {
+        currentScale = Math.min(130, Math.max(90, scale));
+        document.documentElement.style.fontSize = (currentScale / 100) * 16 + 'px';
+        if (btnReset) btnReset.textContent = currentScale + '%';
+      }
+
+      if (btnDec) btnDec.addEventListener('click', () => setScale(currentScale - 10));
+      if (btnInc) btnInc.addEventListener('click', () => setScale(currentScale + 10));
+      if (btnReset) btnReset.addEventListener('click', () => setScale(100));
+
+      // 4. Persona Tabs Switching
+      const tabs = document.querySelectorAll('.persona-tab');
+      const cards = document.querySelectorAll('.persona-card');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          tabs.forEach(t => {
+            t.classList.remove('bg-glacier-600', 'text-white');
+            t.classList.add('text-slate-700', 'dark:text-slate-300');
+          });
+          this.classList.add('bg-glacier-600', 'text-white');
+          this.classList.remove('text-slate-700', 'dark:text-slate-300');
+
+          const persona = this.getAttribute('data-persona');
+          cards.forEach(card => {
+            if (persona === 'all' || card.getAttribute('data-category') === persona) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 5. Multi-Script Language Selector Feedback Toast
+      const scriptSelector = document.getElementById('script-selector');
+      if (scriptSelector) {
+        scriptSelector.addEventListener('change', function(e) {
+          const langMap = {
+            'en': 'Switched system language to English (Global Standard).',
+            'hi': 'भाषा देवनागरी हिन्दी में परिवर्तित हो गई है।',
+            'zh': '系统已切换为中文语言环境。',
+            'ru': 'Интерфейс переведен на русский язык.',
+            'pt': 'Sistema alterado para Português (Brasil).',
+            'ar': 'تم تحويل لغة النظام إلى العربية بنجاح.'
+          };
+          const msg = langMap[e.target.value] || 'Language preference updated.';
+          const toast = document.createElement('div');
+          toast.className = 'fixed bottom-6 right-6 z-50 px-4 py-3 bg-slate-900 text-white text-xs font-semibold rounded-xl shadow-xl flex items-center gap-2 border border-slate-700 animate-fade-in';
+          toast.innerHTML = '<span class="material-symbols-outlined text-[18px] text-glacier-400">translate</span><span>' + msg + '</span>';
+          document.body.appendChild(toast);
+          setTimeout(() => toast.remove(), 3200);
+        });
+      }
+    })();
+  </script>
+</body></html>

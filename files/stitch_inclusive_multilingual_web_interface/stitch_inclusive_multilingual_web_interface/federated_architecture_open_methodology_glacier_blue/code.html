@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-dim": "#d2d9f4",
+            "inverse-primary": "#93ccff",
+            "secondary-container": "#39b8fd",
+            "on-background": "#0f172a",
+            "surface": "#ffffff",
+            "surface-container-high": "#e0f2fe",
+            "on-primary-container": "#ffffff",
+            "tertiary-fixed-dim": "#94ccff",
+            "outline": "#94a3b8",
+            "on-secondary-container": "#0369a1",
+            "surface-container-low": "#f8fafc",
+            "error": "#e11d48",
+            "background": "#ffffff",
+            "primary-container": "#0284c7",
+            "secondary": "#0284c7",
+            "error-container": "#ffe4e6",
+            "surface-bright": "#ffffff",
+            "surface-variant": "#f0f9ff",
+            "surface-container-lowest": "#ffffff",
+            "primary": "#0369a1",
+            "tertiary-container": "#0ea5e9",
+            "on-primary": "#ffffff",
+            "on-surface": "#0f172a",
+            "on-tertiary-fixed-variant": "#004b74",
+            "on-primary-fixed-variant": "#004b73",
+            "on-error": "#ffffff",
+            "on-error-container": "#9f1239",
+            "surface-tint": "#0284c7",
+            "on-secondary-fixed-variant": "#004c6e",
+            "outline-variant": "#e2e8f0",
+            "primary-fixed": "#e0f2fe",
+            "surface-container": "#f0f9ff",
+            "secondary-fixed-dim": "#bae6fd",
+            "inverse-surface": "#0f172a",
+            "on-tertiary-container": "#ffffff",
+            "inverse-on-surface": "#f8fafc",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed": "#0369a1",
+            "secondary-fixed": "#e0f2fe",
+            "primary-fixed-dim": "#bae6fd",
+            "on-surface-variant": "#475569",
+            "on-tertiary-fixed": "#0369a1",
+            "surface-container-highest": "#e2e8f0",
+            "on-secondary": "#ffffff",
+            "tertiary": "#0ea5e9",
+            "tertiary-fixed": "#e0f2fe",
+            "on-secondary-fixed": "#0369a1",
+            // Glacier accents
+            "glacier-50": "#f0f9ff",
+            "glacier-100": "#e0f2fe",
+            "glacier-200": "#bae6fd",
+            "glacier-300": "#7dd3fc",
+            "glacier-400": "#38bdf8",
+            "glacier-500": "#0ea5e9",
+            "glacier-600": "#0284c7",
+            "glacier-700": "#0369a1",
+            "glacier-800": "#075985",
+            "glacier-900": "#0c4a6e"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.375rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            "headline-xl": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+            "headline-sm": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+            "body-xl": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "label-lg": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "mono": ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-glacier-100 selection:text-glacier-900">
+<!-- Header Section -->
+<header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-glacier-100 shadow-[0_2px_12px_rgba(2,132,199,0.04)]">
+<!-- Utility Accessibility Bar -->
+<div class="bg-glacier-50 px-6 py-1.5 flex items-center justify-between border-b border-glacier-100 text-on-surface-variant font-label-sm text-xs">
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1.5 text-glacier-700 font-medium">
+<span class="material-symbols-outlined text-[15px] text-glacier-600">public</span>
+          BRICS Sovereign DPG Network
+        </span>
+<span class="hidden md:inline text-glacier-200">|</span>
+<span class="hidden md:inline text-slate-500">Sovereign Data Residency &amp; PII Safe</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1">
+<button aria-label="Decrease font size" class="px-2 py-0.5 rounded bg-white hover:bg-glacier-100 text-slate-700 font-semibold border border-glacier-200 transition-colors" type="button">A-</button>
+<button aria-label="Increase font size" class="px-2 py-0.5 rounded bg-white hover:bg-glacier-100 text-slate-700 font-semibold border border-glacier-200 transition-colors" type="button">A+</button>
+</div>
+<button class="flex items-center gap-1 px-2.5 py-0.5 rounded bg-white hover:bg-glacier-100 text-slate-700 border border-glacier-200 transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-glacier-600">contrast</span>
+<span class="hidden sm:inline font-medium">High Contrast</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-0.5 rounded bg-glacier-100 text-glacier-700 hover:bg-glacier-200 transition-colors font-medium border border-glacier-200" type="button">
+<span class="material-symbols-outlined text-[15px] text-glacier-600">volume_up</span>
+<span class="hidden sm:inline">Listen to Briefing</span>
+</button>
+<div class="flex items-center gap-1 pl-3 border-l border-glacier-200">
+<span class="material-symbols-outlined text-[15px] text-glacier-600">translate</span>
+<select aria-label="Select language" class="bg-transparent text-slate-700 font-medium text-xs focus:outline-none cursor-pointer pr-1">
+<option>English (Global)</option>
+<option>हिन्दी (Hindi)</option>
+<option>中文 (Mandarin)</option>
+<option>Русский (Russian)</option>
+<option>Português (Brasil)</option>
+<option>العربية (Arabic)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Main Navigation Bar -->
+<div class="h-20 max-w-7xl mx-auto px-6 flex items-center justify-between gap-6">
+<div class="flex items-center gap-3">
+<img alt="Setu brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XsiycFgZvTvqYbVgyz28WgO7sx71aaWhYswpiXnYFpFiltdubsk5fqTd_gKxoTmc5vZ84XC9sZqGIU2T09-h_ByOcNo9ydCfMFHQ5ba11m0eJ6eo6QOEiTeQpUNM7cPm5mbTr7laXXCBopEwr2RXgcxkEH3Ns-vttSj2M4ailr8imjTAAKxloT7zw6G9b-pOnt6a4UCBqopDO7Rb7xdHNESwHpvpLP5-KdRdjfJNumJy8UnBOU-Kl2TQ"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-xl tracking-tight text-glacier-900 font-bold">Setu</span>
+<span class="px-2 py-0.5 bg-glacier-100 text-glacier-700 font-semibold text-[11px] rounded-full border border-glacier-200 tracking-wider">DPG</span>
+</div>
+<span class="hidden sm:inline text-xs text-slate-500 font-medium">DPG Citizen-to-Infrastructure Intelligence</span>
+</div>
+</div>
+<nav class="hidden lg:flex items-center gap-1.5">
+<div class="relative group">
+<button class="px-3.5 py-2 rounded-lg text-slate-600 hover:text-glacier-700 hover:bg-glacier-50 font-medium text-sm transition-colors flex items-center gap-1" type="button">
+            Citizen Voice
+            <span class="material-symbols-outlined text-[18px] text-slate-400 group-hover:text-glacier-600 transition-transform duration-150 group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute left-0 mt-1 w-64 p-2 bg-white rounded-xl shadow-[0_12px_32px_rgba(2,132,199,0.08)] border border-glacier-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 flex flex-col gap-1 z-50">
+<a class="px-3 py-2 rounded-lg text-slate-600 hover:bg-glacier-50 hover:text-glacier-700 font-medium text-sm transition-colors" data-path="voice-and-whatsapp-intake" href="#">Voice &amp; WhatsApp Intake</a>
+<a class="px-3 py-2 rounded-lg text-slate-600 hover:bg-glacier-50 hover:text-glacier-700 font-medium text-sm transition-colors" data-path="track-report-status" href="#">Track Report Status</a>
+<a class="px-3 py-2 rounded-lg text-slate-600 hover:bg-glacier-50 hover:text-glacier-700 font-medium text-sm transition-colors" data-path="offline-pwa-sync" href="#">Offline PWA Sync</a>
+</div>
+</div>
+<div class="relative group">
+<button class="px-3.5 py-2 rounded-lg text-slate-600 hover:text-glacier-700 hover:bg-glacier-50 font-medium text-sm transition-colors flex items-center gap-1" type="button">
+            Policymaker Intelligence
+            <span class="material-symbols-outlined text-[18px] text-slate-400 group-hover:text-glacier-600 transition-transform duration-150 group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute left-0 mt-1 w-64 p-2 bg-white rounded-xl shadow-[0_12px_32px_rgba(2,132,199,0.08)] border border-glacier-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 flex flex-col gap-1 z-50">
+<a class="px-3 py-2 rounded-lg text-slate-600 hover:bg-glacier-50 hover:text-glacier-700 font-medium text-sm transition-colors" data-path="national-hotspot-map" href="#">National Hotspot Map</a>
+<a class="px-3 py-2 rounded-lg text-slate-600 hover:bg-glacier-50 hover:text-glacier-700 font-medium text-sm transition-colors" data-path="ranked-priority-queue" href="#">Ranked Priority Queue</a>
+<a class="px-3 py-2 rounded-lg text-slate-600 hover:bg-glacier-50 hover:text-glacier-700 font-medium text-sm transition-colors" data-path="budget-allocation-simulator" href="#">Budget Allocation Simulator</a>
+</div>
+</div>
+<div class="relative group">
+<button class="px-3.5 py-2 rounded-lg text-glacier-700 bg-glacier-50 font-semibold text-sm transition-colors flex items-center gap-1 border border-glacier-200" type="button">
+            Architecture &amp; Governance
+            <span class="material-symbols-outlined text-[18px] text-glacier-600 group-hover:rotate-180 transition-transform duration-150">expand_more</span>
+</button>
+<div class="absolute left-0 mt-1 w-72 p-2 bg-white rounded-xl shadow-[0_12px_32px_rgba(2,132,199,0.08)] border border-glacier-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 flex flex-col gap-1 z-50">
+<a aria-current="page" class="px-3 py-2 transition-colors bg-glacier-100 text-glacier-800 font-semibold text-sm rounded-lg" data-path="federated-sovereign-architecture" href="#">Federated Sovereign Architecture</a>
+<a class="px-3 py-2 rounded-lg text-slate-600 hover:bg-glacier-50 hover:text-glacier-700 font-medium text-sm transition-colors" data-path="kafka-and-pii-redaction-pipeline" href="#">Kafka &amp; PII Redaction Pipeline</a>
+<a class="px-3 py-2 rounded-lg text-slate-600 hover:bg-glacier-50 hover:text-glacier-700 font-medium text-sm transition-colors" data-path="digital-public-good-and-open-source" href="#">DPG &amp; Open Source Stack</a>
+</div>
+</div>
+<div class="relative group">
+<button class="px-3.5 py-2 rounded-lg text-slate-600 hover:text-glacier-700 hover:bg-glacier-50 font-medium text-sm transition-colors flex items-center gap-1" type="button">
+            Impact &amp; Methodology
+            <span class="material-symbols-outlined text-[18px] text-slate-400 group-hover:text-glacier-600 transition-transform duration-150 group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute left-0 mt-1 w-64 p-2 bg-white rounded-xl shadow-[0_12px_32px_rgba(2,132,199,0.08)] border border-glacier-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 flex flex-col gap-1 z-50">
+<a class="px-3 py-2 rounded-lg text-slate-600 hover:bg-glacier-50 hover:text-glacier-700 font-medium text-sm transition-colors" data-path="priority-scoring-algorithm" href="#">Priority Scoring Algorithm</a>
+<a class="px-3 py-2 rounded-lg text-slate-600 hover:bg-glacier-50 hover:text-glacier-700 font-medium text-sm transition-colors" data-path="verified-projects" href="#">Verified Projects</a>
+<a class="px-3 py-2 rounded-lg text-slate-600 hover:bg-glacier-50 hover:text-glacier-700 font-medium text-sm transition-colors" data-path="citizen-audit-trail" href="#">Citizen Audit Trail</a>
+</div>
+</div>
+</nav>
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex items-center gap-2 h-11 px-5 rounded-full bg-glacier-600 hover:bg-glacier-700 text-white font-medium text-sm transition-all shadow-sm shadow-glacier-500/20" data-path="report-infrastructure-issue" href="#">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+<span>Report Infrastructure Issue</span>
+</a>
+<div class="w-9 h-9 rounded-full bg-glacier-100 border border-glacier-200 flex items-center justify-center text-glacier-700 font-semibold shadow-xs">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="w-full pt-28 bg-white min-h-[calc(100vh-280px)]">
+<div class="flex flex-col w-full">
+<!-- Sovereign Tech Banner / Overline Deck -->
+<section class="w-full bg-gradient-to-b from-glacier-50/80 via-white to-white px-6 py-14 border-b border-glacier-100 relative overflow-hidden">
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-glacier-200/40 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute left-1/3 -bottom-20 w-80 h-80 bg-glacier-100/60 rounded-full blur-2xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-end justify-between gap-8 relative z-10">
+<div class="max-w-3xl space-y-4">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-glacier-100 text-glacier-800 font-label-sm text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 border border-glacier-200">
+<span class="material-symbols-outlined text-[15px] text-glacier-600">verified_user</span>
+                DPG Specification v2.4
+              </span>
+<span class="px-3 py-1 rounded-full bg-white text-slate-700 font-label-sm text-xs flex items-center gap-1.5 border border-slate-200 shadow-xs">
+<span class="material-symbols-outlined text-[15px] text-glacier-600">database</span>
+                Local Sovereign Residency
+              </span>
+<span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-label-sm text-xs font-semibold">
+                Zero Cross-Border Citizen Egress
+              </span>
+</div>
+<h1 class="font-headline-xl text-4xl lg:text-5xl text-slate-900 tracking-tight font-extrabold leading-tight">
+              Sovereign Federated Architecture &amp; Digital Public Good Specifications
+            </h1>
+<p class="font-body-xl text-lg text-slate-600 leading-relaxed max-w-2xl">
+              Open-source, cryptographically sandboxed civic intelligence architecture designed for sovereign deployability across BRICS+ jurisdictions. Engineered to translate grassroots telephony into equitable infrastructure allocation while eliminating vendor entrapment.
+            </p>
+</div>
+<!-- Quick Telemetry Pod -->
+<div class="bg-white p-6 rounded-2xl shadow-[0_4px_24px_rgba(2,132,199,0.06)] border border-glacier-200 flex flex-col gap-4 min-w-[280px]">
+<div class="flex items-center justify-between pb-3 border-b border-glacier-100">
+<span class="font-label-sm text-xs text-slate-500 uppercase font-semibold tracking-wider">Federation Status</span>
+<span class="flex items-center gap-1.5 text-emerald-600 font-label-sm text-xs font-bold">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 5 Clusters Active
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-glacier-50 p-3.5 rounded-xl border border-glacier-100">
+<span class="font-label-sm text-xs text-slate-500 block font-medium">PII Redaction</span>
+<span class="font-headline-md text-xl text-glacier-800 font-bold tracking-tight">100% Edge</span>
+</div>
+<div class="bg-glacier-50 p-3.5 rounded-xl border border-glacier-100">
+<span class="font-label-sm text-xs text-slate-500 block font-medium">License</span>
+<span class="font-headline-md text-xl text-glacier-800 font-bold tracking-tight">Apache-2.0</span>
+</div>
+</div>
+<div class="text-slate-500 font-label-sm text-xs flex items-center gap-1.5 pt-1">
+<span class="material-symbols-outlined text-[16px] text-glacier-600">terminal</span>
+<span>Commit: <code class="bg-glacier-100/60 text-glacier-900 px-1.5 py-0.5 rounded font-mono text-[11px] border border-glacier-200">#brics-dpg-core-89c0a</code></span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Pipeline Stage Controller & Visual Canvas -->
+<section class="max-w-7xl mx-auto px-6 py-16 w-full space-y-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<div class="flex items-center gap-1.5 text-glacier-600 font-label-md text-xs font-bold uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[18px]">schema</span>
+              Architecture §2 &amp; §4
+            </div>
+<h2 class="font-headline-xl text-3xl text-slate-900 font-bold tracking-tight">Interactive End-to-End Pipeline Explorer</h2>
+<p class="font-body-lg text-slate-600 mt-1">
+              Select pipeline stages to inspect data payloads, privacy guarantees, and sovereign execution planes.
+            </p>
+</div>
+<!-- Live Stream Simulator Controls -->
+<div class="flex items-center gap-2.5">
+<button aria-label="Previous Pipeline Stage" class="h-10 w-10 rounded-full bg-white hover:bg-glacier-50 text-slate-700 border border-slate-200 flex items-center justify-center transition-colors shadow-xs" id="step-backward-btn">
+<span class="material-symbols-outlined text-[18px]">west</span>
+</button>
+<button class="h-10 px-5 rounded-full bg-glacier-600 text-white font-medium text-sm flex items-center gap-2 hover:bg-glacier-700 transition-all shadow-sm shadow-glacier-500/20" id="simulate-payload-btn">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+<span>Simulate Redaction Flow</span>
+</button>
+<button aria-label="Next Pipeline Stage" class="h-10 w-10 rounded-full bg-white hover:bg-glacier-50 text-slate-700 border border-slate-200 flex items-center justify-center transition-colors shadow-xs" id="step-forward-btn">
+<span class="material-symbols-outlined text-[18px]">east</span>
+</button>
+</div>
+</div>
+<!-- Pipeline Stage Tabs Ribbon -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+<!-- Stage 1 -->
+<button class="stage-nav-card active text-left p-4 rounded-xl bg-glacier-50/70 border border-glacier-300 shadow-xs hover:border-glacier-400 transition-all flex flex-col justify-between min-h-[140px] relative overflow-hidden group" data-stage="1">
+<div class="flex items-center justify-between w-full">
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-xs bg-glacier-600 text-white font-bold tracking-wider">Stage 01</span>
+<span class="material-symbols-outlined text-glacier-600 text-[24px]">sensors</span>
+</div>
+<div class="mt-4">
+<div class="font-headline-sm text-sm font-bold text-slate-900 group-hover:text-glacier-700 transition-colors">Multimodal Ingestion</div>
+<div class="text-xs text-slate-500 mt-1 font-medium">Voice/IVR, WhatsApp, 2G PWA</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-glacier-600 stage-indicator"></div>
+</button>
+<!-- Stage 2 -->
+<button class="stage-nav-card text-left p-4 rounded-xl bg-white border border-slate-200 shadow-xs hover:border-glacier-300 transition-all flex flex-col justify-between min-h-[140px] relative overflow-hidden group" data-stage="2">
+<div class="flex items-center justify-between w-full">
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-xs bg-slate-100 text-slate-700 font-bold tracking-wider">Stage 02</span>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-glacier-600 text-[24px] transition-colors">lock_reset</span>
+</div>
+<div class="mt-4">
+<div class="font-headline-sm text-sm font-bold text-slate-900 group-hover:text-glacier-700 transition-colors">Gateway &amp; PII Sanitizer</div>
+<div class="text-xs text-slate-500 mt-1 font-medium">Zero-Store Ephemeral Salt</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-glacier-600 stage-indicator hidden"></div>
+</button>
+<!-- Stage 3 -->
+<button class="stage-nav-card text-left p-4 rounded-xl bg-white border border-slate-200 shadow-xs hover:border-glacier-300 transition-all flex flex-col justify-between min-h-[140px] relative overflow-hidden group" data-stage="3">
+<div class="flex items-center justify-between w-full">
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-xs bg-slate-100 text-slate-700 font-bold tracking-wider">Stage 03</span>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-glacier-600 text-[24px] transition-colors">hub</span>
+</div>
+<div class="mt-4">
+<div class="font-headline-sm text-sm font-bold text-slate-900 group-hover:text-glacier-700 transition-colors">Self-Hosted Kafka &amp; NLP</div>
+<div class="text-xs text-slate-500 mt-1 font-medium">Strimzi Kube, Whisper, NLLB</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-glacier-600 stage-indicator hidden"></div>
+</button>
+<!-- Stage 4 -->
+<button class="stage-nav-card text-left p-4 rounded-xl bg-white border border-slate-200 shadow-xs hover:border-glacier-300 transition-all flex flex-col justify-between min-h-[140px] relative overflow-hidden group" data-stage="4">
+<div class="flex items-center justify-between w-full">
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-xs bg-slate-100 text-slate-700 font-bold tracking-wider">Stage 04</span>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-glacier-600 text-[24px] transition-colors">balance</span>
+</div>
+<div class="mt-4">
+<div class="font-headline-sm text-sm font-bold text-slate-900 group-hover:text-glacier-700 transition-colors">Prioritization Engine</div>
+<div class="text-xs text-slate-500 mt-1 font-medium">Score = Demand × Vuln × Deficit</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-glacier-600 stage-indicator hidden"></div>
+</button>
+<!-- Stage 5 -->
+<button class="stage-nav-card text-left p-4 rounded-xl bg-white border border-slate-200 shadow-xs hover:border-glacier-300 transition-all flex flex-col justify-between min-h-[140px] relative overflow-hidden group" data-stage="5">
+<div class="flex items-center justify-between w-full">
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-xs bg-slate-100 text-slate-700 font-bold tracking-wider">Stage 05</span>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-glacier-600 text-[24px] transition-colors">storage</span>
+</div>
+<div class="mt-4">
+<div class="font-headline-sm text-sm font-bold text-slate-900 group-hover:text-glacier-700 transition-colors">Sovereign Warehouse</div>
+<div class="text-xs text-slate-500 mt-1 font-medium">nation_id Isolated Partitioning</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-glacier-600 stage-indicator hidden"></div>
+</button>
+</div>
+<!-- Active Stage Interactive Workspace Panel -->
+<div class="bg-white rounded-2xl border border-glacier-200 shadow-[0_4px_24px_rgba(2,132,199,0.06)] overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12">
+<!-- Left: Technical Anatomy & Specs -->
+<div class="p-8 lg:p-10 lg:col-span-7 space-y-6">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded-full bg-glacier-100 text-glacier-800 font-label-sm text-xs uppercase font-bold tracking-wider border border-glacier-200" id="stage-badge">
+                  Stage 01: Multi-Modal Ingestion
+                </span>
+<span class="text-slate-500 font-label-sm text-xs font-medium">Telecom-Agnostic Low Bandwidth Stack</span>
+</div>
+<h3 class="font-headline-lg text-2xl lg:text-3xl text-slate-900 font-bold tracking-tight" id="stage-title">
+                Dialect-Resilient Multimodal Voice &amp; Messaging Intake
+              </h3>
+<p class="font-body-lg text-base text-slate-600 leading-relaxed" id="stage-description">
+                Citizens report potable water deficits, culvert collapse, and transmission line outages across IVR phone trees, asynchronous WhatsApp audio snippets, or an ultra-low footprint 2G progressive web application (under 300KB initial payload).
+              </p>
+<!-- Metrics / Guarantees Strip -->
+<div class="grid grid-cols-3 gap-4 pt-2">
+<div class="p-4 rounded-xl bg-glacier-50 border border-glacier-100">
+<span class="text-xs text-slate-500 font-medium block">Throughput Cap</span>
+<span class="font-headline-md text-xl text-glacier-700 font-bold" id="metric-1">14,200 msg/s</span>
+<span class="text-[11px] text-glacier-600 font-medium block mt-0.5">P99 Latency &lt; 85ms</span>
+</div>
+<div class="p-4 rounded-xl bg-glacier-50 border border-glacier-100">
+<span class="text-xs text-slate-500 font-medium block">Network Minimum</span>
+<span class="font-headline-md text-xl text-slate-900 font-bold" id="metric-2">2G / Edge</span>
+<span class="text-[11px] text-slate-500 block mt-0.5">Offline SQLite sync</span>
+</div>
+<div class="p-4 rounded-xl bg-glacier-50 border border-glacier-100">
+<span class="text-xs text-slate-500 font-medium block">Dialects Supported</span>
+<span class="font-headline-md text-xl text-glacier-700 font-bold" id="metric-3">48 Accents</span>
+<span class="text-[11px] text-slate-500 block mt-0.5">Automatic detection</span>
+</div>
+</div>
+<!-- Micro Spec Tags -->
+<div class="space-y-2.5 pt-2">
+<span class="font-label-sm text-xs text-slate-800 font-bold uppercase tracking-wider block">Components &amp; Protocols</span>
+<div class="flex flex-wrap gap-2" id="tech-tags">
+<span class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-medium text-slate-700">Asterisk / FreeSWITCH IVR</span>
+<span class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-medium text-slate-700">Twilio / Karix SMS Hooks</span>
+<span class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-medium text-slate-700">OPUS Audio Streamer</span>
+<span class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-medium text-slate-700">ServiceWorker Cache Storage</span>
+</div>
+</div>
+</div>
+<!-- Right: Real-time Payload & Sanitization Terminal -->
+<div class="bg-slate-950 text-slate-200 p-8 lg:p-10 lg:col-span-5 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-slate-800">
+<div class="space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-slate-800">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-rose-500 inline-block"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500 inline-block"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
+<span class="font-mono text-xs text-slate-400 ml-2 font-medium">payload_inspector.json</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-slate-800 text-glacier-300 font-mono text-[11px] border border-slate-700">JSON-SCHEMA 2020-12</span>
+</div>
+<div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 font-mono text-xs overflow-x-auto leading-relaxed max-h-[340px]">
+<pre class="text-glacier-300" id="code-terminal">{
+  "event_id": "evt_9984bf41-8c01",
+  "nation_id": "IN-MH",
+  "channel": "WHATSAPP_AUDIO_OPUS",
+  "ingress_timestamp": "2025-05-18T09:41:22.104Z",
+  "sender_raw": "+91-98440-XXXXX",
+  "voice_payload_hash": "sha256:e3b0c44298fc1c149afbf4c8...",
+  "detected_dialect": "marathi_rural_vidarbha",
+  "audio_duration_sec": 14.8,
+  "client_fingerprint": "pwa_sw_v2_offline_synced",
+  "edge_status": "QUEUED_FOR_REDACT_STAGE"
+}</pre>
+</div>
+</div>
+<div class="mt-6 bg-slate-900/60 border border-slate-800 p-4 rounded-xl space-y-1.5">
+<div class="flex items-center justify-between text-xs font-mono">
+<span class="text-slate-300 flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-[16px] text-glacier-400">shield</span>
+                    Sovereign Guardrail:
+                  </span>
+<span class="text-glacier-300 font-bold" id="guardrail-status">Pre-Storage Cryptographic Hash Active</span>
+</div>
+<p class="text-[12px] text-slate-400 leading-relaxed" id="guardrail-note">
+                  Raw citizen mobile identifiers and voice biometric signatures are buffered purely in ephemeral memory and discarded upon stage handoff.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Prioritization Formula Deep-Dive Box -->
+<section class="max-w-7xl mx-auto px-6 py-6 w-full">
+<div class="bg-gradient-to-br from-glacier-50/70 via-white to-glacier-50/40 p-8 lg:p-10 rounded-2xl border border-glacier-200 shadow-sm relative overflow-hidden">
+<div class="absolute right-0 top-0 w-80 h-full bg-gradient-to-l from-glacier-200/20 to-transparent pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 relative z-10">
+<div class="space-y-2 max-w-2xl">
+<div class="flex items-center gap-2 text-glacier-700 font-label-md text-xs uppercase font-bold tracking-wider">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+                Priority Scoring Mathematical Rigor (§6 ADR-004)
+              </div>
+<h3 class="font-headline-lg text-2xl lg:text-3xl text-slate-900 font-bold tracking-tight">
+                Deterministic, Algorithmic Allocation Formula
+              </h3>
+<p class="font-body-md text-slate-600">
+                To prevent political favoritism and urban-bias skew, capital interventions are queued strictly according to the open-source Setu Priority Formulation:
+              </p>
+</div>
+<div class="bg-white p-6 rounded-xl border border-glacier-200 shadow-sm flex flex-col items-center">
+<div class="font-mono text-glacier-800 font-bold text-lg sm:text-xl text-center tracking-tight">
+                Priority Score = Demand × Vulnerability Index × Deficit
+              </div>
+<div class="mt-3 flex items-center gap-3 text-xs font-mono text-slate-500">
+<span>D = Σ Normalized Complaints</span>
+<span>•</span>
+<span>V = Socio-Economic Factor</span>
+<span>•</span>
+<span>Def = Asset Degradation</span>
+</div>
+</div>
+</div>
+<!-- Variable Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+<div class="bg-white p-5 rounded-xl border border-glacier-100 shadow-xs space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-sm text-glacier-800 font-bold">Demand (D)</span>
+<span class="material-symbols-outlined text-glacier-600 text-[22px]">record_voice_over</span>
+</div>
+<p class="text-sm text-slate-600 leading-relaxed">
+                Aggregated citizen submissions filtered for duplicate sybil attacks. Voice memos and SMS within a 250m geodesic radius are dynamically deduplicated via semantic vector similarity.
+              </p>
+</div>
+<div class="bg-white p-5 rounded-xl border border-glacier-100 shadow-xs space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-sm text-glacier-800 font-bold">Vulnerability Index (V)</span>
+<span class="material-symbols-outlined text-glacier-600 text-[22px]">health_and_safety</span>
+</div>
+<p class="text-sm text-slate-600 leading-relaxed">
+                National census demographic weighting factor (0.5 to 2.5). Uplifts priority for low-income wards, flood-prone agrarian basins, and peripheral settlements lacking alternative facilities.
+              </p>
+</div>
+<div class="bg-white p-5 rounded-xl border border-glacier-100 shadow-xs space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-sm text-glacier-800 font-bold">Infrastructure Deficit</span>
+<span class="material-symbols-outlined text-glacier-600 text-[22px]">warning</span>
+</div>
+<p class="text-sm text-slate-600 leading-relaxed">
+                Quantitative physical degradation metric derived from maintenance registry delays, sensor telemetry, and historical inspection logs. Exponentially ramps after 30 days of neglect.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Architectural Decision Records (ADRs) Section -->
+<section class="max-w-7xl mx-auto px-6 py-16 w-full space-y-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<div class="flex items-center gap-1.5 text-glacier-600 font-label-md text-xs uppercase font-bold tracking-wider mb-1">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+              Architecture §6
+            </div>
+<h2 class="font-headline-xl text-3xl text-slate-900 font-bold tracking-tight">Architectural Decision Records (ADRs)</h2>
+<p class="font-body-lg text-slate-600 mt-1">
+              Peer-reviewed engineering rationales preserving sovereignty, resilience, and vendor-neutrality.
+            </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs text-slate-500 font-medium">Formal Status:</span>
+<span class="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold">
+              Accepted &amp; Supervised
+            </span>
+</div>
+</div>
+<!-- ADR Cards Stack -->
+<div class="space-y-4" id="adr-container">
+<!-- ADR-001 -->
+<div class="bg-white rounded-2xl border border-glacier-200 shadow-sm hover:shadow-md transition-all p-6 lg:p-8 space-y-5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded-full bg-glacier-100 text-glacier-800 border border-glacier-200 font-mono font-bold text-xs">
+                  ADR-001
+                </span>
+<h3 class="font-headline-md text-lg lg:text-xl text-slate-900 font-bold">
+                  Self-Hosted Kafka (Strimzi Operator) over Managed Hyperscaler Cloud
+                </h3>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-xs text-slate-600 font-medium">Decision: ACCEPTED</span>
+<span class="px-2.5 py-0.5 rounded-full bg-glacier-50 border border-glacier-200 text-xs text-glacier-700 font-medium">Portability Target</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-1">
+<div class="space-y-1.5">
+<h4 class="text-xs uppercase font-bold text-slate-500 tracking-wider">Context</h4>
+<p class="text-sm text-slate-600 leading-relaxed">
+                  Global cloud providers offer managed queues (AWS SQS, Google PubSub). However, relying on proprietary cloud backplanes violates Digital Public Good standard #6 (freedom from cloud lock-in) and prevents bare-metal deployment in state-run datacenters.
+                </p>
+</div>
+<div class="space-y-1.5">
+<h4 class="text-xs uppercase font-bold text-glacier-700 tracking-wider">Decision Rationale</h4>
+<p class="text-sm text-slate-600 leading-relaxed">
+                  Standardize on the CNCF-backed Strimzi Apache Kafka Operator across vanilla Kubernetes clusters. Enables air-gapped sovereign execution with standard Helm charts, guaranteed throughput of 40,000 evt/s, and full data-plane independence.
+                </p>
+</div>
+<div class="space-y-1.5">
+<h4 class="text-xs uppercase font-bold text-slate-700 tracking-wider">Consequences</h4>
+<p class="text-sm text-slate-600 leading-relaxed">
+                  Requires operational competence in persistent volume orchestration and ZooKeeper/KRaft quorum management. Mitigated via automated GitOps reconciliation (ArgoCD) and bundled Prometheus/Grafana runbooks.
+                </p>
+</div>
+</div>
+<div class="pt-4 flex flex-wrap items-center justify-between gap-4 border-t border-glacier-100 bg-glacier-50/50 p-4 rounded-xl">
+<div class="flex items-center gap-2 font-mono text-xs text-slate-600">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">check_circle</span>
+<span>RFC Verification: Signed by 6 Technical Ministries</span>
+</div>
+<a class="text-xs font-semibold text-glacier-700 hover:text-glacier-800 hover:underline flex items-center gap-1" href="#">
+<span>Read full RFC-001 specification</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- ADR-002 -->
+<div class="bg-white rounded-2xl border border-glacier-200 shadow-sm hover:shadow-md transition-all p-6 lg:p-8 space-y-5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded-full bg-glacier-100 text-glacier-800 border border-glacier-200 font-mono font-bold text-xs">
+                  ADR-002
+                </span>
+<h3 class="font-headline-md text-lg lg:text-xl text-slate-900 font-bold">
+                  Server-Side Hybrid Batch Whisper &amp; NLLB-200 for Low-Power Telephony
+                </h3>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-xs text-slate-600 font-medium">Decision: ACCEPTED</span>
+<span class="px-2.5 py-0.5 rounded-full bg-glacier-50 border border-glacier-200 text-xs text-glacier-700 font-medium">Hardware Inclusivity</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-1">
+<div class="space-y-1.5">
+<h4 class="text-xs uppercase font-bold text-slate-500 tracking-wider">Context</h4>
+<p class="text-sm text-slate-600 leading-relaxed">
+                  Client-side ASR (WebSpeech or quantized ONNX models) drains device battery on $40 Android devices and fails on standard feature-phone audio recorded via GSM telephony 8kHz sampling.
+                </p>
+</div>
+<div class="space-y-1.5">
+<h4 class="text-xs uppercase font-bold text-glacier-700 tracking-wider">Decision Rationale</h4>
+<p class="text-sm text-slate-600 leading-relaxed">
+                  Implement server-side asynchronous batch processing using Open-Weight Whisper Medium fine-tuned on local dialect corpuses, piped into Meta NLLB-200. Audio is compressed via libopus before transit, cutting data usage to &lt;20KB per report.
+                </p>
+</div>
+<div class="space-y-1.5">
+<h4 class="text-xs uppercase font-bold text-slate-700 tracking-wider">Consequences</h4>
+<p class="text-sm text-slate-600 leading-relaxed">
+                  Requires dedicated GPU (NVIDIA A10G or open ROCm) worker pools inside the national k8s boundary. Solved by dynamic horizontal autoscaling: queues back up safely in Kafka during peak daytime spikes.
+                </p>
+</div>
+</div>
+<div class="pt-4 flex flex-wrap items-center justify-between gap-4 border-t border-glacier-100 bg-glacier-50/50 p-4 rounded-xl">
+<div class="flex items-center gap-2 font-mono text-xs text-slate-600">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">check_circle</span>
+<span>Word Error Rate (WER): &lt; 8.4% on 8kHz GSM Audio</span>
+</div>
+<a class="text-xs font-semibold text-glacier-700 hover:text-glacier-800 hover:underline flex items-center gap-1" href="#">
+<span>Inspect ASR Dialect Matrices</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- ADR-003 -->
+<div class="bg-white rounded-2xl border border-glacier-200 shadow-sm hover:shadow-md transition-all p-6 lg:p-8 space-y-5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded-full bg-glacier-100 text-glacier-800 border border-glacier-200 font-mono font-bold text-xs">
+                  ADR-003
+                </span>
+<h3 class="font-headline-md text-lg lg:text-xl text-slate-900 font-bold">
+                  Federated Sovereign Data Plane with Zero Cross-Border Flow
+                </h3>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-xs text-slate-600 font-medium">Decision: ACCEPTED</span>
+<span class="px-2.5 py-0.5 rounded-full bg-glacier-50 border border-glacier-200 text-xs text-glacier-700 font-medium">Legal &amp; Sovereignty</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-1">
+<div class="space-y-1.5">
+<h4 class="text-xs uppercase font-bold text-slate-500 tracking-wider">Context</h4>
+<p class="text-sm text-slate-600 leading-relaxed">
+                  BRICS intergovernmental conventions prohibit civic complaints, geographic coordinates, or demographic telemetry from traversing foreign network borders or consolidating in centralized overseas repositories.
+                </p>
+</div>
+<div class="space-y-1.5">
+<h4 class="text-xs uppercase font-bold text-glacier-700 tracking-wider">Decision Rationale</h4>
+<p class="text-sm text-slate-600 leading-relaxed">
+                  Establish fully autonomous, isolated k8s clusters per nation. Cross-nation federation exchanges purely non-sensitive, aggregated metrics (e.g., Model weights via Differential Privacy, SDG achievement indices) over mTLS APIs.
+                </p>
+</div>
+<div class="space-y-1.5">
+<h4 class="text-xs uppercase font-bold text-slate-700 tracking-wider">Consequences</h4>
+<p class="text-sm text-slate-600 leading-relaxed">
+                  Eliminates the possibility of cross-border subpoena or foreign surveillance. Requires each nation to provide tier-3 datacenter hosting or sovereign state cloud environments with physical jurisdiction.
+                </p>
+</div>
+</div>
+<div class="pt-4 flex flex-wrap items-center justify-between gap-4 border-t border-glacier-100 bg-glacier-50/50 p-4 rounded-xl">
+<div class="flex items-center gap-2 font-mono text-xs text-slate-600">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">check_circle</span>
+<span>Data Sovereignty Mandate: Section §5 Complete Compliance</span>
+</div>
+<a class="text-xs font-semibold text-glacier-700 hover:text-glacier-800 hover:underline flex items-center gap-1" href="#">
+<span>Download Multi-Cluster Kubeconfigs</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Multi-Nation Sovereign Federation Topology Visualizer -->
+<section class="max-w-7xl mx-auto px-6 py-10 w-full">
+<div class="bg-white rounded-2xl border border-glacier-200 shadow-sm p-8 lg:p-10 space-y-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<span class="text-glacier-700 font-label-md text-xs uppercase tracking-wider font-bold">Multi-Nation Federation §5</span>
+<h3 class="font-headline-lg text-2xl lg:text-3xl text-slate-900 font-bold tracking-tight">Sovereign Cluster Boundary Isolations</h3>
+<p class="text-slate-600 text-sm mt-1">
+                Citizen PII and regional tickets never cross the sovereign boundary. Only differential federated insights sync across partner nodes.
+              </p>
+</div>
+<!-- Node Selector Buttons -->
+<div class="flex flex-wrap gap-2">
+<button class="cluster-btn active px-4 py-1.5 rounded-full bg-glacier-600 text-white text-xs font-semibold shadow-xs transition-all border border-glacier-600" data-cluster="india">
+                Node: India (IN-Central)
+              </button>
+<button class="cluster-btn px-4 py-1.5 rounded-full bg-white hover:bg-glacier-50 text-slate-700 text-xs font-semibold transition-all border border-slate-200" data-cluster="brazil">
+                Node: Brazil (BR-East)
+              </button>
+<button class="cluster-btn px-4 py-1.5 rounded-full bg-white hover:bg-glacier-50 text-slate-700 text-xs font-semibold transition-all border border-slate-200" data-cluster="south-africa">
+                Node: South Africa (ZA-South)
+              </button>
+</div>
+</div>
+<!-- Architecture Topology Diagram -->
+<div class="bg-glacier-50/70 rounded-2xl p-6 lg:p-8 space-y-6 border border-glacier-100">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- National Cluster Box -->
+<div class="bg-white p-6 rounded-xl shadow-xs space-y-4 border-l-4 border-glacier-600 border border-slate-200/80">
+<div class="flex items-center justify-between">
+<span class="text-sm font-bold text-slate-900" id="cluster-name">Cluster IN-DL-01</span>
+<span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-bold">SOVEREIGN AIRGAP</span>
+</div>
+<div class="space-y-2.5 font-mono text-xs">
+<div class="p-3 rounded-lg bg-glacier-50 border border-glacier-100 flex items-center justify-between">
+<span class="text-slate-500">Storage Backend:</span>
+<span class="font-bold text-slate-900" id="cluster-storage">PostgreSQL / TimescaleDB (New Delhi)</span>
+</div>
+<div class="p-3 rounded-lg bg-glacier-50 border border-glacier-100 flex items-center justify-between">
+<span class="text-slate-500">Kafka Cluster:</span>
+<span class="font-bold text-slate-900">3 Brokers (Strimzi)</span>
+</div>
+<div class="p-3 rounded-lg bg-glacier-50 border border-glacier-100 flex items-center justify-between">
+<span class="text-slate-500">ASR Language Node:</span>
+<span class="font-bold text-glacier-700" id="cluster-lang">Bhashini / Whisper-IN</span>
+</div>
+</div>
+<div class="pt-2 text-slate-500 text-xs flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-[16px] text-glacier-600">security</span>
+<span>Resident Jurisdiction: Digital Personal Data Protection Act (DPDP)</span>
+</div>
+</div>
+<!-- The Sovereign Bridge Connector -->
+<div class="flex flex-col items-center justify-center p-6 bg-white rounded-xl border border-glacier-200 shadow-xs text-center space-y-4">
+<div class="w-14 h-14 rounded-full bg-glacier-100 text-glacier-700 border border-glacier-200 flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[28px]">sync_alt</span>
+</div>
+<div>
+<span class="text-sm text-slate-900 font-bold block">Federated Policy Bus</span>
+<span class="text-xs text-slate-500 block mt-1">
+                    Zero Citizen Records Exchanged
+                  </span>
+</div>
+<div class="px-3.5 py-1.5 rounded-full bg-glacier-50 border border-glacier-200 text-glacier-800 font-mono text-xs font-semibold shadow-xs">
+                  Δ Differential Privacy ε ≤ 0.05
+                </div>
+</div>
+<!-- Global DPG Model & Registry Sync -->
+<div class="bg-white p-6 rounded-xl shadow-xs space-y-4 border-l-4 border-glacier-400 border border-slate-200/80">
+<div class="flex items-center justify-between">
+<span class="text-sm font-bold text-slate-900">DPG Registry &amp; Global Model</span>
+<span class="px-2.5 py-0.5 rounded-full bg-glacier-100 text-glacier-800 border border-glacier-200 text-[11px] font-bold">DPG #0841</span>
+</div>
+<div class="space-y-2.5 font-mono text-xs">
+<div class="p-3 rounded-lg bg-glacier-50 border border-glacier-100 flex items-center justify-between">
+<span class="text-slate-500">Federated Aggregator:</span>
+<span class="font-bold text-slate-900">Flower / PySyft Worker</span>
+</div>
+<div class="p-3 rounded-lg bg-glacier-50 border border-glacier-100 flex items-center justify-between">
+<span class="text-slate-500">Synced Assets:</span>
+<span class="font-bold text-glacier-700">Fine-tuned Model Weights</span>
+</div>
+<div class="p-3 rounded-lg bg-glacier-50 border border-glacier-100 flex items-center justify-between">
+<span class="text-slate-500">Global Dashboards:</span>
+<span class="font-bold text-slate-900">UN SDG Progress Metrics</span>
+</div>
+</div>
+<div class="pt-2 text-slate-500 text-xs flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-[16px] text-glacier-600">public</span>
+<span>Open Source Distribution via GitHub / Codeberg</span>
+</div>
+</div>
+</div>
+<!-- Architectural Visual Graph Representation -->
+<div class="w-full bg-white p-4 rounded-xl border border-glacier-200 flex items-center justify-center">
+<svg class="w-full max-w-2xl h-16" fill="none" viewbox="0 0 600 50" xmlns="http://www.w3.org/2000/svg">
+<line class="text-glacier-600" stroke="currentColor" stroke-dasharray="4 4" stroke-width="2" x1="30" x2="250" y1="25" y2="25"></line>
+<circle class="fill-glacier-600" cx="30" cy="25" r="7"></circle>
+<circle class="fill-glacier-400" cx="250" cy="25" r="5"></circle>
+<line class="text-glacier-400" stroke="currentColor" stroke-width="3" x1="260" x2="340" y1="25" y2="25"></line>
+<circle class="fill-glacier-400" cx="350" cy="25" r="5"></circle>
+<line class="text-glacier-400" stroke="currentColor" stroke-dasharray="4 4" stroke-width="2" x1="360" x2="570" y1="25" y2="25"></line>
+<circle class="fill-glacier-600" cx="570" cy="25" r="7"></circle>
+<text class="fill-current text-slate-500 text-[11px] font-mono font-medium" text-anchor="middle" x="300" y="44">Mutual TLS 1.3 Strict Verification Ring</text>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- Public Data Governance, DPG Verifications & Compliance Badges -->
+<section class="max-w-7xl mx-auto px-6 py-16 w-full space-y-10">
+<div class="text-center max-w-3xl mx-auto space-y-3">
+<span class="px-3.5 py-1 rounded-full bg-glacier-100 border border-glacier-200 text-glacier-800 text-xs font-bold uppercase tracking-wider">
+            Public Good Verifiability
+          </span>
+<h2 class="font-headline-xl text-3xl lg:text-4xl text-slate-900 font-bold tracking-tight">Institutional Trust &amp; Open Standards Compliance</h2>
+<p class="font-body-lg text-slate-600">
+            Audit certificates, open license compliance, and United Nations sustainable development alignments verified independently by third-party civic bodies.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Badge 1: Apache-2.0 -->
+<div class="bg-white p-6 rounded-2xl border border-glacier-200 shadow-sm hover:shadow-md hover:border-glacier-300 transition-all flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="w-12 h-12 rounded-xl bg-glacier-100 border border-glacier-200 text-glacier-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">code</span>
+</div>
+<h3 class="font-headline-md text-base text-slate-900 font-bold">Apache-2.0 Open Source</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+                Full codebase published without proprietary blobs. Free to deploy, modify, and distribute with patent rights explicitly granted to all adopting state entities.
+              </p>
+</div>
+<div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+<span class="font-mono text-xs text-glacier-700 font-bold">OSI Approved</span>
+<a class="text-glacier-600 hover:text-glacier-700 text-xs font-semibold flex items-center gap-1 hover:underline" href="#">
+<span>License File</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Badge 2: UN SDG Alignment -->
+<div class="bg-white p-6 rounded-2xl border border-glacier-200 shadow-sm hover:shadow-md hover:border-glacier-300 transition-all flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="w-12 h-12 rounded-xl bg-glacier-100 border border-glacier-200 text-glacier-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">domain</span>
+</div>
+<h3 class="font-headline-md text-base text-slate-900 font-bold">UN SDG 9 &amp; 11 Aligned</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+                Targeted directly at Industry, Innovation &amp; Infrastructure (Goal 9) and Sustainable Cities &amp; Communities (Goal 11). Quantifies civic asset lifespans.
+              </p>
+</div>
+<div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+<span class="font-mono text-xs text-glacier-700 font-bold">UN DPG #0841</span>
+<a class="text-glacier-600 hover:text-glacier-700 text-xs font-semibold flex items-center gap-1 hover:underline" href="#">
+<span>SDG Mapping</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Badge 3: WCAG 2.1 AA Certified -->
+<div class="bg-white p-6 rounded-2xl border border-glacier-200 shadow-sm hover:shadow-md hover:border-glacier-300 transition-all flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="w-12 h-12 rounded-xl bg-glacier-100 border border-glacier-200 text-glacier-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">accessibility_new</span>
+</div>
+<h3 class="font-headline-md text-base text-slate-900 font-bold">WCAG 2.1 AA Certified</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+                Designed for 4.5:1 minimum contrast across all displays. Fully accessible via screen readers, keyboard navigation, and low-fidelity voice assistants.
+              </p>
+</div>
+<div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+<span class="font-mono text-xs text-glacier-700 font-bold">Score: 100/100</span>
+<a class="text-glacier-600 hover:text-glacier-700 text-xs font-semibold flex items-center gap-1 hover:underline" href="#">
+<span>VPAT Report</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Badge 4: Zero-PII Gateway Guarantee -->
+<div class="bg-white p-6 rounded-2xl border border-glacier-200 shadow-sm hover:shadow-md hover:border-glacier-300 transition-all flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="w-12 h-12 rounded-xl bg-glacier-100 border border-glacier-200 text-glacier-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">verified</span>
+</div>
+<h3 class="font-headline-md text-base text-slate-900 font-bold">Zero-PII Gateway Verified</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+                Independent cryptographic verification that citizen mobile numbers and names are tokenized and irreversibly redacted prior to disk persistence.
+              </p>
+</div>
+<div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+<span class="font-mono text-xs text-glacier-700 font-bold">Formal Provability</span>
+<a class="text-glacier-600 hover:text-glacier-700 text-xs font-semibold flex items-center gap-1 hover:underline" href="#">
+<span>Audit Key #4B8</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Deployment CTA Ribbon -->
+<section class="w-full bg-gradient-to-r from-glacier-700 via-glacier-600 to-glacier-800 text-white py-14 px-6 mt-8 relative overflow-hidden shadow-lg shadow-glacier-700/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+<div class="space-y-2 max-w-2xl text-center md:text-left">
+<h3 class="font-headline-xl text-3xl font-bold tracking-tight text-white">
+              Ready to Deploy Setu in Your Jurisdiction?
+            </h3>
+<p class="font-body-lg text-glacier-100 text-base">
+              Access the sovereign Kubernetes Helm repository, local dialect model weights, and the zero-PII gateway test harness.
+            </p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a class="h-12 px-6 rounded-full bg-white text-glacier-800 hover:bg-glacier-50 font-semibold text-sm flex items-center gap-2 shadow-md transition-all" href="#">
+<span class="material-symbols-outlined text-[20px] text-glacier-700">download</span>
+<span>Download Helm Charts</span>
+</a>
+<a class="h-12 px-6 rounded-full bg-glacier-800/80 hover:bg-glacier-900 text-white border border-glacier-400/40 font-semibold text-sm flex items-center gap-2 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<span>View GitHub Repo</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+<!-- Inline Micro-Interaction Logic for Pipeline Stages & Federation Topology -->
+<script>
+      (function() {
+        const stageData = {
+          "1": {
+            badge: "Stage 01: Multimodal Ingestion",
+            title: "Dialect-Resilient Multimodal Voice & Messaging Intake",
+            description: "Citizens report potable water deficits, culvert collapse, and transmission line outages across IVR phone trees, asynchronous WhatsApp audio snippets, or an ultra-low footprint 2G progressive web application (under 300KB initial payload).",
+            m1: "14,200 msg/s",
+            m2: "2G / Edge",
+            m3: "48 Accents",
+            tags: ["Asterisk / FreeSWITCH IVR", "Twilio / Karix SMS Hooks", "OPUS Audio Streamer", "ServiceWorker Cache Storage"],
+            guardrailStatus: "Pre-Storage Cryptographic Hash Active",
+            guardrailNote: "Raw citizen mobile identifiers and voice biometric signatures are buffered purely in ephemeral memory and discarded upon stage handoff.",
+            code: `{\n  "event_id": "evt_9984bf41-8c01",\n  "nation_id": "IN-MH",\n  "channel": "WHATSAPP_AUDIO_OPUS",\n  "ingress_timestamp": "2025-05-18T09:41:22.104Z",\n  "sender_raw": "+91-98440-XXXXX",\n  "voice_payload_hash": "sha256:e3b0c44298fc1c149afbf4c8...",\n  "detected_dialect": "marathi_rural_vidarbha",\n  "audio_duration_sec": 14.8,\n  "client_fingerprint": "pwa_sw_v2_offline_synced",\n  "edge_status": "QUEUED_FOR_REDACT_STAGE"\n}`
+          },
+          "2": {
+            badge: "Stage 02: Gateway & PII Sanitization",
+            title: "Edge PII Sanitizer & Cryptographic Pseudonymization Engine",
+            description: "Zero-store architecture guarantee: The ingress proxy replaces citizen MSISDN, voice identifiers, and geographic street names with salted SHA-512 hashes. Rotating jurisdictional salt keys ensure neither engineers nor policymakers can re-identify vulnerable complainants.",
+            m1: "0 Bytes PII",
+            m2: "< 12ms",
+            m3: "HMAC-SHA512",
+            tags: ["Envoy WASM Filter", "Rotating HSM Salt Engine", "Named Entity Recognition (Presidio)", "Geo-Fuzzing (250m Jitter)"],
+            guardrailStatus: "Zero Disk Egress Verification: PASS",
+            guardrailNote: "Direct byte inspection certifies zero unredacted telephone numbers or street-level addresses penetrate the internal Kafka bus.",
+            code: `{\n  "event_id": "evt_9984bf41-8c01",\n  "nation_id": "IN-MH",\n  "citizen_pseudonym": "anon_u_7f1c9902b8d0034a",\n  "geo_cluster_centroid": {\n    "lat": 20.892,\n    "lon": 77.749,\n    "geohash_precision_6": "te7u0x"\n  },\n  "redaction_audit_proof": "zkp_salt_sig_a89104c8f",\n  "ingress_timestamp": "2025-05-18T09:41:22.116Z",\n  "pii_presence": false\n}`
+          },
+          "3": {
+            badge: "Stage 03: Event Bus & NLP Core",
+            title: "Self-Hosted Strimzi Kafka Bus & Multilingual Semantic NLP",
+            description: "Buffered across high-throughput Kafka partitions organized by sovereign jurisdictional codes. Worker pods run containerized Whisper Medium and NLLB-200 transformers, transcribing rural speech to text and vectorizing issue semantics.",
+            m1: "42,000 evt/s",
+            m2: "Whisper Med",
+            m3: "NLLB-200",
+            tags: ["Apache Kafka 3.6 / Strimzi", "KNative Auto-scaling Workers", "HuggingFace Transformers", "Qdrant Vector Cluster"],
+            guardrailStatus: "Local On-Prem GPU Cluster Bound",
+            guardrailNote: "Transcription and categorization models run exclusively on local infrastructure with zero API calls to foreign multi-tenant LLMs.",
+            code: `{\n  "event_id": "evt_9984bf41-8c01",\n  "transcribed_text_en": "Main irrigation canal culvert cracked, farmland inundated.",\n  "source_language": "mar",\n  "sentiment_urgency_score": 0.89,\n  "domain_taxonomy": "IRRIGATION_AND_WATERWORKS",\n  "semantic_vector_dim": 768,\n  "duplicate_cluster_id": "cluster_irrig_2025_05_vidarbha_04",\n  "kafka_partition": "in_mh_water_events_p3"\n}`
+          },
+          "4": {
+            badge: "Stage 04: Fusion & Prioritization Engine",
+            title: "Explainable Prioritization & Algorithmic Allocation Matrix",
+            description: "Computes dynamic priority scores by intersecting citizen incident density against ward socio-economic deprivation and verified physical maintenance deficits. Prevents allocation skew toward affluent or politically favored districts.",
+            m1: "Score: 91.4/100",
+            m2: "Explainable",
+            m3: "Deterministic",
+            tags: ["Setu Priority v2 Engine", "GeoJSON Voronoi Mesher", "Socio-Economic Index API", "PostGIS Spatial R-Tree"],
+            guardrailStatus: "Audit Logged in Immutable Merkle Tree",
+            guardrailNote: "The weights and variable components of every generated score are signed and exposed for public oversight.",
+            code: `{\n  "ticket_id": "TCK-2025-0914-MH",\n  "calculation": {\n    "demand_factor_d": 4.82,\n    "vulnerability_index_v": 2.1,\n    "asset_deficit_def": 9.02,\n    "computed_score": 91.388\n  },\n  "allocation_recommendation": "IMMEDIATE_PUBLIC_WORKS_DISPATCH",\n  "affected_population_estimate": 1420,\n  "merkle_root_proof": "0x7a31...b01c"\n}`
+          },
+          "5": {
+            badge: "Stage 05: Sovereign Data Lake & Analytics",
+            title: "Sovereign In-Country Warehouse & Transparency Portal Sync",
+            description: "Cold records land in nation-partitioned TimescaleDB/ClickHouse instances governed by the national civil authority. De-identified analytical rollups stream to public transparency interfaces and civil society monitors.",
+            m1: "ClickHouse",
+            m2: "nation_id Bound",
+            m3: "0 Egress",
+            tags: ["TimescaleDB / ClickHouse", "Apache Superset Dashboards", "Prometheus Metric Exporter", "mTLS Sovereign Gateways"],
+            guardrailStatus: "Absolute Sovereign Residency Locked",
+            guardrailNote: "Raw database partitions are cryptographically locked to national datacenter IPs. Inter-nation synchronizations exchange model updates only.",
+            code: `{\n  "warehouse_node": "IN-MUMBAI-DATA-VAULT-01",\n  "retention_policy_days": 1825,\n  "partition_key": "nation_id=IN_state=MH",\n  "transparency_ledger_sync": true,\n  "public_audit_uri": "https://transparency.setu.gov.in/tck/TCK-2025-0914-MH",\n  "sovereignty_verification": "VALIDATED_BY_CAG_CERT"\n}`
+          }
+        };
+
+        let currentStage = 1;
+
+        function renderStage(stageId) {
+          const data = stageData[stageId];
+          if (!data) return;
+
+          document.getElementById('stage-badge').innerText = data.badge;
+          document.getElementById('stage-title').innerText = data.title;
+          document.getElementById('stage-description').innerText = data.description;
+          document.getElementById('metric-1').innerText = data.m1;
+          document.getElementById('metric-2').innerText = data.m2;
+          document.getElementById('metric-3').innerText = data.m3;
+          document.getElementById('code-terminal').innerText = data.code;
+          document.getElementById('guardrail-status').innerText = data.guardrailStatus;
+          document.getElementById('guardrail-note').innerText = data.guardrailNote;
+
+          const tagsContainer = document.getElementById('tech-tags');
+          tagsContainer.innerHTML = '';
+          data.tags.forEach(t => {
+            const span = document.createElement('span');
+            span.className = "px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-medium text-slate-700";
+            span.innerText = t;
+            tagsContainer.appendChild(span);
+          });
+
+          // Update Tab Visuals
+          document.querySelectorAll('.stage-nav-card').forEach(btn => {
+            const sid = btn.getAttribute('data-stage');
+            const ind = btn.querySelector('.stage-indicator');
+            const badge = btn.querySelector('.font-label-sm');
+            if (sid === String(stageId)) {
+              btn.classList.add('bg-glacier-50/70', 'border-glacier-300');
+              btn.classList.remove('bg-white', 'border-slate-200');
+              if (badge) {
+                badge.className = "px-2.5 py-0.5 rounded-full font-label-sm text-xs bg-glacier-600 text-white font-bold tracking-wider";
+              }
+              if (ind) ind.classList.remove('hidden');
+            } else {
+              btn.classList.remove('bg-glacier-50/70', 'border-glacier-300');
+              btn.classList.add('bg-white', 'border-slate-200');
+              if (badge) {
+                badge.className = "px-2.5 py-0.5 rounded-full font-label-sm text-xs bg-slate-100 text-slate-700 font-bold tracking-wider";
+              }
+              if (ind) ind.classList.add('hidden');
+            }
+          });
+          currentStage = Number(stageId);
+        }
+
+        document.querySelectorAll('.stage-nav-card').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const stage = btn.getAttribute('data-stage');
+            renderStage(stage);
+          });
+        });
+
+        document.getElementById('step-forward-btn').addEventListener('click', () => {
+          let next = currentStage + 1;
+          if (next > 5) next = 1;
+          renderStage(next);
+        });
+
+        document.getElementById('step-backward-btn').addEventListener('click', () => {
+          let prev = currentStage - 1;
+          if (prev < 1) prev = 5;
+          renderStage(prev);
+        });
+
+        document.getElementById('simulate-payload-btn').addEventListener('click', () => {
+          let step = 1;
+          renderStage(1);
+          const timer = setInterval(() => {
+            step++;
+            if (step > 5) {
+              clearInterval(timer);
+            } else {
+              renderStage(step);
+            }
+          }, 1100);
+        });
+
+        // Multi-Nation Cluster Switcher Micro-Interaction
+        const clusterMeta = {
+          india: {
+            name: "Cluster IN-DL-01 (Delhi Core)",
+            storage: "TimescaleDB (New Delhi Node)",
+            lang: "Bhashini / Whisper-IN",
+            badge: "DPDP Act Compliant"
+          },
+          brazil: {
+            name: "Cluster BR-SP-04 (São Paulo)",
+            storage: "ClickHouse (Campinas Datacenter)",
+            lang: "Whisper-PT / Curupira-LLM",
+            badge: "LGPD Mandate Certified"
+          },
+          "south-africa": {
+            name: "Cluster ZA-CT-02 (Cape Town)",
+            storage: "PostgreSQL (Johannesburg Airgap)",
+            lang: "Whisper-Zulu / Xhosa FineTune",
+            badge: "POPIA Section 72 Standard"
+          }
+        };
+
+        document.querySelectorAll('.cluster-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            document.querySelectorAll('.cluster-btn').forEach(b => {
+              b.classList.remove('bg-glacier-600', 'text-white', 'border-glacier-600', 'active');
+              b.classList.add('bg-white', 'text-slate-700', 'border-slate-200');
+            });
+            btn.classList.add('bg-glacier-600', 'text-white', 'border-glacier-600', 'active');
+            btn.classList.remove('bg-white', 'text-slate-700', 'border-slate-200');
+
+            const key = btn.getAttribute('data-cluster');
+            const c = clusterMeta[key];
+            if (c) {
+              document.getElementById('cluster-name').innerText = c.name;
+              document.getElementById('cluster-storage').innerText = c.storage;
+              document.getElementById('cluster-lang').innerText = c.lang;
+            }
+          });
+        });
+      })();
+    </script>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-slate-50 border-t border-glacier-200/80 mt-12">
+<div class="max-w-7xl mx-auto px-6 py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-slate-200">
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-xl text-glacier-800 font-bold">Setu</span>
+<span class="px-2.5 py-0.5 bg-glacier-100 text-glacier-800 border border-glacier-200 text-xs font-semibold rounded-full">Public Infrastructure</span>
+</div>
+<p class="text-xs text-slate-600 leading-relaxed">
+            Decentralized, sovereign civic intelligence bridging grassroots voice to proactive public works allocation across BRICS partner nations.
+          </p>
+</div>
+<div>
+<h4 class="font-label-lg text-sm text-slate-900 font-bold mb-3">Trust &amp; Governance</h4>
+<ul class="space-y-2 text-xs text-slate-600">
+<li>Apache 2.0 Open Source License</li>
+<li>WCAG 2.1 AA Accessibility Certified</li>
+<li>Local Data Residency Guarantee</li>
+<li>Zero Untracked PII Retention</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-sm text-slate-900 font-bold mb-3">Sustainable Impact</h4>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-medium">
+<span class="material-symbols-outlined text-[16px] text-glacier-600">domain</span>
+              UN SDG 9: Infrastructure
+            </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-medium">
+<span class="material-symbols-outlined text-[16px] text-glacier-600">location_city</span>
+              UN SDG 11: Sustainable Cities
+            </span>
+</div>
+</div>
+<div>
+<h4 class="font-label-lg text-sm text-slate-900 font-bold mb-3">Rapid Intake</h4>
+<p class="text-xs text-slate-600 mb-3 leading-relaxed">Submit multi-dialect voice memos via telecom-agnostic toll-free channels.</p>
+<a class="inline-flex items-center gap-1.5 text-xs font-bold text-glacier-700 hover:text-glacier-800 hover:underline" data-path="voice-and-whatsapp-intake" href="#">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+<span>Dial Civic Hotlines</span>
+</a>
+</div>
+</div>
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
+<div class="flex items-center gap-3">
+<span>© 2025 Setu Open Source Initiative. DPG Registry ID: #DPG-0841.</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            Sovereign Data Storage: In-Country Nodes
+          </span>
+<span>All Systems Operational</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

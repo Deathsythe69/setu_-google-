@@ -1,0 +1,134 @@
+[
+  {
+    "region_id": "IND-VAR-01",
+    "region_name": "Varanasi District (Urban Ghats & Trans-Varuna)",
+    "state": "Uttar Pradesh",
+    "nation_id": "IND",
+    "population": 3676841,
+    "density_sq_km": 2395,
+    "vulnerability_index": 48.2,
+    "source": "Census of India & NITI Aayog Multidimensional Poverty Index (MPI) Uttar Pradesh Report"
+  },
+  {
+    "region_id": "IND-BUN-02",
+    "region_name": "Chhatarpur District (Bundelkhand Drought Basin)",
+    "state": "Madhya Pradesh",
+    "nation_id": "IND",
+    "population": 1762375,
+    "density_sq_km": 203,
+    "vulnerability_index": 82.4,
+    "source": "NITI Aayog Aspirational Districts Baseline & Bundelkhand Special Package Evaluation"
+  },
+  {
+    "region_id": "IND-MUM-03",
+    "region_name": "Mumbai Suburban Ward G-North (Dharavi / Mahim)",
+    "state": "Maharashtra",
+    "nation_id": "IND",
+    "population": 985000,
+    "density_sq_km": 66000,
+    "vulnerability_index": 78.6,
+    "source": "Brihanmumbai Municipal Corporation (BMC) Ward Profile & Slum Rehabilitation Authority"
+  },
+  {
+    "region_id": "IND-PAT-04",
+    "region_name": "Patna Urban Lowland Basin (Ward 9 & Kankarbagh)",
+    "state": "Bihar",
+    "nation_id": "IND",
+    "population": 2046652,
+    "density_sq_km": 1823,
+    "vulnerability_index": 64.1,
+    "source": "Bihar Urban Infrastructure Development Corporation (BUIDCO) & NITI Aayog MPI"
+  },
+  {
+    "region_id": "IND-BLR-05",
+    "region_name": "Bengaluru East Mahadevapura Tech Corridor",
+    "state": "Karnataka",
+    "nation_id": "IND",
+    "population": 1120000,
+    "density_sq_km": 4381,
+    "vulnerability_index": 31.5,
+    "source": "Bruhat Bengaluru Mahanagara Palike (BBMP) Restructuring & Janaagraha Urban Baseline"
+  },
+  {
+    "region_id": "IND-GUW-06",
+    "region_name": "Guwahati Brahmaputra Flood Plain (Sector 3)",
+    "state": "Assam",
+    "nation_id": "IND",
+    "population": 1253938,
+    "density_sq_km": 1310,
+    "vulnerability_index": 59.8,
+    "source": "Guwahati Metropolitan Development Authority (GMDA) Comprehensive Mobility Plan"
+  },
+
+  {
+    "region_id": "BRA-RIO-01",
+    "region_name": "Complexo da Maré (Zona Norte Favela Cluster)",
+    "state": "Rio de Janeiro",
+    "nation_id": "BRA",
+    "population": 140000,
+    "density_sq_km": 32000,
+    "vulnerability_index": 79.4,
+    "source": "Instituto Brasileiro de Geografia e Estatística (IBGE) Censo Favelas & Redes da Maré"
+  },
+  {
+    "region_id": "BRA-MAN-02",
+    "region_name": "Manaus Igarapé Riverine Floodplain",
+    "state": "Amazonas",
+    "nation_id": "BRA",
+    "population": 2063547,
+    "density_sq_km": 180,
+    "vulnerability_index": 71.8,
+    "source": "IBGE Censo Amazonas & PROSAMIM Programa Socioambiental dos Igarapés de Manaus"
+  },
+  {
+    "region_id": "BRA-REC-03",
+    "region_name": "Recife Coastal Morros & Lowland Slopes",
+    "state": "Pernambuco",
+    "nation_id": "BRA",
+    "population": 1488920,
+    "density_sq_km": 6800,
+    "vulnerability_index": 75.2,
+    "source": "Prefeitura do Recife Defesa Civil & IPEA Atlas da Vulnerabilidade Social"
+  },
+  {
+    "region_id": "BRA-SAO-04",
+    "region_name": "São Paulo Zona Leste (Itaquera / Cidade Tiradentes)",
+    "state": "São Paulo",
+    "nation_id": "BRA",
+    "population": 2400000,
+    "density_sq_km": 12500,
+    "vulnerability_index": 58.7,
+    "source": "Fundação Seade & Metrô São Paulo Relatório de Sustentabilidade"
+  },
+
+  {
+    "region_id": "ZAF-JHB-01",
+    "region_name": "City of Johannesburg Region D (Soweto Sub-basin)",
+    "state": "Gauteng",
+    "nation_id": "ZAF",
+    "population": 1271628,
+    "density_sq_km": 6350,
+    "vulnerability_index": 68.3,
+    "source": "Statistics South Africa (Stats SA) Census & Gauteng Provincial Socio-Economic Index"
+  },
+  {
+    "region_id": "ZAF-CPT-02",
+    "region_name": "City of Cape Town Sub-council 9 (Khayelitsha)",
+    "state": "Western Cape",
+    "nation_id": "ZAF",
+    "population": 920000,
+    "density_sq_km": 8900,
+    "vulnerability_index": 84.1,
+    "source": "City of Cape Town Spatial Development Framework & Social Justice Coalition"
+  },
+  {
+    "region_id": "ZAF-DUR-03",
+    "region_name": "eThekwini Metropolitan Municipality (Umlazi South)",
+    "state": "KwaZulu-Natal",
+    "nation_id": "ZAF",
+    "population": 750000,
+    "density_sq_km": 4800,
+    "vulnerability_index": 72.0,
+    "source": "eThekwini Integrated Development Plan (IDP) & Stats SA Community Survey"
+  }
+]

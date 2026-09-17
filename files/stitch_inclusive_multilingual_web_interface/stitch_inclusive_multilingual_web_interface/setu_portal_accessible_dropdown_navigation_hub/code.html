@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error":"#ffffff","surface-variant":"#dae2fd","inverse-on-surface":"#eef0ff","on-tertiary-fixed-variant":"#6e3900","tertiary-fixed":"#ffdcc3","on-secondary-fixed-variant":"#005049","tertiary-fixed-dim":"#ffb77d","surface-tint":"#3755c3","on-primary-fixed":"#001453","secondary-fixed-dim":"#6bd8cb","primary":"#00288e","surface":"#faf8ff","on-tertiary-container":"#ffa85d","error":"#ba1a1a","secondary-fixed":"#89f5e7","surface-container-highest":"#dae2fd","surface-container":"#eaedff","on-primary":"#ffffff","secondary":"#006a61","error-container":"#ffdad6","surface-container-low":"#f2f3ff","secondary-container":"#86f2e4","surface-bright":"#faf8ff","on-secondary-fixed":"#00201d","on-tertiary-fixed":"#2f1500","on-primary-container":"#a8b8ff","background":"#faf8ff","inverse-surface":"#283044","primary-container":"#1e40af","on-secondary-container":"#006f66","on-error-container":"#93000a","tertiary-container":"#743d00","on-surface":"#131b2e","surface-dim":"#d2d9f4","on-surface-variant":"#444653","primary-fixed-dim":"#b8c4ff","tertiary":"#532a00","surface-container-high":"#e2e7ff","inverse-primary":"#b8c4ff","outline":"#757684","on-tertiary":"#ffffff","outline-variant":"#c4c5d5","surface-container-lowest":"#ffffff","primary-fixed":"#dde1ff","on-background":"#131b2e","on-primary-fixed-variant":"#173bab","on-secondary":"#ffffff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin-mobile":"1rem","space-md":"1rem","space-sm":"0.5rem","margin":"2rem","space-xl":"2.5rem","space-xs":"0.25rem","gutter":"1.5rem","gutter-mobile":"1rem","space-lg":"1.5rem"},fontFamily:{"body-md":["Noto Sans"],"label-lg":["Noto Sans"],"label-md":["Noto Sans"],"headline-xl":["Noto Sans"],"headline-lg":["Noto Sans"],"display-lg":["Noto Sans"],"headline-xl-mobile":["Noto Sans"],"body-lg":["Noto Sans"],"headline-md":["Noto Sans"],"display-lg-mobile":["Noto Sans"],"label-sm":["Noto Sans"],"body-xl":["Noto Sans"]},fontSize:{"body-md":["14px",{"lineHeight":"24px","fontWeight":"400"}],"label-lg":["16px",{"lineHeight":"24px","letterSpacing":"0.01em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-xl":["32px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"34px","fontWeight":"600"}],"display-lg":["44px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"36px","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"30px","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.03em","fontWeight":"600"}],"body-xl":["18px",{"lineHeight":"30px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(15,23,42,0.06)]"><div class="bg-surface-container-low px-space-lg py-1 flex items-center justify-between border-b border-surface-container text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-md"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">public</span>BRICS Sovereign DPG Network</span><span class="hidden md:inline text-outline-variant">|</span><span class="hidden md:inline text-on-surface-variant">Sovereign Data Residency &amp; PII Safe</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-1"><button aria-label="Decrease font size" class="px-1.5 py-0.5 rounded hover:bg-surface-container-high hover:text-on-surface font-label-sm text-label-sm" type="button">A-</button><button aria-label="Increase font size" class="px-1.5 py-0.5 rounded hover:bg-surface-container-high hover:text-on-surface font-label-sm text-label-sm" type="button">A+</button></div><button class="flex items-center gap-1 px-2 py-0.5 rounded hover:bg-surface-container-high hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[15px]">contrast</span><span class="hidden sm:inline font-label-sm text-label-sm">High Contrast</span></button><button class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-secondary hover:bg-secondary-container hover:text-on-secondary-container transition-colors" type="button"><span class="material-symbols-outlined text-[15px]">volume_up</span><span class="hidden sm:inline font-label-sm text-label-sm">Listen to Briefing</span></button><div class="flex items-center gap-1 pl-2 border-l border-outline-variant"><span class="material-symbols-outlined text-[15px] text-on-surface-variant">translate</span><select aria-label="Select language" class="bg-transparent text-on-surface font-label-sm text-label-sm focus:outline-none cursor-pointer pr-1"><option>English (Global)</option><option>हिन्दी (Hindi)</option><option>中文 (Mandarin)</option><option>Русский (Russian)</option><option>Português (Brasil)</option><option>العربية (Arabic)</option></select></div></div></div><div class="h-20 max-w-7xl mx-auto px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-3"><img alt="Brand logo. - Primary color: #1e40af - Font: notoSans - Mode: light - Roundness: rounded-sm " class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XsiycFgZvTvqYbVgyz28WgO7sx71aaWhYswpiXnYFpFiltdubsk5fqTd_gKxoTmc5vZ84XC9sZqGIU2T09-h_ByOcNo9ydCfMFHQ5ba11m0eJ6eo6QOEiTeQpUNM7cPm5mbTr7laXXCBopEwr2RXgcxkEH3Ns-vttSj2M4ailr8imjTAAKxloT7zw6G9b-pOnt6a4UCBqopDO7Rb7xdHNESwHpvpLP5-KdRdjfJNumJy8UnBOU-Kl2TQ"/><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-headline-md text-headline-md text-primary tracking-tight">Setu</span><span class="px-1.5 py-0.5 bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm rounded-lg uppercase tracking-wider">DPG</span></div><span class="hidden sm:inline font-label-sm text-label-sm text-on-surface-variant -mt-0.5">DPG Citizen-to-Infrastructure Intelligence</span></div></div><nav class="hidden lg:flex items-center gap-space-sm" data-active-classes="bg-primary-container text-on-primary font-label-md text-label-md rounded-xl shadow-sm"><div class="relative group"><button class="px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1" type="button">Citizen Voice<span class="material-symbols-outlined text-[18px] text-on-surface-variant">expand_more</span></button><div class="absolute left-0 mt-1 w-64 p-2 bg-surface-container-lowest rounded-xl shadow-[0_8px_24px_rgba(15,23,42,0.12)] border border-surface-container-high opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 flex flex-col gap-1 z-50"><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="voice-and-whatsapp-intake" href="#">Voice &amp; WhatsApp Intake</a><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="track-report-status" href="#">Track Report Status</a><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="offline-pwa-sync" href="#">Offline PWA Sync</a></div></div><div class="relative group"><button class="px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1" type="button">Policymaker Intelligence<span class="material-symbols-outlined text-[18px] text-on-surface-variant">expand_more</span></button><div class="absolute left-0 mt-1 w-64 p-2 bg-surface-container-lowest rounded-xl shadow-[0_8px_24px_rgba(15,23,42,0.12)] border border-surface-container-high opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 flex flex-col gap-1 z-50"><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="national-hotspot-map" href="#">National Hotspot Map</a><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="ranked-priority-queue" href="#">Ranked Priority Queue</a><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="budget-allocation-simulator" href="#">Budget Allocation Simulator</a></div></div><div class="relative group"><button class="px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1" type="button">Architecture &amp; Governance<span class="material-symbols-outlined text-[18px] text-on-surface-variant">expand_more</span></button><div class="absolute left-0 mt-1 w-72 p-2 bg-surface-container-lowest rounded-xl shadow-[0_8px_24px_rgba(15,23,42,0.12)] border border-surface-container-high opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 flex flex-col gap-1 z-50"><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="federated-sovereign-architecture" href="#">Federated Sovereign Architecture</a><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="kafka-and-pii-redaction-pipeline" href="#">Kafka &amp; PII Redaction Pipeline</a><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="digital-public-good-and-open-source" href="#">DPG &amp; Open Source Stack</a></div></div><div class="relative group"><button class="px-3 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1" type="button">Impact &amp; Methodology<span class="material-symbols-outlined text-[18px] text-on-surface-variant">expand_more</span></button><div class="absolute left-0 mt-1 w-64 p-2 bg-surface-container-lowest rounded-xl shadow-[0_8px_24px_rgba(15,23,42,0.12)] border border-surface-container-high opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 flex flex-col gap-1 z-50"><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="priority-scoring-algorithm" href="#">Priority Scoring Algorithm</a><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="verified-projects" href="#">Verified Projects</a><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="citizen-audit-trail" href="#">Citizen Audit Trail</a></div></div></nav><div class="flex items-center gap-3"><a class="hidden sm:inline-flex items-center gap-2 h-11 px-5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors shadow-sm" data-path="report-infrastructure-issue" href="#"><span class="material-symbols-outlined text-[20px]">mic</span><span>Report Infrastructure Issue</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-28 bg-surface min-h-[calc(100vh-280px)]"><div class="flex flex-col w-full">
+<!-- Interactive Navigation & Accessibility Showcase Banner -->
+<section class="w-full bg-surface-container-low px-margin-mobile md:px-margin py-space-md">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-md">
+<!-- Live Accessibility Utility Bar -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-wrap items-center justify-between gap-space-sm text-on-surface">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-surface-container font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+            Sovereign Portal Engine
+          </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm hidden sm:inline">Universal Access Control (WCAG 2.1 AA)</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<!-- Text Resizer -->
+<div aria-label="Font scale adjustments" class="flex items-center bg-surface-container-high rounded-lg p-0.5" role="group">
+<button aria-label="Decrease text scale" class="px-2.5 py-1 rounded font-label-sm text-label-sm text-on-surface hover:bg-surface-container-lowest transition-colors flex items-center gap-0.5" id="btn-text-decrease" type="button">
+<span class="material-symbols-outlined text-[14px]">text_decrease</span>
+<span>A-</span>
+</button>
+<button aria-label="Reset text scale" class="px-2.5 py-1 rounded font-label-sm text-label-sm text-on-surface hover:bg-surface-container-lowest transition-colors" id="btn-text-reset" type="button">100%</button>
+<button aria-label="Increase text scale" class="px-2.5 py-1 rounded font-label-sm text-label-sm text-on-surface hover:bg-surface-container-lowest transition-colors flex items-center gap-0.5" id="btn-text-increase" type="button">
+<span class="material-symbols-outlined text-[14px]">text_increase</span>
+<span>A+</span>
+</button>
+</div>
+<!-- Dyslexia Friendly Toggle -->
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-colors" id="toggle-dyslexia" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">spellcheck</span>
+<span id="dyslexia-label">Dyslexia-Friendly Off</span>
+</button>
+<!-- High Contrast Mode Toggle -->
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-colors" id="toggle-contrast" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">contrast</span>
+<span id="contrast-label">High Contrast</span>
+</button>
+<!-- Multi-Script Selector -->
+<div class="relative inline-flex items-center bg-surface-container-high rounded-lg px-2 py-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant mr-1">language</span>
+<select aria-label="Choose sovereign script" class="bg-transparent text-on-surface font-label-sm text-label-sm cursor-pointer outline-none" id="script-selector">
+<option value="en">English (Universal)</option>
+<option value="hi">हिन्दी (Devanagari)</option>
+<option value="zh">中文 (Standard)</option>
+<option value="ru">Русский (Cyrillic)</option>
+<option value="pt">Português (BR)</option>
+<option value="ar">العربية (Arabic)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Decongested Dropdown Navigation Live Demonstration Hub -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm border-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">hub</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Interactive Navigation Hub &amp; Live Menus</h2>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed">Zero Cognitive Burden System</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md max-w-3xl">
+          Designed specifically for civic clarity across rural 2G terminals, local ward offices, and central ministries. Click or focus below to test the instant non-blocking navigation structure.
+        </p>
+<!-- Navigation Strip with Open-Ready Menus -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Column 1: Citizen Voice (Always prominent & accessible) -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2 text-primary font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+<span>Citizen Voice</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Primary</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">Multi-dialect voice memos, low-bandwidth queues, and zero-PII tracking.</p>
+<ul class="flex flex-col gap-2">
+<li>
+<a class="group flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:text-on-primary mt-0.5">graphic_eq</span>
+<div>
+<div class="font-label-md text-label-md group-hover:text-on-primary">Voice &amp; WhatsApp Intake</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant group-hover:text-on-primary-container">Dial IVR or transmit speech snippet</div>
+</div>
+</a>
+</li>
+<li>
+<a class="group flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:text-on-primary mt-0.5">receipt_long</span>
+<div>
+<div class="font-label-md text-label-md group-hover:text-on-primary">Track Report Status</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant group-hover:text-on-primary-container">Anonymous 6-digit public hash</div>
+</div>
+</a>
+</li>
+<li>
+<a class="group flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:text-on-primary mt-0.5">wifi_off</span>
+<div>
+<div class="font-label-md text-label-md group-hover:text-on-primary">2G Offline Queue</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant group-hover:text-on-primary-container">Cache locally until cellular lock</div>
+</div>
+</a>
+</li>
+</ul>
+</div>
+<a class="mt-space-md inline-flex items-center justify-center gap-2 h-14 w-full rounded-xl bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-md" href="#">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+<span>Report Infrastructure Issue</span>
+</a>
+</div>
+<!-- Column 2: Policymaker Intelligence -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2 text-primary font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[20px]">insights</span>
+<span>Policymaker Intel</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Admin</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">Objective GIS aggregation, systemic clustering, and multi-criteria urgency scores.</p>
+<ul class="flex flex-col gap-2">
+<li>
+<a class="group flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:text-on-primary mt-0.5">map</span>
+<div>
+<div class="font-label-md text-label-md group-hover:text-on-primary">National Hotspot Map</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant group-hover:text-on-primary-container">Live density gradients by sector</div>
+</div>
+</a>
+</li>
+<li>
+<a class="group flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:text-on-primary mt-0.5">format_list_numbered</span>
+<div>
+<div class="font-label-md text-label-md group-hover:text-on-primary">Ranked Priority Queue</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant group-hover:text-on-primary-container">Need score + population impact</div>
+</div>
+</a>
+</li>
+<li>
+<a class="group flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:text-on-primary mt-0.5">tune</span>
+<div>
+<div class="font-label-md text-label-md group-hover:text-on-primary">Scenario Simulator</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant group-hover:text-on-primary-container">Simulate capital allocation yield</div>
+</div>
+</a>
+</li>
+</ul>
+</div>
+<div class="mt-space-md p-2.5 bg-surface-container-lowest rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">sensors</span> 4,892 Live Reports Active
+              </span>
+</div>
+</div>
+<!-- Column 3: Architecture & System -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2 text-primary font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[20px]">device_hub</span>
+<span>Architecture &amp; System</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Tech</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">Sovereignty guarantees, local server parity, and Apache 2.0 open-source repositories.</p>
+<ul class="flex flex-col gap-2">
+<li>
+<a class="group flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:text-on-primary mt-0.5">account_tree</span>
+<div>
+<div class="font-label-md text-label-md group-hover:text-on-primary">Federated Sovereign Arch</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant group-hover:text-on-primary-container">Multi-cluster regional mesh</div>
+</div>
+</a>
+</li>
+<li>
+<a class="group flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:text-on-primary mt-0.5">lock_reset</span>
+<div>
+<div class="font-label-md text-label-md group-hover:text-on-primary">Zero-PII Ingestion Pipeline</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant group-hover:text-on-primary-container">Kafka stream redaction &amp; salt</div>
+</div>
+</a>
+</li>
+<li>
+<a class="group flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:text-on-primary mt-0.5">code</span>
+<div>
+<div class="font-label-md text-label-md group-hover:text-on-primary">Digital Public Good Docs</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant group-hover:text-on-primary-container">DPG Standard 508 &amp; OpenAPI v3</div>
+</div>
+</a>
+</li>
+</ul>
+</div>
+<div class="mt-space-md p-2.5 bg-surface-container-lowest rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span> Zero-Vendor Lock-in
+              </span>
+</div>
+</div>
+<!-- Column 4: Public Transparency -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2 text-primary font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[20px]">policy</span>
+<span>Public Transparency</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Auditor</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">Closed-loop citizen verification, tamper-proof logs, and measurable SDG milestones.</p>
+<ul class="flex flex-col gap-2">
+<li>
+<a class="group flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:text-on-primary mt-0.5">model_training</span>
+<div>
+<div class="font-label-md text-label-md group-hover:text-on-primary">Explainable Priority Score</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant group-hover:text-on-primary-container">Auditable mathematical weights</div>
+</div>
+</a>
+</li>
+<li>
+<a class="group flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:text-on-primary mt-0.5">history_edu</span>
+<div>
+<div class="font-label-md text-label-md group-hover:text-on-primary">Public Audit Ledger</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant group-hover:text-on-primary-container">Verifiable timeline of allocations</div>
+</div>
+</a>
+</li>
+<li>
+<a class="group flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary transition-colors text-on-surface shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:text-on-primary mt-0.5">flag</span>
+<div>
+<div class="font-label-md text-label-md group-hover:text-on-primary">UN SDG Alignment</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant group-hover:text-on-primary-container">Goal 9 &amp; Goal 11 civic matrices</div>
+</div>
+</a>
+</li>
+</ul>
+</div>
+<div class="mt-space-md p-2.5 bg-surface-container-lowest rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span> 100% Open Data Enclave
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Hero Section: Clean, Dignified, Uncluttered Citizen Intelligence -->
+<section class="w-full px-margin-mobile md:px-margin py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Overline & Main Title -->
+<div class="max-w-4xl flex flex-col gap-3">
+<div class="inline-flex items-center gap-2 self-start px-3 py-1 bg-surface-container-high rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Universal Civic Technology Standard</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight">
+          Democratizing Infrastructure Planning Through Multilingual Citizen Intelligence
+        </h1>
+<p class="font-body-xl text-body-xl text-on-surface-variant max-w-3xl leading-relaxed">
+          Setu translates unstructured citizen voice notes and community reports across 40+ dialects into mathematically prioritized, transparent public works budgets. Built for low-connectivity environments, sovereign data control, and citizen auditability.
+        </p>
+</div>
+<!-- Primary Action Cards Grid (3 Primary Persona Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mt-space-sm">
+<!-- Card 1: Citizens: Speak Your Issue -->
+<div class="group bg-surface-container-lowest rounded-xl p-space-lg shadow-md hover:shadow-xl transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-primary-container text-on-primary flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[30px]">mic</span>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Direct Voice Channel</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-space-xs group-hover:text-primary transition-colors">
+              Citizens: Speak Your Issue
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              No forms or high-speed data required. Dial our free IVR hotline, transmit a quick WhatsApp voice snippet in your local dialect, or log through offline PWA.
+            </p>
+<div class="bg-surface-container-low rounded-lg p-3 space-y-2 mb-space-md">
+<div class="flex items-center justify-between text-on-surface font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">phone_in_talk</span> Toll-Free Hotline:</span>
+<span class="font-bold text-primary">1-800-SETU-CIVIC</span>
+</div>
+<div class="flex items-center justify-between text-on-surface font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-secondary">chat</span> WhatsApp Mesh:</span>
+<span>+91 800-248-4242</span>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 h-14 w-full rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+<span>Record Voice Memo Now</span>
+</a>
+</div>
+<!-- Card 2: Officials: Explore Hotspots & Ranked Priorities -->
+<div class="group bg-surface-container-lowest rounded-xl p-space-lg shadow-md hover:shadow-xl transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-secondary text-on-secondary flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[30px]">analytics</span>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Policymaker Suite</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-space-xs group-hover:text-secondary transition-colors">
+              Officials: Explore Hotspots
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Data-driven transparent triage. Replace subjective contractor lobbying with an open multi-dimensional priority queue assessing safety, density, and cost.
+            </p>
+<div class="bg-surface-container-low rounded-lg p-3 space-y-2 mb-space-md">
+<div class="flex items-center justify-between text-on-surface font-label-sm text-label-sm">
+<span>Active Clustered Nodes:</span>
+<span class="font-semibold text-secondary">3,420 Wards</span>
+</div>
+<div class="flex items-center justify-between text-on-surface font-label-sm text-label-sm">
+<span>Avg Triage Latency:</span>
+<span class="font-semibold text-primary">2.4 Minutes</span>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 h-14 w-full rounded-xl bg-surface-container text-primary hover:bg-primary hover:text-on-primary font-label-md text-label-md transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span>Launch Hotspot Explorer</span>
+</a>
+</div>
+<!-- Card 3: Auditors & Public: Trace Verified Spend & Impact -->
+<div class="group bg-surface-container-lowest rounded-xl p-space-lg shadow-md hover:shadow-xl transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-surface-container-highest text-on-surface flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[30px] text-primary">verified</span>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Public Ledger</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-space-xs group-hover:text-primary transition-colors">
+              Auditors: Trace Spend &amp; Impact
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Closed-loop citizen verification. Cross-check municipal contract milestones directly against geo-tagged follow-up photos submitted by the local community.
+            </p>
+<div class="bg-surface-container-low rounded-lg p-3 space-y-2 mb-space-md">
+<div class="flex items-center justify-between text-on-surface font-label-sm text-label-sm">
+<span>Public Audit Ledger:</span>
+<span class="font-semibold text-secondary">Sha-256 Verifiable</span>
+</div>
+<div class="flex items-center justify-between text-on-surface font-label-sm text-label-sm">
+<span>Citizen Sign-offs:</span>
+<span class="font-semibold text-primary">94.1% Validated</span>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 h-14 w-full rounded-xl bg-surface-container text-primary hover:bg-primary hover:text-on-primary font-label-md text-label-md transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">policy</span>
+<span>Open Public Ledger</span>
+</a>
+</div>
+</div>
+<!-- Real-World Field Intelligence Snapshot (Visual Richness Element) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-5 flex flex-col gap-3">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">spatial_tracking</span> Field Verification Node
+          </span>
+<h4 class="font-headline-md text-headline-md text-on-surface">
+            Bridging Voice Signals to Municipal Works Teams
+          </h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Reports logged via voice memo pass through autonomous speech-to-text diarization, strip all identifying PII in transit, extract GPS coordinates from verbal landmarks, and surface directly inside district triage queues within seconds.
+          </p>
+<div class="flex items-center gap-space-md pt-2">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-primary font-bold">100%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Audio Anonymized</span>
+</div>
+<div class="w-px h-8 bg-surface-container-high"></div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-secondary font-bold">&lt; 350ms</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Kafka Pipeline Latency</span>
+</div>
+<div class="w-px h-8 bg-surface-container-high"></div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">42</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Local Dialects</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="rounded-xl overflow-hidden shadow-sm bg-surface-container">
+<img class="w-full h-48 object-cover" data-alt="A documentary-style daylight photo of a rural civic road repair site in an Indian municipality, showing municipal engineers collaborating with village elders holding low-bandwidth mobile phones, under calm natural sunlight, subtle blue and deep cyan workwear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw9bLHHdYGOC-hvgpnEUY2Zxt1Ejs4Q18QGYrUbkoF1EoGuisIzUGz9jIS14nXtnMjOgaln5Ks-NtUDVBOHtBYYuov8pc39JaPg6_0azHCsGUxR6uVrov2pgj-3eY_g67m5oZTjxGptLe24cbJvkBay9qSZMkmF5GhonR-iEIyWg9FefOJ3AHFDTyvPWjjMRhm_wfVWUDP0XRy7eEnDdjE1HEnQPPYkEJ-ERBMPSrf9vs8HGPnbWYk"/>
+<div class="p-3 bg-surface-container-low">
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">Culvert Rebuild - Sector 12</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Triggered via 34 citizen voice memos</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-sm bg-surface-container">
+<img class="w-full h-48 object-cover" data-alt="A clean civic engineering control room in a developing regional metropolis with operators reviewing digital public good infrastructure dashboards on wide monitors, bathed in soft daylight and balanced oceanic blues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANkvrVxOVviyGiqPf9X1fxcxb4B02tquSo8306FvdF-A9mMMreqcOUhKVvqvjSq8lCFYT399qhruDZxo9lXRwFH9PUYtZXYro3arS91y86gZpg9GCE8_nDPgFL7gGBcxr1L7wcDH9tUq7th_RS15ALkizApO8bdJRCDcijwmFSKU52ERWiLOhI-4qgyEKbW8gvStc57di827eGtOP7w4pr3NzzyatFimKGfT9JHPKt20S7gE5yV-Rn"/>
+<div class="p-3 bg-surface-container-low">
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">Regional Triage Operations</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Real-time unblocking of water main grid</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Interactive Navigation Matrix & Site Architecture Map -->
+<section class="w-full bg-surface-container-low px-margin-mobile md:px-margin py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="max-w-3xl">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Decentralized System Architecture</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mt-1">
+            Decongested Navigation Matrix by User Persona
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            Every user group reaches their designated public mission in zero unnecessary clicks, preventing civic decision fatigue and ensuring universal digital accessibility.
+          </p>
+</div>
+<!-- Filter / Tab Simulation for Personas -->
+<div class="flex items-center gap-1.5 p-1 bg-surface-container-highest rounded-xl overflow-x-auto self-start md:self-auto" role="tablist">
+<button class="persona-tab active px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold transition-all" data-persona="all" type="button">All Channels</button>
+<button class="persona-tab px-3 py-1.5 rounded-lg text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-semibold transition-all" data-persona="citizen" type="button">Citizens</button>
+<button class="persona-tab px-3 py-1.5 rounded-lg text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-semibold transition-all" data-persona="official" type="button">Local Officials</button>
+<button class="persona-tab px-3 py-1.5 rounded-lg text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-semibold transition-all" data-persona="auditor" type="button">Auditors</button>
+<button class="persona-tab px-3 py-1.5 rounded-lg text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-semibold transition-all" data-persona="integrator" type="button">Integrators</button>
+</div>
+</div>
+<!-- Persona Matrix Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md" id="matrix-container">
+<!-- Persona 1: Citizen -->
+<div class="persona-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between" data-category="citizen">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">record_voice_over</span> Citizen Persona
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Low Cognitive Load</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Voice &amp; Low-Spec Intake</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Targeted towards everyday citizens with basic mobile handsets or offline cellular conditions.
+            </p>
+<div class="space-y-2.5">
+<div class="p-3 bg-surface-container-low rounded-lg">
+<div class="font-label-md text-label-md text-on-surface">Voice Memo Ingestion</div>
+<div class="font-body-md text-body-md text-on-surface-variant">Send a 30-sec audio note via WhatsApp bot or toll-free hotline.</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg">
+<div class="font-label-md text-label-md text-on-surface">Receipt Token Tracker</div>
+<div class="font-body-md text-body-md text-on-surface-variant">Enter your numeric code or telephone hash to hear resolution updates.</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg">
+<div class="font-label-md text-label-md text-on-surface">Offline 2G Local Storage</div>
+<div class="font-body-md text-body-md text-on-surface-variant">Draft reports without cellular coverage; syncs automatically once in range.</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">3 Direct Routes</span>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1" href="#">Open Flow <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Persona 2: Local Official -->
+<div class="persona-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between" data-category="official">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">apartment</span> Local Ward Official
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Field Triage Focus</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Ward Triage &amp; Work Orders</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Targeted towards ward engineers, district magistrates, and municipal field commissioners.
+            </p>
+<div class="space-y-2.5">
+<div class="p-3 bg-surface-container-low rounded-lg">
+<div class="font-label-md text-label-md text-on-surface">Spatial Incident Clusters</div>
+<div class="font-body-md text-body-md text-on-surface-variant">See co-located water pipe breaks and pothole clusters grouped into one order.</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg">
+<div class="font-label-md text-label-md text-on-surface">Contractor Dispatch Dispatcher</div>
+<div class="font-body-md text-body-md text-on-surface-variant">Dispatch verified public works units with automated milestone deadlines.</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg">
+<div class="font-label-md text-label-md text-on-surface">Field Proof Verification</div>
+<div class="font-body-md text-body-md text-on-surface-variant">Review geo-stamped before-and-after work evidence before payment release.</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Action-Oriented View</span>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1" href="#">Open Triage <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Persona 3: National Policymaker -->
+<div class="persona-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between" data-category="official">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">account_balance</span> National Policymaker
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Strategic Macro</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Macro Allocator &amp; Hotspots</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Targeted towards national planning commissions and regional infrastructure ministries.
+            </p>
+<div class="space-y-2.5">
+<div class="p-3 bg-surface-container-low rounded-lg">
+<div class="font-label-md text-label-md text-on-surface">National Hotspot Map</div>
+<div class="font-body-md text-body-md text-on-surface-variant">Macro-view of recurring failure corridors across national road and water grids.</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg">
+<div class="font-label-md text-label-md text-on-surface">Budget Allocation Simulator</div>
+<div class="font-body-md text-body-md text-on-surface-variant">Run budget allocation scenarios to calculate population relief yield per million spent.</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg">
+<div class="font-label-md text-label-md text-on-surface">Equity Parity Indicators</div>
+<div class="font-body-md text-body-md text-on-surface-variant">Audit capital distribution to ensure underserved districts receive balanced public funds.</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Strategic Tools</span>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1" href="#">Open Simulator <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Persona 4: Civil-Society Auditor -->
+<div class="persona-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between" data-category="auditor">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">fact_check</span> Civil Society Auditor
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Public Oversight</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Auditing &amp; Integrity Logs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Targeted towards investigative journalists, community advocates, and watchdog groups.
+            </p>
+<div class="space-y-2.5">
+<div class="p-3 bg-surface-container-low rounded-lg">
+<div class="font-label-md text-label-md text-on-surface">Explainable Scoring Weights</div>
+<div class="font-body-md text-body-md text-on-surface-variant">Audit the mathematical formulae that determine why Project A was funded over Project B.</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg">
+<div class="font-label-md text-label-md text-on-surface">Public Expenditure Ledger</div>
+<div class="font-body-md text-body-md text-on-surface-variant">Immutable changelogs of contractor payments, delay penalties, and repair completions.</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg">
+<div class="font-label-md text-label-md text-on-surface">Citizen Audit Trail</div>
+<div class="font-body-md text-body-md text-on-surface-variant">Direct feedback from original reporters confirming whether repairs actually hold up.</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">100% Transparent</span>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1" href="#">Open Ledger <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Persona 5: Platform Integrator & Developer -->
+<div class="persona-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between" data-category="integrator">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">code_blocks</span> Platform Integrator
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">DPG Standard</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Open-Source &amp; Sovereign Core</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Targeted towards sovereign IT teams deploying regional on-prem nodes and open API bridges.
+            </p>
+<div class="space-y-2.5">
+<div class="p-3 bg-surface-container-low rounded-lg">
+<div class="font-label-md text-label-md text-on-surface">Kafka Stream Topology</div>
+<div class="font-body-md text-body-md text-on-surface-variant">High-throughput event broker processing audio chunks with zero in-memory retention.</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg">
+<div class="font-label-md text-label-md text-on-surface">PII Redaction Engine</div>
+<div class="font-body-md text-body-md text-on-surface-variant">Regex and named entity recognizers stripping national IDs, names, and phone numbers.</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg">
+<div class="font-label-md text-label-md text-on-surface">OpenAPI 3.1 Documentation</div>
+<div class="font-body-md text-body-md text-on-surface-variant">Federated schemas compliant with BRICS sovereign data exchange protocols.</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Apache 2.0 Docs</span>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1" href="#">View Repos <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Quick Access Diagnostic Card -->
+<div class="bg-primary-container text-on-primary rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">speed</span> Fast Route
+              </span>
+<span class="font-label-sm text-label-sm text-primary-fixed">Instant Intake</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary mb-2">Need Immediate Support?</h3>
+<p class="font-body-md text-body-md text-primary-fixed mb-space-md">
+              If an infrastructure breakdown poses an imminent risk to life, clean water supply, or electrical safety, initiate emergency routing immediately.
+            </p>
+<div class="bg-primary/50 rounded-lg p-3 space-y-2 text-primary-fixed font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">call</span>
+<span>Emergency Civic Dispatch: 112 / 108</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">crisis_alert</span>
+<span>Automated Hazard Escalator Protocol Active</span>
+</div>
+</div>
+</div>
+<button class="mt-space-md inline-flex items-center justify-center gap-2 h-14 w-full rounded-xl bg-surface-container-lowest text-primary font-label-md text-label-md hover:bg-surface-container-low transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+<span>Flag Critical Safety Hazard</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Civic Trust, Open-Source & Governance Banner -->
+<section class="w-full bg-surface px-margin-mobile md:px-margin py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg md:p-space-xl shadow-md flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-md">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">gavel</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Institutional Trust &amp; Governance Charter</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Rigorous sovereign compliance, data privacy guarantees, and open-access standards.</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+              Registry: DPG-0841
+            </span>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+              Apache 2.0 Open Source
+            </span>
+</div>
+</div>
+<!-- 4 Pillars Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Pillar 1 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">lock</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface">Zero-PII Storage</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Audio voiceprints, telephone IDs, and raw caller locations are stripped in memory before database commit. Only anonymized incident vectors persist.
+            </p>
+<span class="font-label-sm text-label-sm text-primary font-semibold mt-auto flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Hardware Salting
+            </span>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">public</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface">Sovereign Data Residency</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Zero foreign cloud transmission. All compute nodes operate strictly within in-country municipal boundary enclaves with local judicial oversight.
+            </p>
+<span class="font-label-sm text-label-sm text-primary font-semibold mt-auto flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> In-Country Enclaves
+            </span>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">accessibility_new</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface">WCAG 2.1 AA Compliant</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Engineered with 4.5:1 minimum color contrast, screen reader aria attributes, keyboard navigation paths, and 56px physical touch bounding targets.
+            </p>
+<span class="font-label-sm text-label-sm text-secondary font-semibold mt-auto flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Universal Usability
+            </span>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">handshake</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface">Open Public Ledger</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Every stage of municipal prioritization, contractor bidding, and expenditure verification is published openly as structured machine-readable open data.
+            </p>
+<span class="font-label-sm text-label-sm text-secondary font-semibold mt-auto flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Audit Trail Verifiable
+            </span>
+</div>
+</div>
+<!-- SDG Alignment Micro Bar -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[28px]">eco</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface">United Nations Sustainable Development Goals Alignment</div>
+<div class="font-body-md text-body-md text-on-surface-variant">Direct operational adherence to SDG 9 (Resilient Infrastructure) and SDG 11 (Sustainable Cities).</div>
+</div>
+</div>
+<a class="px-4 py-2 rounded-lg bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary font-label-md text-label-md transition-colors whitespace-nowrap shadow-sm" href="#">
+            Read SDG Audit Report
+          </a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Accessibility and Navigation Interactivity
+  (function() {
+    // Dyslexia mode toggle
+    const dyslexiaBtn = document.getElementById('toggle-dyslexia');
+    const dyslexiaLabel = document.getElementById('dyslexia-label');
+    let dyslexiaActive = false;
+
+    if (dyslexiaBtn) {
+      dyslexiaBtn.addEventListener('click', function() {
+        dyslexiaActive = !dyslexiaActive;
+        if (dyslexiaActive) {
+          document.body.style.fontFamily = 'system-ui, -apple-system, sans-serif';
+          document.body.style.letterSpacing = '0.04em';
+          document.body.style.wordSpacing = '0.1em';
+          dyslexiaLabel.textContent = 'Dyslexia Mode Active';
+          dyslexiaBtn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+        } else {
+          document.body.style.fontFamily = '';
+          document.body.style.letterSpacing = '';
+          document.body.style.wordSpacing = '';
+          dyslexiaLabel.textContent = 'Dyslexia-Friendly Off';
+          dyslexiaBtn.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+        }
+      });
+    }
+
+    // High Contrast Mode toggle
+    const contrastBtn = document.getElementById('toggle-contrast');
+    const contrastLabel = document.getElementById('contrast-label');
+    let highContrast = false;
+
+    if (contrastBtn) {
+      contrastBtn.addEventListener('click', function() {
+        highContrast = !highContrast;
+        if (highContrast) {
+          document.documentElement.classList.add('contrast-more');
+          document.body.style.filter = 'contrast(125%)';
+          contrastLabel.textContent = 'High Contrast On';
+          contrastBtn.classList.add('bg-primary-container', 'text-on-primary');
+        } else {
+          document.documentElement.classList.remove('contrast-more');
+          document.body.style.filter = '';
+          contrastLabel.textContent = 'High Contrast';
+          contrastBtn.classList.remove('bg-primary-container', 'text-on-primary');
+        }
+      });
+    }
+
+    // Text Resizing simulation
+    let currentZoom = 100;
+    const btnDecrease = document.getElementById('btn-text-decrease');
+    const btnIncrease = document.getElementById('btn-text-increase');
+    const btnReset = document.getElementById('btn-text-reset');
+
+    function applyZoom(val) {
+      currentZoom = Math.min(130, Math.max(90, val));
+      document.documentElement.style.fontSize = (currentZoom / 100) * 16 + 'px';
+      if (btnReset) btnReset.textContent = currentZoom + '%';
+    }
+
+    if (btnDecrease) btnDecrease.addEventListener('click', () => applyZoom(currentZoom - 10));
+    if (btnIncrease) btnIncrease.addEventListener('click', () => applyZoom(currentZoom + 10));
+    if (btnReset) btnReset.addEventListener('click', () => applyZoom(100));
+
+    // Persona Tab Switching
+    const personaTabs = document.querySelectorAll('.persona-tab');
+    const personaCards = document.querySelectorAll('.persona-card');
+
+    personaTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        personaTabs.forEach(t => {
+          t.classList.remove('bg-primary-container', 'text-on-primary');
+          t.classList.add('text-on-surface', 'hover:bg-surface-container');
+        });
+        this.classList.remove('text-on-surface', 'hover:bg-surface-container');
+        this.classList.add('bg-primary-container', 'text-on-primary');
+
+        const persona = this.getAttribute('data-persona');
+        personaCards.forEach(card => {
+          if (persona === 'all' || card.getAttribute('data-category') === persona) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Multi-Script Selector Notification
+    const scriptSelector = document.getElementById('script-selector');
+    if (scriptSelector) {
+      scriptSelector.addEventListener('change', function(e) {
+        const langMap = {
+          'en': 'Switched system orthography to English (Global Standard).',
+          'hi': 'भाषा देवनागरी हिन्दी में परिवर्तित हो गई है।',
+          'zh': '系统已切换为中文语言环境。',
+          'ru': 'Интерфейс переведен на русский язык.',
+          'pt': 'Sistema alterado para Português.',
+          'ar': 'تم تحويل لغة النظام إلى العربية بنجاح.'
+        };
+        const message = langMap[e.target.value] || 'Language updated.';
+        
+        const toast = document.createElement('div');
+        toast.className = 'fixed bottom-6 right-6 z-50 px-4 py-3 bg-inverse-surface text-inverse-on-surface font-label-md text-label-md rounded-xl shadow-xl flex items-center gap-2';
+        toast.innerHTML = '<span class="material-symbols-outlined text-[18px] text-secondary-fixed">translate</span><span>' + message + '</span>';
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3500);
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-low border-t border-surface-container mt-12"><div class="max-w-7xl mx-auto px-space-lg py-10"><div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-outline-variant/30"><div class="space-y-2"><div class="flex items-center gap-2"><span class="font-headline-md text-headline-md text-primary font-bold">Setu</span><span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded-lg">Public Infrastructure</span></div><p class="font-body-md text-body-md text-on-surface-variant">Decentralized, sovereign civic intelligence bridging grassroots voice to proactive public works allocation across BRICS partner nations.</p></div><div><h4 class="font-label-lg text-label-lg text-on-surface mb-3">Trust &amp; Governance</h4><ul class="space-y-2 font-body-md text-body-md text-on-surface-variant"><li>Apache 2.0 Open Source License</li><li>WCAG 2.1 AA Accessibility Certified</li><li>Local Data Residency Guarantee</li><li>Zero Untracked PII Retention</li></ul></div><div><h4 class="font-label-lg text-label-lg text-on-surface mb-3">Sustainable Impact</h4><div class="flex flex-wrap gap-2"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-secondary">domain</span>UN SDG 9: Infrastructure</span><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-secondary">location_city</span>UN SDG 11: Sustainable Cities</span></div></div><div><h4 class="font-label-lg text-label-lg text-on-surface mb-3">Rapid Intake</h4><p class="font-body-md text-body-md text-on-surface-variant mb-3">Submit multi-dialect voice memos via telecom-agnostic toll-free channels.</p><a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:underline" data-path="voice-and-whatsapp-intake" href="#"><span class="material-symbols-outlined text-[18px]">support_agent</span>Dial Civic Hotlines</a></div></div><div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-on-surface-variant"><div class="flex items-center gap-3"><span>© 2025 Setu Open Source Initiative. DPG Registry ID: #DPG-0841.</span></div><div class="flex items-center gap-4"><span>Sovereign Data Storage: In-Country Nodes</span><span>All Systems Operational</span></div></div></div></footer></body></html>

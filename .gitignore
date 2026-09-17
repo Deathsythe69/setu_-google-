@@ -1,0 +1,17 @@
+.env
+.env.local
+.env.*.local
+.env.example
+node_modules
+.next
+out
+dist
+build
+.DS_Store
+.vscode
+.idea
+.cache
+.npm
+.parcel-cache
+.pnp.*
+

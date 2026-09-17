@@ -1,0 +1,244 @@
+[
+  {
+    "region_id": "IND-VAR-01",
+    "region_name": "Varanasi District (Urban Ghats & Trans-Varuna)",
+    "nation_id": "IND",
+    "sector": "sanitation",
+    "deficit_score": 68,
+    "existing_coverage_pct": 52,
+    "last_updated": "2026-08-15",
+    "source": "Central Pollution Control Board (CPCB) National Mission for Clean Ganga (NMCG) STP Gap Assessment"
+  },
+  {
+    "region_id": "IND-VAR-01",
+    "region_name": "Varanasi District (Urban Ghats & Trans-Varuna)",
+    "nation_id": "IND",
+    "sector": "roads",
+    "deficit_score": 54,
+    "existing_coverage_pct": 66,
+    "last_updated": "2026-08-15",
+    "source": "UP PWD State Highway & Urban Roads Asset Management Registry"
+  },
+  {
+    "region_id": "IND-VAR-01",
+    "region_name": "Varanasi District (Urban Ghats & Trans-Varuna)",
+    "nation_id": "IND",
+    "sector": "drainage",
+    "deficit_score": 76,
+    "existing_coverage_pct": 44,
+    "last_updated": "2026-08-15",
+    "source": "Varanasi Nagar Nigam Stormwater Drainage Master Plan & AMRUT Assessment"
+  },
+  {
+    "region_id": "IND-BUN-02",
+    "region_name": "Chhatarpur District (Bundelkhand Drought Basin)",
+    "nation_id": "IND",
+    "sector": "water",
+    "deficit_score": 89,
+    "existing_coverage_pct": 21,
+    "last_updated": "2026-08-20",
+    "source": "Ministry of Jal Shakti - Jal Jeevan Mission (JJM) Integrated Management Information System (IMIS) 2026"
+  },
+  {
+    "region_id": "IND-BUN-02",
+    "region_name": "Chhatarpur District (Bundelkhand Drought Basin)",
+    "nation_id": "IND",
+    "sector": "electricity",
+    "deficit_score": 62,
+    "existing_coverage_pct": 58,
+    "last_updated": "2026-08-20",
+    "source": "Ministry of Power - Revamped Distribution Sector Scheme (RDSS) Feeder Monitoring"
+  },
+  {
+    "region_id": "IND-BUN-02",
+    "region_name": "Chhatarpur District (Bundelkhand Drought Basin)",
+    "nation_id": "IND",
+    "sector": "roads",
+    "deficit_score": 71,
+    "existing_coverage_pct": 49,
+    "last_updated": "2026-08-20",
+    "source": "Pradhan Mantri Gram Sadak Yojana (PMGSY) Habitation Connectivity Deficit Portal"
+  },
+  {
+    "region_id": "IND-MUM-03",
+    "region_name": "Mumbai Suburban Ward G-North (Dharavi / Mahim)",
+    "nation_id": "IND",
+    "sector": "water",
+    "deficit_score": 81,
+    "existing_coverage_pct": 39,
+    "last_updated": "2026-09-01",
+    "source": "Brihanmumbai Municipal Corporation (BMC) Hydraulic Engineer Water Distribution Report"
+  },
+  {
+    "region_id": "IND-MUM-03",
+    "region_name": "Mumbai Suburban Ward G-North (Dharavi / Mahim)",
+    "nation_id": "IND",
+    "sector": "transit",
+    "deficit_score": 75,
+    "existing_coverage_pct": 45,
+    "last_updated": "2026-09-01",
+    "source": "Mumbai Metropolitan Region Development Authority (MMRDA) Comprehensive Transportation Study"
+  },
+  {
+    "region_id": "IND-MUM-03",
+    "region_name": "Mumbai Suburban Ward G-North (Dharavi / Mahim)",
+    "nation_id": "IND",
+    "sector": "sanitation",
+    "deficit_score": 88,
+    "existing_coverage_pct": 32,
+    "last_updated": "2026-09-01",
+    "source": "BMC SWM Community Toilet & Underground Drainage Audit"
+  },
+  {
+    "region_id": "IND-PAT-04",
+    "region_name": "Patna Urban Lowland Basin (Ward 9 & Kankarbagh)",
+    "nation_id": "IND",
+    "sector": "drainage",
+    "deficit_score": 93,
+    "existing_coverage_pct": 18,
+    "last_updated": "2026-09-05",
+    "source": "Bihar Urban Infrastructure Development Corporation (BUIDCO) Sump & Outfall Drain Assessment"
+  },
+  {
+    "region_id": "IND-PAT-04",
+    "region_name": "Patna Urban Lowland Basin (Ward 9 & Kankarbagh)",
+    "nation_id": "IND",
+    "sector": "roads",
+    "deficit_score": 67,
+    "existing_coverage_pct": 53,
+    "last_updated": "2026-09-05",
+    "source": "Patna Smart City Limited Road Grid & Pavement Condition Index"
+  },
+  {
+    "region_id": "IND-BLR-05",
+    "region_name": "Bengaluru East Mahadevapura Tech Corridor",
+    "nation_id": "IND",
+    "sector": "roads",
+    "deficit_score": 64,
+    "existing_coverage_pct": 58,
+    "last_updated": "2026-09-02",
+    "source": "BBMP Pothole & Road Infrastructure Tracking Platform (FIXMYSTREET Open Data)"
+  },
+  {
+    "region_id": "IND-BLR-05",
+    "region_name": "Bengaluru East Mahadevapura Tech Corridor",
+    "nation_id": "IND",
+    "sector": "transit",
+    "deficit_score": 58,
+    "existing_coverage_pct": 62,
+    "last_updated": "2026-09-02",
+    "source": "Bangalore Metropolitan Transport Corporation (BMTC) Route Frequency & First-Mile Analysis"
+  },
+  {
+    "region_id": "IND-BLR-05",
+    "region_name": "Bengaluru East Mahadevapura Tech Corridor",
+    "nation_id": "IND",
+    "sector": "drainage",
+    "deficit_score": 79,
+    "existing_coverage_pct": 36,
+    "last_updated": "2026-09-02",
+    "source": "Karnataka State Natural Disaster Monitoring Centre (KSNDMC) Urban Inundation Vulnerability"
+  },
+  {
+    "region_id": "IND-GUW-06",
+    "region_name": "Guwahati Brahmaputra Flood Plain (Sector 3)",
+    "nation_id": "IND",
+    "sector": "drainage",
+    "deficit_score": 85,
+    "existing_coverage_pct": 33,
+    "last_updated": "2026-08-28",
+    "source": "Guwahati Smart City / Water Resources Dept Bharalu River Catchment Drainage Study"
+  },
+  {
+    "region_id": "IND-GUW-06",
+    "region_name": "Guwahati Brahmaputra Flood Plain (Sector 3)",
+    "nation_id": "IND",
+    "sector": "healthcare",
+    "deficit_score": 72,
+    "existing_coverage_pct": 47,
+    "last_updated": "2026-08-28",
+    "source": "National Health Mission (NHM) Assam Urban Primary Health Centre (UPHC) Gap Analysis"
+  },
+
+  {
+    "region_id": "BRA-RIO-01",
+    "region_name": "Complexo da Maré (Zona Norte Favela Cluster)",
+    "nation_id": "BRA",
+    "sector": "sanitation",
+    "deficit_score": 87,
+    "existing_coverage_pct": 28,
+    "last_updated": "2026-08-10",
+    "source": "SNIS - Sistema Nacional de Informações sobre Saneamento & Cedae RJ"
+  },
+  {
+    "region_id": "BRA-RIO-01",
+    "region_name": "Complexo da Maré (Zona Norte Favela Cluster)",
+    "nation_id": "BRA",
+    "sector": "electricity",
+    "deficit_score": 64,
+    "existing_coverage_pct": 56,
+    "last_updated": "2026-08-10",
+    "source": "ANEEL - Agência Nacional de Energia Elétrica Reliability Index DEC/FEC"
+  },
+  {
+    "region_id": "BRA-MAN-02",
+    "region_name": "Manaus Igarapé Riverine Floodplain",
+    "nation_id": "BRA",
+    "sector": "water",
+    "deficit_score": 82,
+    "existing_coverage_pct": 36,
+    "last_updated": "2026-08-14",
+    "source": "Águas de Manaus Regulatory Audit & PROSAMIM Relatório Ambiental"
+  },
+  {
+    "region_id": "BRA-REC-03",
+    "region_name": "Recife Coastal Morros & Lowland Slopes",
+    "nation_id": "BRA",
+    "sector": "drainage",
+    "deficit_score": 89,
+    "existing_coverage_pct": 22,
+    "last_updated": "2026-08-19",
+    "source": "EMLURB Recife Plano Diretor de Drenagem Urbana & Defesa Civil"
+  },
+  {
+    "region_id": "BRA-SAO-04",
+    "region_name": "São Paulo Zona Leste (Itaquera / Cidade Tiradentes)",
+    "nation_id": "BRA",
+    "sector": "transit",
+    "deficit_score": 63,
+    "existing_coverage_pct": 57,
+    "last_updated": "2026-08-12",
+    "source": "SPTrans Pesquisa Origem e Destino & Metrô São Paulo Demanda Linha 15"
+  },
+
+  {
+    "region_id": "ZAF-JHB-01",
+    "region_name": "Soweto Metropolitan District 4",
+    "nation_id": "ZAF",
+    "sector": "electricity",
+    "deficit_score": 84,
+    "existing_coverage_pct": 36,
+    "last_updated": "2026-08-22",
+    "source": "Eskom Distribution Network Overload Report & City Power Johannesburg"
+  },
+  {
+    "region_id": "ZAF-CPT-02",
+    "region_name": "Khayelitsha Informal Settlement Sector C",
+    "nation_id": "ZAF",
+    "sector": "sanitation",
+    "deficit_score": 91,
+    "existing_coverage_pct": 21,
+    "last_updated": "2026-08-25",
+    "source": "City of Cape Town Water & Sanitation Directorate Informal Settlement Matrix"
+  },
+  {
+    "region_id": "ZAF-DUR-03",
+    "region_name": "Umlazi Township Section K & Catchment",
+    "nation_id": "ZAF",
+    "sector": "roads",
+    "deficit_score": 73,
+    "existing_coverage_pct": 47,
+    "last_updated": "2026-08-18",
+    "source": "eThekwini Municipality Engineering Unit Storm Damaged Access Roads Audit"
+  }
+]

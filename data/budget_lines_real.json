@@ -1,0 +1,154 @@
+[
+  {
+    "id": "BL-IND-WATER-26",
+    "nation_id": "IND",
+    "sector": "water",
+    "fiscal_year": "2026-27",
+    "amount_allocated": 70163,
+    "amount_available": 28450,
+    "currency": "₹ Cr",
+    "source": "Union Budget of India 2026-27 (Demand for Grants No. 62 - Department of Drinking Water and Sanitation - Jal Jeevan Mission)"
+  },
+  {
+    "id": "BL-IND-ROADS-26",
+    "nation_id": "IND",
+    "sector": "roads",
+    "fiscal_year": "2026-27",
+    "amount_allocated": 118410,
+    "amount_available": 42300,
+    "currency": "₹ Cr",
+    "source": "Union Budget of India 2026-27 (Demand for Grants No. 85 - MoRTH & Pradhan Mantri Gram Sadak Yojana PMGSY-IV)"
+  },
+  {
+    "id": "BL-IND-DRAIN-26",
+    "nation_id": "IND",
+    "sector": "drainage",
+    "fiscal_year": "2026-27",
+    "amount_allocated": 14200,
+    "amount_available": 6750,
+    "currency": "₹ Cr",
+    "source": "Ministry of Housing and Urban Affairs (MoHUA) AMRUT 2.0 Stormwater Drainage & Urban Flood Mitigation Allocation"
+  },
+  {
+    "id": "BL-IND-SANIT-26",
+    "nation_id": "IND",
+    "sector": "sanitation",
+    "fiscal_year": "2026-27",
+    "amount_allocated": 12500,
+    "amount_available": 5900,
+    "currency": "₹ Cr",
+    "source": "Union Budget 2026-27 - Swachh Bharat Mission (Urban & Gramin II) & NMCG Namami Gange STPs"
+  },
+  {
+    "id": "BL-IND-TRANS-26",
+    "nation_id": "IND",
+    "sector": "transit",
+    "fiscal_year": "2026-27",
+    "amount_allocated": 24930,
+    "amount_available": 9800,
+    "currency": "₹ Cr",
+    "source": "MoHUA Metro Rail Projects & PM-eBus Sewa Urban Transit Capital Outlay"
+  },
+  {
+    "id": "BL-IND-ELECT-26",
+    "nation_id": "IND",
+    "sector": "electricity",
+    "fiscal_year": "2026-27",
+    "amount_allocated": 16400,
+    "amount_available": 7250,
+    "currency": "₹ Cr",
+    "source": "Ministry of Power Revamped Distribution Sector Scheme (RDSS) Modernization Fund"
+  },
+  {
+    "id": "BL-IND-HEALT-26",
+    "nation_id": "IND",
+    "sector": "healthcare",
+    "fiscal_year": "2026-27",
+    "amount_allocated": 90958,
+    "amount_available": 31200,
+    "currency": "₹ Cr",
+    "source": "Demand No. 46 - Department of Health & Family Welfare, PM-ABHIM Health Infrastructure Mission"
+  },
+  {
+    "id": "BL-IND-SCHOL-26",
+    "nation_id": "IND",
+    "sector": "schools",
+    "fiscal_year": "2026-27",
+    "amount_allocated": 73498,
+    "amount_available": 24800,
+    "currency": "₹ Cr",
+    "source": "Department of School Education & Literacy - Samagra Shiksha & PM SHRI Infrastructure Upgrade"
+  },
+
+  {
+    "id": "BL-BRA-SANIT-26",
+    "nation_id": "BRA",
+    "sector": "sanitation",
+    "fiscal_year": "2026",
+    "amount_allocated": 1840,
+    "amount_available": 780,
+    "currency": "R$ M",
+    "source": "Ministério das Cidades do Brasil - Programa de Aceleração do Crescimento (Novo PAC - Água Para Todos & Esgotamento)"
+  },
+  {
+    "id": "BL-BRA-WATER-26",
+    "nation_id": "BRA",
+    "sector": "water",
+    "fiscal_year": "2026",
+    "amount_allocated": 2350,
+    "amount_available": 1120,
+    "currency": "R$ M",
+    "source": "Governo Federal do Brasil - Orçamento Geral da União (OGU) Segurança Hídrica e Abastecimento"
+  },
+  {
+    "id": "BL-BRA-DRAIN-26",
+    "nation_id": "BRA",
+    "sector": "drainage",
+    "fiscal_year": "2026",
+    "amount_allocated": 1150,
+    "amount_available": 460,
+    "currency": "R$ M",
+    "source": "Novo PAC Prevenção a Desastres - Drenagem Urbana Sustentável e Contenção de Encostas"
+  },
+  {
+    "id": "BL-BRA-TRANS-26",
+    "nation_id": "BRA",
+    "sector": "transit",
+    "fiscal_year": "2026",
+    "amount_allocated": 3200,
+    "amount_available": 1450,
+    "currency": "R$ M",
+    "source": "Ministério dos Transportes & Mobilidade Urbana Sustentável (Corredores de Ônibus e Trens Metropolitanos)"
+  },
+
+  {
+    "id": "BL-ZAF-SANIT-26",
+    "nation_id": "ZAF",
+    "sector": "sanitation",
+    "fiscal_year": "2026-27",
+    "amount_allocated": 4820,
+    "amount_available": 1950,
+    "currency": "R M",
+    "source": "National Treasury of South Africa - Vote 41: Water and Sanitation Municipal Infrastructure Grant (MIG)"
+  },
+  {
+    "id": "BL-ZAF-ELECT-26",
+    "nation_id": "ZAF",
+    "sector": "electricity",
+    "fiscal_year": "2026-27",
+    "amount_allocated": 6140,
+    "amount_available": 2300,
+    "currency": "R M",
+    "source": "Department of Mineral Resources and Energy - Integrated National Electrification Programme (INEP)"
+  },
+  {
+    "id": "BL-ZAF-ROADS-26",
+    "nation_id": "ZAF",
+    "sector": "roads",
+    "fiscal_year": "2026-27",
+    "amount_allocated": 5400,
+    "amount_available": 2100,
+    "currency": "R M",
+    "source": "Department of Transport South Africa - Provincial Emergency Roads Maintenance Grant (PRMG)"
+  }
+]

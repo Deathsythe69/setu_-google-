@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-dim":"#d2d9f4","outline-variant":"#c4c5d5","surface-container-low":"#f2f3ff","on-error":"#ffffff","tertiary":"#532a00","secondary":"#006a61","outline":"#757684","primary":"#00288e","on-primary-container":"#a8b8ff","tertiary-fixed":"#ffdcc3","on-background":"#131b2e","primary-fixed-dim":"#b8c4ff","surface-bright":"#faf8ff","primary-fixed":"#dde1ff","tertiary-fixed-dim":"#ffb77d","background":"#faf8ff","on-secondary":"#ffffff","surface-container":"#eaedff","primary-container":"#1e40af","inverse-primary":"#b8c4ff","surface-container-lowest":"#ffffff","tertiary-container":"#743d00","error":"#ba1a1a","on-tertiary-fixed":"#2f1500","inverse-on-surface":"#eef0ff","on-tertiary-container":"#ffa85d","error-container":"#ffdad6","surface-variant":"#dae2fd","on-tertiary":"#ffffff","secondary-container":"#86f2e4","on-secondary-fixed":"#00201d","surface":"#faf8ff","on-surface-variant":"#444653","on-primary-fixed":"#001453","inverse-surface":"#283044","on-primary-fixed-variant":"#173bab","surface-tint":"#3755c3","on-secondary-container":"#006f66","on-secondary-fixed-variant":"#005049","surface-container-highest":"#dae2fd","on-tertiary-fixed-variant":"#6e3900","on-surface":"#131b2e","secondary-fixed":"#89f5e7","surface-container-high":"#e2e7ff","on-error-container":"#93000a","secondary-fixed-dim":"#6bd8cb","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","margin-mobile":"1rem","gutter-mobile":"1rem","space-lg":"1.5rem","gutter":"1.5rem","space-md":"1rem","space-xl":"2.5rem","margin":"2rem","space-xs":"0.25rem"},"fontFamily":{"label-lg":["Noto Sans"],"headline-lg":["Noto Sans"],"display-lg":["Noto Sans"],"headline-xl":["Noto Sans"],"label-sm":["Noto Sans"],"label-md":["Noto Sans"],"display-lg-mobile":["Noto Sans"],"headline-xl-mobile":["Noto Sans"],"body-xl":["Noto Sans"],"body-md":["Noto Sans"],"body-lg":["Noto Sans"],"headline-md":["Noto Sans"]},"fontSize":{"label-lg":["16px",{"lineHeight":"24px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"34px","fontWeight":"600"}],"display-lg":["44px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl":["32px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.03em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"36px","fontWeight":"700"}],"body-xl":["18px",{"lineHeight":"30px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"24px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"30px","fontWeight":"600"}]}}}};</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased"><a class="sr-only focus:not-sr-only focus:fixed focus:top-space-sm focus:left-space-sm z-[100] px-space-md py-space-sm bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-md" href="#main-content">Skip to main content (WCAG 2.4.1)</a><header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-surface-container-low px-gutter border-b border-outline-variant/30"><div class="max-w-[1280px] mx-auto py-space-xs flex flex-wrap items-center justify-between gap-space-sm"><div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">bolt</span><span class="font-semibold text-on-surface">DPG Portal</span>: Sovereign Infrastructure Registry</span><div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span>Sync Ready / 2G Optimized</span></div></div><div class="flex items-center gap-space-sm"><div aria-label="Text Size Adjuster" class="inline-flex items-center bg-surface-container-lowest rounded-lg p-0.5 shadow-sm border border-outline-variant/50"><button aria-label="Decrease font size" class="px-space-xs text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">A-</button><span class="text-outline-variant">|</span><button aria-label="Increase font size" class="px-space-xs text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-bold" type="button">A+</button></div><button class="inline-flex items-center gap-space-xs px-space-sm py-0.5 bg-surface-container-lowest rounded-lg border border-outline-variant/50 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" title="Toggle high contrast mode" type="button"><span class="material-symbols-outlined text-[16px]">contrast</span><span>Contrast</span></button><button class="inline-flex items-center gap-space-xs px-space-sm py-0.5 bg-surface-container-lowest rounded-lg border border-outline-variant/50 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" title="Listen to briefing / Text-to-speech" type="button"><span class="material-symbols-outlined text-[16px] text-secondary">volume_up</span><span>Read Aloud</span></button><button class="inline-flex items-center gap-space-xs px-space-sm py-0.5 bg-surface-container-lowest rounded-lg border border-outline-variant/50 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" title="Toggle Dyslexia Friendly Script Font" type="button"><span class="material-symbols-outlined text-[16px]">spellcheck</span><span>Dyslexic Font</span></button></div></div></div><div class="h-20 max-w-[1280px] mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="Setu Civic Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XsiycFgZvTvqYbVgyz28WgO7sx71aaWhYswpiXnYFpFiltdubsk5fqTd_gKxoTmc5vZ84XC9sZqGIU2T09-h_ByOcNo9ydCfMFHQ5ba11m0eJ6eo6QOEiTeQpUNM7cPm5mbTr7laXXCBopEwr2RXgcxkEH3Ns-vttSj2M4ailr8imjTAAKxloT7zw6G9b-pOnt6a4UCBqopDO7Rb7xdHNESwHpvpLP5-KdRdjfJNumJy8UnBOU-Kl2TQ"/><div class="flex flex-col"><div class="flex items-baseline gap-space-xs"><span class="text-on-surface font-headline-md text-headline-md font-bold tracking-tight">Setu</span><span class="text-outline font-label-sm text-label-sm">| सेतु | 桥 | Мост</span></div><span class="text-on-surface-variant font-label-sm text-label-sm">Citizen-to-Infrastructure Intelligence</span></div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg"><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-bold rounded-lg" data-path="report-infrastructure" href="#">Report Infrastructure</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="explore-hotspots" href="#">Explore Hotspots</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="track-reports" href="#">Track Reports</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="open-data-and-methodology" href="#">Open Data &amp; Methodology</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="about-dpg" href="#">About DPG</a></nav><div class="flex items-center gap-space-sm"><div class="relative inline-flex items-center"><button aria-expanded="false" aria-haspopup="listbox" class="inline-flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container rounded-lg text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[18px] text-primary">translate</span><span class="font-semibold">English</span><span class="text-on-surface-variant font-label-sm text-label-sm hidden sm:inline">(EN)</span><span class="material-symbols-outlined text-[16px]">expand_more</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]" id="main-content"><div class="flex flex-col w-full">
+<!-- Top Sovereign Trust & Accessibility Strip -->
+<section aria-label="Language and accessibility preference controls" class="w-full bg-surface-container-low py-space-sm">
+<div class="max-w-[1280px] mx-auto px-gutter flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-sm">
+<!-- Quick Language Script Selector -->
+<div aria-label="Script selection" class="flex items-center gap-space-xs flex-wrap" role="toolbar">
+<span class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm mr-space-xs">
+<span aria-hidden="true" class="material-symbols-outlined text-[18px] text-primary">language</span>
+<span>Script:</span>
+</span>
+<button aria-pressed="true" class="inline-flex items-center gap-1 px-space-sm py-1 bg-primary text-on-primary rounded-xl font-label-sm text-label-sm font-bold shadow-sm" type="button">
+<span>English</span><span class="text-on-primary-container text-[10px]">(EN)</span>
+</button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container-lowest text-on-surface hover:bg-surface-container-high rounded-xl font-label-sm text-label-sm shadow-sm transition-colors" type="button">
+<span>हिन्दी</span><span class="text-outline text-[10px]">(HI)</span>
+</button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container-lowest text-on-surface hover:bg-surface-container-high rounded-xl font-label-sm text-label-sm shadow-sm transition-colors" type="button">
+<span>中文</span><span class="text-outline text-[10px]">(ZH)</span>
+</button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container-lowest text-on-surface hover:bg-surface-container-high rounded-xl font-label-sm text-label-sm shadow-sm transition-colors" type="button">
+<span>Русский</span><span class="text-outline text-[10px]">(RU)</span>
+</button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container-lowest text-on-surface hover:bg-surface-container-high rounded-xl font-label-sm text-label-sm shadow-sm transition-colors" type="button">
+<span>Português</span><span class="text-outline text-[10px]">(PT)</span>
+</button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container-lowest text-on-surface hover:bg-surface-container-high rounded-xl font-label-sm text-label-sm shadow-sm transition-colors" type="button">
+<span>العربية</span><span class="text-outline text-[10px]">(AR)</span>
+</button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container-lowest text-on-surface hover:bg-surface-container-high rounded-xl font-label-sm text-label-sm shadow-sm transition-colors" type="button">
+<span>isiZulu</span><span class="text-outline text-[10px]">(ZU)</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-xs py-1 text-primary hover:text-primary-container font-label-sm text-label-sm underline font-semibold" type="button">
+<span>+12 regional dialects</span>
+</button>
+</div>
+<!-- Cognitive & Sensory Access Controls -->
+<div aria-label="Visual and sensory tuning" class="flex items-center gap-space-xs flex-wrap self-end lg:self-auto">
+<div class="inline-flex items-center bg-surface-container-lowest rounded-xl p-0.5 shadow-sm">
+<button aria-label="Standard font scale" class="px-space-xs py-0.5 text-on-surface hover:text-primary font-label-sm text-label-sm" type="button">A</button>
+<span class="text-outline-variant">|</span>
+<button aria-label="Large font scale" class="px-space-xs py-0.5 text-on-surface hover:text-primary font-label-sm text-label-sm font-semibold" type="button">A+</button>
+<span class="text-outline-variant">|</span>
+<button aria-label="Extra large font scale" class="px-space-xs py-0.5 text-on-surface hover:text-primary font-label-sm text-label-sm font-bold" type="button">A++</button>
+</div>
+<button class="inline-flex items-center gap-1 px-space-sm py-1 bg-secondary-container text-on-secondary-container rounded-xl font-label-sm text-label-sm font-semibold shadow-sm hover:opacity-90 transition-opacity" id="audio-guide-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">volume_up</span>
+<span>Listen to Guide</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container-lowest text-on-surface-variant hover:text-on-surface rounded-xl font-label-sm text-label-sm shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">screen_search_desktop</span>
+<span>Plain Text Mode</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Hero Ingestion Header with Multilingual Parallel Ribbons -->
+<section class="w-full bg-surface-container py-space-xl relative overflow-hidden">
+<div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-secondary/5 blur-3xl pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto px-gutter relative z-10 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-4xl">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-lowest shadow-sm w-fit">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface-variant font-label-sm text-label-sm font-semibold tracking-wide">DIGITAL PUBLIC GOOD #2024-81 • UN SDG 9, 11, 16</span>
+</div>
+<h1 class="text-on-surface font-display-lg text-display-lg font-bold tracking-tight">
+          Every Citizen's Voice Builds Sovereign Public Infrastructure
+        </h1>
+</div>
+<!-- Parallel Multi-Script Carousel / Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-0.5">
+<span class="text-outline text-[11px] font-semibold uppercase tracking-wider font-label-sm">हिन्दी / Hindi</span>
+<p class="text-on-surface font-body-md text-body-md font-semibold">हर नागरिक की आवाज़ बनाती है सार्वजनिक ढांचा।</p>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-0.5">
+<span class="text-outline text-[11px] font-semibold uppercase tracking-wider font-label-sm">中文 / Mandarin</span>
+<p class="text-on-surface font-body-md text-body-md font-semibold">每一位公民的声音构筑公共基础设施。</p>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-0.5">
+<span class="text-outline text-[11px] font-semibold uppercase tracking-wider font-label-sm">Русский / Russian</span>
+<p class="text-on-surface font-body-md text-body-md font-semibold">Голос каждого гражданина строит инфраструктуру.</p>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-0.5">
+<span class="text-outline text-[11px] font-semibold uppercase tracking-wider font-label-sm">Português / Portuguese</span>
+<p class="text-on-surface font-body-md text-body-md font-semibold">A voz de cada cidadão constrói infraestrutura.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Primary Voice-First Action Zone (Low-Literacy & Universal Accessibility) -->
+<section aria-labelledby="action-zone-heading" class="w-full bg-surface py-space-xl">
+<div class="max-w-[1280px] mx-auto px-gutter flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<h2 class="text-on-surface font-headline-xl text-headline-xl font-bold" id="action-zone-heading">
+          Report Broken Infrastructure Without Typing
+        </h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-3xl">
+          Setu translates spontaneous spoken dialect, WhatsApp snapshots, and toll-free phone calls into sovereign municipal budget signals. No app download or high-speed internet needed.
+        </p>
+</div>
+<!-- Hero Voice Record Action Module -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg lg:p-space-xl shadow-md flex flex-col lg:flex-row items-center gap-space-xl">
+<div class="flex flex-col items-center justify-center text-center lg:items-start lg:text-left gap-space-md flex-1">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-secondary-container rounded-full text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">record_voice_over</span>
+<span>Zero Literacy Barrier: 15+ Native Dialects Supported</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="text-on-surface font-headline-lg text-headline-lg font-bold">Press &amp; Speak Your Issue</span>
+<span class="text-outline font-headline-md text-headline-md font-semibold">बोलने के लिए दबाएं • 按住讲话 • Нажмите, чтобы сказать</span>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md max-w-lg">
+            Speak naturally in your mother tongue. Tell us your location and describe what is damaged (broken bridge, dry water tap, fallen power pole). We handle transcription, classification, and municipal routing with zero personal tracking.
+          </p>
+<div class="flex items-center gap-space-sm text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Audio stream securely scrubbed of name and phone numbers instantly.</span>
+</div>
+</div>
+<!-- Giant Tactical Voice Button Target (56px+ compliant / 160px centerpiece) -->
+<div class="flex flex-col items-center justify-center gap-space-sm py-space-md">
+<button aria-label="Start Voice Recording in any language" class="relative group w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-primary flex flex-col items-center justify-center text-on-primary shadow-xl hover:bg-primary-container transition-all focus:outline-none" id="record-action-button" type="button">
+<span class="absolute inset-0 rounded-full bg-primary/30 animate-ping group-hover:bg-primary/40 pointer-events-none"></span>
+<span class="material-symbols-outlined text-[54px] sm:text-[64px] mb-1">mic</span>
+<span class="font-label-lg text-label-lg tracking-wider font-bold">RECORD</span>
+<span class="text-[11px] text-on-primary-container font-label-sm uppercase">Tap to speak</span>
+</button>
+<div class="flex items-center gap-2 text-on-surface font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span id="recording-status">Microphone Ready • Offline Capable</span>
+</div>
+</div>
+</div>
+<!-- Alternative Dual-Channel Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- WhatsApp & Telegram Gateway -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[26px]">chat</span>
+</div>
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold mt-space-xs">WhatsApp &amp; Telegram</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">
+              Send a photo, voice note, or drop a pin directly to our verified civic bot without filling any forms.
+            </p>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<a class="h-14 w-full bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary rounded-xl font-label-md text-label-md font-bold flex items-center justify-center gap-space-xs shadow-sm transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Open WhatsApp Bot</span>
+</a>
+<span class="text-outline text-center font-label-sm text-label-sm">+1 (800) 555-SETU • @SetuCivicBot</span>
+</div>
+</div>
+<!-- Toll-Free Feature Phone IVR -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[26px]">phone_in_talk</span>
+</div>
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold mt-space-xs">Toll-Free Voice Hotline</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">
+              Works on simple 2G basic keypad feature phones. Zero airtime cost. Automated IVR speaks back in your dialect.
+            </p>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<a class="h-14 w-full bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary rounded-xl font-label-md text-label-md font-bold flex items-center justify-center gap-space-xs shadow-sm transition-colors" href="tel:18007388248">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span>Dial 1800-SETU-CIVIC</span>
+</a>
+<span class="text-outline text-center font-label-sm text-label-sm">Free across all national telecom carriers</span>
+</div>
+</div>
+<!-- Guided Web Portal Wizard -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[26px]">edit_document</span>
+</div>
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold mt-space-xs">Web Assisted Wizard</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">
+              Step-by-step submission with image uploads, GPS pinpointing, and instant duplicate signal aggregation.
+            </p>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="h-14 w-full bg-primary text-on-primary rounded-xl font-label-md text-label-md font-bold flex items-center justify-center gap-space-xs shadow-sm hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">add_location_alt</span>
+<span>Launch Step-by-Step Form</span>
+</button>
+<span class="text-outline text-center font-label-sm text-label-sm">Takes less than 90 seconds</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Universal Category Grid (Dual-Encoded Accessible Signals) -->
+<section aria-labelledby="categories-heading" class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[1280px] mx-auto px-gutter flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="text-secondary font-label-md text-label-md font-bold uppercase tracking-wider">Democratized Telemetry</span>
+<h2 class="text-on-surface font-headline-xl text-headline-xl font-bold" id="categories-heading">
+            Select an Infrastructure Need
+          </h2>
+<p class="text-on-surface-variant font-body-md text-body-md">
+            All categories include redundant visual icons, high-contrast markers, and bilingual script tags.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="px-space-sm py-1 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-sm" type="button">All Active (31,581)</button>
+<button class="px-space-sm py-1 rounded-xl bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high shadow-sm" type="button">Critical Severity</button>
+<button class="px-space-sm py-1 rounded-xl bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high shadow-sm" type="button">Funded This Week</button>
+</div>
+</div>
+<!-- 6-Card Category Matrix -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- 1. Water & Sewage -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md group cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="w-14 h-14 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[32px]">water_drop</span>
+</div>
+<span class="px-space-sm py-1 bg-surface-container rounded-lg text-on-surface font-label-sm text-label-sm font-bold">
+              4,821 Signals
+            </span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold group-hover:text-primary transition-colors">
+              Clean Water &amp; Sewage
+            </h3>
+<p class="text-outline font-label-md text-label-md font-semibold">जल एवं स्वच्छता • 供水与排污</p>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">
+              Contaminated borewells, leaking municipal mains, clogged drainage canals, and drought relief.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1 text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 89% Action Rate
+            </span>
+<span class="flex items-center gap-0.5 text-primary font-bold group-hover:translate-x-1 transition-transform">
+              Explore Ward Feed <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</article>
+<!-- 2. Roads & Bridges -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md group cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="w-14 h-14 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[32px]">add_road</span>
+</div>
+<span class="px-space-sm py-1 bg-surface-container rounded-lg text-on-surface font-label-sm text-label-sm font-bold">
+              12,490 Signals
+            </span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold group-hover:text-primary transition-colors">
+              Roads &amp; Bridges
+            </h3>
+<p class="text-outline font-label-md text-label-md font-semibold">सड़क एवं पुल • 道路与桥梁</p>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">
+              Pothole clusters, washed-out monsoon culverts, damaged footbridges, and unpaved farm corridors.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1 text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 76% Action Rate
+            </span>
+<span class="flex items-center gap-0.5 text-primary font-bold group-hover:translate-x-1 transition-transform">
+              Explore Ward Feed <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</article>
+<!-- 3. Power & Electricity -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md group cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="w-14 h-14 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[32px]">bolt</span>
+</div>
+<span class="px-space-sm py-1 bg-surface-container rounded-lg text-on-surface font-label-sm text-label-sm font-bold">
+              3,115 Signals
+            </span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold group-hover:text-primary transition-colors">
+              Power &amp; Electricity
+            </h3>
+<p class="text-outline font-label-md text-label-md font-semibold">बिजली आपूर्ति • 电力供应</p>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">
+              Blown transformers, sagging high-tension wire hazards, unlit transit hubs, and feeder blackouts.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1 text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 94% Action Rate
+            </span>
+<span class="flex items-center gap-0.5 text-primary font-bold group-hover:translate-x-1 transition-transform">
+              Explore Ward Feed <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</article>
+<!-- 4. Public Transit & Safety -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md group cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="w-14 h-14 rounded-xl bg-surface-variant text-on-surface-variant flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[32px]">directions_bus</span>
+</div>
+<span class="px-space-sm py-1 bg-surface-container rounded-lg text-on-surface font-label-sm text-label-sm font-bold">
+              6,340 Signals
+            </span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold group-hover:text-primary transition-colors">
+              Public Transit &amp; Safety
+            </h3>
+<p class="text-outline font-label-md text-label-md font-semibold">सार्वजनिक परिवहन • 公共交通</p>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">
+              Missing bus shelters, broken railway crossings, poorly lit pedestrian underpasses, and zebra crossings.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1 text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 81% Action Rate
+            </span>
+<span class="flex items-center gap-0.5 text-primary font-bold group-hover:translate-x-1 transition-transform">
+              Explore Ward Feed <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</article>
+<!-- 5. Healthcare Clinics -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md group cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="w-14 h-14 rounded-xl bg-error-container text-error flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[32px]">local_hospital</span>
+</div>
+<span class="px-space-sm py-1 bg-surface-container rounded-lg text-on-surface font-label-sm text-label-sm font-bold">
+              2,870 Signals
+            </span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold group-hover:text-primary transition-colors">
+              Healthcare Clinics
+            </h3>
+<p class="text-outline font-label-md text-label-md font-semibold">स्वास्थ्य केंद्र • 医疗诊所</p>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">
+              Primary health post roof collapses, lack of emergency ramp access, power backup failure, cold chain issues.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1 text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 96% Action Rate
+            </span>
+<span class="flex items-center gap-0.5 text-primary font-bold group-hover:translate-x-1 transition-transform">
+              Explore Ward Feed <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</article>
+<!-- 6. School Infrastructure -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md group cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="w-14 h-14 rounded-xl bg-surface-container-highest text-on-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[32px]">school</span>
+</div>
+<span class="px-space-sm py-1 bg-surface-container rounded-lg text-on-surface font-label-sm text-label-sm font-bold">
+              1,940 Signals
+            </span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold group-hover:text-primary transition-colors">
+              School Infrastructure
+            </h3>
+<p class="text-outline font-label-md text-label-md font-semibold">विद्यालय भवन • 学校基础设施</p>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">
+              Damaged boundary walls, absence of functional girl student sanitation facilities, and cracked classroom slabs.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1 text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 88% Action Rate
+            </span>
+<span class="flex items-center gap-0.5 text-primary font-bold group-hover:translate-x-1 transition-transform">
+              Explore Ward Feed <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Photo-Rich Ground Evidence & Civic Telemetry in Action -->
+<section aria-label="Ground evidence gallery" class="w-full bg-surface py-space-xl">
+<div class="max-w-[1280px] mx-auto px-gutter flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="text-primary font-label-md text-label-md font-bold uppercase tracking-wider">Verifiable Ground Telemetry</span>
+<h2 class="text-on-surface font-headline-xl text-headline-xl font-bold">Citizen Verified Remediation in Progress</h2>
+<p class="text-on-surface-variant font-body-md text-body-md max-w-2xl">
+            Every audio complaint is paired with geo-tagged photographic evidence submitted by volunteer ward auditors and validated publicly.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">database</span>
+<span>Synced with Sovereign Geo-Enclave</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Photo 1: Water pipeline repair -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="relative h-56 w-full">
+<img class="w-full h-full object-cover" data-alt="Civil municipal workers in high-visibility vests inspecting and welding a newly installed blue ductile iron water supply pipe trench in a dense urban neighborhood under bright natural daylight with crisp civic documentation style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBTOwVmq1JjAcnHUwR_9nDX63MBn-nGuKq9uTyiqJ-bjc_m_CQdwK75wdL3kPj25-NnJQ3Z_lvfCFVIm8WDhkAL74xbbG0xrb48xGI2sIisIIstrMjWqCfByU7JF0Qsl7ukQG5iPUhqFW-O_EqwsGRqoEjNmmsAvEVSSHA40lFnE-ujoglYl2nVG_2dUu5VAEgntLfzwkF5wfsPqjRPmvt0Xanf6vKhMWtxrUn186TcFD4q1P1y3lR"/>
+<div class="absolute top-space-sm left-space-sm px-space-sm py-1 bg-secondary-container text-on-secondary-container rounded-lg font-label-sm text-label-sm font-bold shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Work Commissioned</span>
+</div>
+<div class="absolute bottom-space-sm right-space-sm px-space-xs py-0.5 bg-surface/90 backdrop-blur rounded text-on-surface font-label-sm text-label-sm">
+              Ward 14, Zone East
+            </div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between">
+<div>
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold">Sub-surface Aquifer Pipe Reroute</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">318 voice signals merged into 1 urgent budget line. Public testing completed.</p>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-space-xs">
+<span>Sanction: $42,000</span>
+<span class="text-primary font-semibold">Audit Hash: #0x9F4A</span>
+</div>
+</div>
+</div>
+<!-- Photo 2: Rural Bridge Renovation -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="relative h-56 w-full">
+<img class="w-full h-full object-cover" data-alt="Engineers and rural community leaders standing beside a reinforced concrete bridge over a river during construction in a subtropical region, showcasing steel rebar structure under a bright clear sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOkQ__Ae3U8DoJWEvyubmQ4cf72QdMF1eODWN1nK8T3xEobww612jv_gtZzX-ApcVCf-qPfL5Dup87aPZOUxNSLwGRiOV-XZJM_3yvDKHYejeFLD6VaYpCKhMiGXvjFM_zu-AyDXAT4W_vQzzllT4q7SA1J6enjo7vSRpQVagIkJeGAOJt99R27ZZgpXNM-6aJh_G8te0Vc-K844kurBj8hTixx0CdqGRMU0agy-iRnmx15dtw0taj"/>
+<div class="absolute top-space-sm left-space-sm px-space-sm py-1 bg-primary text-on-primary rounded-lg font-label-sm text-label-sm font-bold shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">engineering</span>
+<span>Tender Awarded</span>
+</div>
+<div class="absolute bottom-space-sm right-space-sm px-space-xs py-0.5 bg-surface/90 backdrop-blur rounded text-on-surface font-label-sm text-label-sm">
+              Kaveri District Culvert 7
+            </div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between">
+<div>
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold">Monsoon Resistant Span Bridge</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">IVR phone reports highlighted impassable school bus route during annual monsoons.</p>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-space-xs">
+<span>Sanction: $185,000</span>
+<span class="text-primary font-semibold">Audit Hash: #0x32BD</span>
+</div>
+</div>
+</div>
+<!-- Photo 3: Solar Clinic Microgrid -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="relative h-56 w-full">
+<img class="w-full h-full object-cover" data-alt="Technicians assembling rooftop solar photovoltaic panels on top of a rural white community healthcare clinic building with medical signs, clear sunny sky and lush vegetation in background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEzkCQsAJ6TVrbRRzwG8B5LBuMZUU1ES2KVHboujPhZ7U-CNCh9TQBHCKXDbqVHqN9bk3GF2wbH4JFnvytUlR2LbW0HKyOz4KQtUk-BwUiOchEM_5ume2WWmEXYBweYLVG963X79s60A8z2lmmbXgxFzQQHRmN08_WJq9g1oI2faDshSdVIOsIN-QIz_p-GmGtb69FcYQsQAD4tHDCtmoRPuzBURE2hx-BXahHDZ77KNgbY2A72nUl"/>
+<div class="absolute top-space-sm left-space-sm px-space-sm py-1 bg-secondary-container text-on-secondary-container rounded-lg font-label-sm text-label-sm font-bold shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Fully Operational</span>
+</div>
+<div class="absolute bottom-space-sm right-space-sm px-space-xs py-0.5 bg-surface/90 backdrop-blur rounded text-on-surface font-label-sm text-label-sm">
+              Primary Clinic 09
+            </div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between">
+<div>
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold">24/7 Vaccine Cold Storage Solar Grid</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">Initiated after 94 WhatsApp voice memos flagged recurring nocturnal power cuts.</p>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-space-xs">
+<span>Sanction: $29,500</span>
+<span class="text-primary font-semibold">Audit Hash: #0x88C1</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Transparency & Explainable Impact Pipeline (No Black-Box AI) -->
+<section aria-labelledby="pipeline-heading" class="w-full bg-surface-container py-space-xl">
+<div class="max-w-[1280px] mx-auto px-gutter flex flex-col gap-space-xl">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<span class="text-secondary font-label-md text-label-md font-bold uppercase tracking-wider">Democratic Algorithmic Governance</span>
+<h2 class="text-on-surface font-headline-xl text-headline-xl font-bold" id="pipeline-heading">
+          How Setu Prioritizes Needs Without Black-Box AI
+        </h2>
+<p class="text-on-surface-variant font-body-md text-body-md">
+          Citizens retain mathematical oversight. Every triage algorithm is deterministic, inspectable via public code, and requires human policymaker authorization prior to fiscal disbursement.
+        </p>
+</div>
+<!-- 4-Step Pipeline Flow -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-full bg-primary text-on-primary font-headline-md text-headline-md font-bold flex items-center justify-center">1</span>
+<span class="material-symbols-outlined text-[24px] text-secondary">security</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold">Voice / Chat Ingestion</h3>
+<p class="text-outline font-label-sm text-label-sm font-semibold">Edge Zero-PII Sanitization</p>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">
+              Personal names, phone numbers, and voice biometric pitch are instantly stripped at the gateway. Only geo-coordinates and problem descriptions survive.
+            </p>
+</div>
+<div class="mt-auto pt-space-xs text-secondary font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">lock_reset</span>
+<span>Cryptographic Salt Applied</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-full bg-primary text-on-primary font-headline-md text-headline-md font-bold flex items-center justify-center">2</span>
+<span class="material-symbols-outlined text-[24px] text-primary">hub</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold">Multilingual Clustering</h3>
+<p class="text-outline font-label-sm text-label-sm font-semibold">Semantic Dialect Aggregation</p>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">
+              Hundreds of informal voice notes across Tamil, Hindi, and English describing the same broken pipe are automatically aggregated into one single physical asset ID.
+            </p>
+</div>
+<div class="mt-auto pt-space-xs text-primary font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">merge_type</span>
+<span>Eliminates Report Spam</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-full bg-primary text-on-primary font-headline-md text-headline-md font-bold flex items-center justify-center">3</span>
+<span class="material-symbols-outlined text-[24px] text-tertiary">balance</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold">Transparent Scoring</h3>
+<p class="text-outline font-label-sm text-label-sm font-semibold">Open Formula Priority Weight</p>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">
+              Calculated using: <span class="font-semibold text-on-surface">(Demand Density × Demographic Deficit Index) ÷ Historical Ward Allocation</span>. Zero opaque black-box neural bias.
+            </p>
+</div>
+<div class="mt-auto pt-space-xs text-tertiary font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">rule</span>
+<span>Public Math Audit Ledger</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-full bg-secondary text-on-secondary font-headline-md text-headline-md font-bold flex items-center justify-center">4</span>
+<span class="material-symbols-outlined text-[24px] text-secondary">verified</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold">Policymaker Approval</h3>
+<p class="text-outline font-label-sm text-label-sm font-semibold">Sovereign Budget Allocation</p>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">
+              Elected representatives receive pre-ranked public priority dossiers. Approvals trigger live municipal tender notices open for citizen tracking.
+            </p>
+</div>
+<div class="mt-auto pt-space-xs text-secondary font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+<span>Elected Official Sign-off</span>
+</div>
+</div>
+</div>
+<!-- Real-Time Report Tracker Search & Ticker -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5 max-w-xl">
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold">Track Your Voice Ticket or Reference ID</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Enter the 6-digit SMS token you received or anonymous voice intake pin.</p>
+</div>
+<form class="flex items-center gap-space-xs flex-1 max-w-md" onsubmit="event.preventDefault(); document.getElementById('search-result').classList.remove('hidden');">
+<label class="sr-only" for="reference-id-input">Reference ID or Phone Token</label>
+<input class="w-full h-14 px-space-md bg-surface-container rounded-xl text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-high transition-colors" id="reference-id-input" placeholder="e.g., SETU-9402 or Phone Number" type="text"/>
+<button class="h-14 px-space-md bg-primary text-on-primary rounded-xl font-label-md text-label-md font-bold flex items-center gap-1 shadow-sm hover:bg-primary-container shrink-0 transition-colors" type="submit">
+<span class="material-symbols-outlined text-[20px]">search</span>
+<span>Track</span>
+</button>
+</form>
+</div>
+<!-- Simulated Search Status Result -->
+<div class="hidden p-space-md bg-secondary-container rounded-xl text-on-secondary-container flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm" id="search-result">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[28px] text-secondary">task_alt</span>
+<div>
+<p class="font-headline-md text-headline-md font-bold">Token SETU-9402: Under Municipal Review</p>
+<p class="font-body-md text-body-md">Combined with 42 neighboring requests. Priority Score: 87/100. Allocated to Ward 11 Water Works Department.</p>
+</div>
+</div>
+<button class="px-space-sm py-1 bg-surface-container-lowest text-on-surface rounded-lg font-label-sm text-label-sm font-bold shadow-sm hover:bg-surface transition-colors shrink-0" type="button">
+            View Public Audit PDF
+          </button>
+</div>
+<!-- Live Impact Ticker -->
+<div class="pt-space-xs flex items-center gap-space-sm overflow-hidden text-on-surface font-label-md text-label-md">
+<span class="inline-flex items-center gap-1 text-secondary font-bold shrink-0 bg-secondary-container px-space-xs py-0.5 rounded">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+            LIVE MUNICIPAL RESOLUTION:
+          </span>
+<div class="truncate text-on-surface-variant font-body-md text-body-md">
+            Ward 14 Drinking Water Main Pipeline funded by District Council ($42,000 sanctioned • 318 Citizen Voice Reports unified into 1 Action • 2 hours ago)
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Ground Evidence Visual Map Section -->
+<section aria-label="Geographic Hotspot Mapping" class="w-full bg-surface py-space-xl">
+<div class="max-w-[1280px] mx-auto px-gutter flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<span class="text-primary font-label-md text-label-md font-bold uppercase tracking-wider">Cartographic Transparency</span>
+<h2 class="text-on-surface font-headline-xl text-headline-xl font-bold">Live Citizen Telemetry Heatmap</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">
+            Explore clustered infrastructure demands across rural wards and urban sectors in real-time. Redundant icons indicate verified critical alerts.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container rounded-lg text-on-surface font-label-sm text-label-sm">
+<span class="w-3 h-3 rounded-full bg-error"></span> High Urgency (&gt;50 calls)
+          </div>
+<div class="inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container rounded-lg text-on-surface font-label-sm text-label-sm">
+<span class="w-3 h-3 rounded-full bg-secondary"></span> Funded / Under Repair
+          </div>
+</div>
+</div>
+<!-- Real Map View Container using data-location -->
+<div class="w-full h-96 rounded-xl overflow-hidden shadow-md relative">
+<div class="w-full h-full bg-cover bg-center" data-location="New Delhi, India" style=""></div>
+<div class="absolute bottom-space-md left-space-md bg-surface/95 backdrop-blur-md p-space-md rounded-xl shadow-lg max-w-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="text-primary font-label-sm text-label-sm font-bold uppercase">Active Geographic Cluster</span>
+<span class="px-2 py-0.5 bg-error-container text-error rounded font-label-sm text-label-sm font-bold">14 Active Signals</span>
+</div>
+<p class="text-on-surface font-headline-md text-headline-md font-bold">Sector 4 Transit Underpass</p>
+<p class="text-on-surface-variant font-body-md text-body-md">Severe monsoon pooling causing traffic halt and electrical short circuits on pump house.</p>
+<a class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-bold hover:underline pt-1" href="#">
+<span>Inspect 14 merged citizen voice memos</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Standards & Sovereign Civic Trust Badges -->
+<section aria-label="Standards, Verification, and Open Source Accord" class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[1280px] mx-auto px-gutter flex flex-col gap-space-lg">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-space-xs">
+<h2 class="text-on-surface font-headline-xl text-headline-xl font-bold">Built for Democratic Sovereignty</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">
+          Conforming to the highest global standards for non-extractive, rights-respecting public digital infrastructure.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Badge 1: Apache 2.0 Open Source -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">code</span>
+</div>
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold">Apache 2.0 Open Source</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">
+            Any municipality or federal agency can self-host the Setu engine. Completely free of vendor lock-in or licensing fees.
+          </p>
+<div class="mt-auto pt-space-xs">
+<a class="text-primary font-label-sm text-label-sm font-bold hover:underline inline-flex items-center gap-1" href="#">
+<span>View GitHub Sovereign Repository</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Badge 2: WCAG 2.1 AA & Zero-PII Guarantee -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">accessibility_new</span>
+</div>
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold">WCAG 2.1 AA &amp; Zero-PII</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">
+            Certified for blind, low-vision, and dialect-speaking citizens. No surveillance telemetry or behavioral profiling cookies stored.
+          </p>
+<div class="mt-auto pt-space-xs">
+<a class="text-secondary font-label-sm text-label-sm font-bold hover:underline inline-flex items-center gap-1" href="#">
+<span>Download Accessibility Audit Report</span>
+<span class="material-symbols-outlined text-[16px]">description</span>
+</a>
+</div>
+</div>
+<!-- Badge 3: UN Sustainable Development Goals -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">public</span>
+</div>
+<h3 class="text-on-surface font-headline-md text-headline-md font-bold">UN SDG Framework</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">
+            Directly advancing SDG 9 (Resilient Infrastructure), SDG 11 (Sustainable Cities), and SDG 16 (Transparent Public Institutions).
+          </p>
+<div class="mt-auto pt-space-xs">
+<a class="text-tertiary font-label-sm text-label-sm font-bold hover:underline inline-flex items-center gap-1" href="#">
+<span>United Nations DPGA Listing #2024-81</span>
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Client-side Script for Micro-interactions -->
+<script>
+    (function() {
+      const recordBtn = document.getElementById('record-action-button');
+      const recordingStatus = document.getElementById('recording-status');
+      const audioGuideBtn = document.getElementById('audio-guide-btn');
+      let isRecording = false;
+
+      if (recordBtn && recordingStatus) {
+        recordBtn.addEventListener('click', function() {
+          isRecording = !isRecording;
+          if (isRecording) {
+            recordBtn.classList.add('bg-error');
+            recordBtn.classList.remove('bg-primary');
+            recordBtn.setAttribute('aria-pressed', 'true');
+            recordingStatus.innerHTML = '<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span> <span class="text-error font-bold">Listening in real-time... Speak now in any language</span>';
+          } else {
+            recordBtn.classList.remove('bg-error');
+            recordBtn.classList.add('bg-primary');
+            recordBtn.setAttribute('aria-pressed', 'false');
+            recordingStatus.innerHTML = '<span class="w-2 h-2 rounded-full bg-secondary"></span> Voice processed &bull; Reference #SETU-5521 generated';
+          }
+        });
+      }
+
+      if (audioGuideBtn) {
+        let isSpeaking = false;
+        audioGuideBtn.addEventListener('click', function() {
+          isSpeaking = !isSpeaking;
+          if (isSpeaking) {
+            audioGuideBtn.classList.add('bg-primary', 'text-on-primary');
+            audioGuideBtn.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+            audioGuideBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">pause_circle</span><span>Reading Aloud...</span>';
+          } else {
+            audioGuideBtn.classList.remove('bg-primary', 'text-on-primary');
+            audioGuideBtn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+            audioGuideBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">volume_up</span><span>Listen to Guide</span>';
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low border-t border-outline-variant/40 mt-space-xl"><div class="max-w-[1280px] mx-auto px-gutter py-space-xl flex flex-col gap-space-lg"><div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg"><div class="flex flex-col gap-space-sm md:col-span-2"><div class="flex items-center gap-space-sm"><span class="text-on-surface font-headline-md text-headline-md font-bold">Setu Digital Public Good</span><span class="px-space-xs py-0.5 rounded-sm bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">DPGA Verified #2024-81</span></div><p class="text-on-surface-variant font-body-md text-body-md max-w-xl">Setu is an open-source civic telemetry and participatory accountability layer designed under the UN Secretary-General's Roadmap for Digital Cooperation. Zero citizen PII stored cross-border.</p><div class="flex flex-wrap items-center gap-space-sm pt-space-xs"><span class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span><span>WCAG 2.1 AA Certified</span></span><span class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">lock</span><span>Sovereign Local Enclave</span></span><span class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px]">code</span><span>Apache 2.0 Open Source</span></span></div></div><div class="flex flex-col gap-space-sm"><h3 class="text-on-surface font-label-lg text-label-lg font-bold uppercase tracking-wider">Civic Architecture</h3><ul class="flex flex-col gap-space-xs text-on-surface-variant font-label-md text-label-md"><li><a class="hover:text-primary transition-colors" href="#">National Grid Integrity API</a></li><li><a class="hover:text-primary transition-colors" href="#">Rural Sensor Mesh Protocol</a></li><li><a class="hover:text-primary transition-colors" href="#">Public Audit Log</a></li><li><a class="hover:text-primary transition-colors" href="#">Hardware Kit Blueprint</a></li></ul></div><div class="flex flex-col gap-space-sm"><h3 class="text-on-surface font-label-lg text-label-lg font-bold uppercase tracking-wider">Multilingual Directory</h3><div class="grid grid-cols-2 gap-x-space-sm gap-y-space-xs font-label-sm text-label-sm text-on-surface-variant"><span class="text-primary font-semibold">English</span><a class="hover:text-on-surface" href="#">हिन्दी (Hindi)</a><a class="hover:text-on-surface" href="#">中文 (Mandarin)</a><a class="hover:text-on-surface" href="#">Русский (Russian)</a><a class="hover:text-on-surface" href="#">Português</a><a class="hover:text-on-surface" href="#">isiZulu</a><a class="hover:text-on-surface" href="#">Español</a><a class="hover:text-on-surface" href="#">العربية (Arabic)</a></div></div></div><div class="pt-space-md border-t border-outline-variant/30 flex flex-wrap items-center justify-between gap-space-md text-on-surface-variant font-label-sm text-label-sm"><div><span>© 2024 Setu Core Contributors. Licensed under Apache 2.0. Digital Public Good.</span></div><div class="flex items-center gap-space-md"><a class="hover:text-on-surface transition-colors" href="#">Accessibility Statement</a><a class="hover:text-on-surface transition-colors" href="#">Civic Feedback &amp; Bug Bounty</a><a class="hover:text-on-surface transition-colors" href="#">Data Governance Charter</a></div></div></div></footer></body></html>

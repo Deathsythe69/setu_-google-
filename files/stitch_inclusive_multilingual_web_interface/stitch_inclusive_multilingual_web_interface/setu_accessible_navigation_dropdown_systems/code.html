@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary":"#ffffff","surface":"#faf8ff","surface-container-high":"#e2e7ff","on-surface":"#131b2e","primary-fixed":"#dde1ff","on-tertiary-container":"#ffa85d","secondary":"#006a61","error-container":"#ffdad6","on-secondary-container":"#006f66","primary-fixed-dim":"#b8c4ff","outline":"#757684","on-error-container":"#93000a","on-background":"#131b2e","surface-container-highest":"#dae2fd","inverse-surface":"#283044","surface-container-lowest":"#ffffff","on-primary-fixed":"#001453","surface-container-low":"#f2f3ff","on-primary":"#ffffff","error":"#ba1a1a","on-tertiary-fixed-variant":"#6e3900","on-tertiary-fixed":"#2f1500","outline-variant":"#c4c5d5","on-error":"#ffffff","primary":"#00288e","primary-container":"#1e40af","tertiary-fixed":"#ffdcc3","surface-variant":"#dae2fd","inverse-primary":"#b8c4ff","surface-bright":"#faf8ff","surface-tint":"#3755c3","secondary-container":"#86f2e4","on-primary-container":"#a8b8ff","on-tertiary":"#ffffff","surface-dim":"#d2d9f4","on-primary-fixed-variant":"#173bab","inverse-on-surface":"#eef0ff","secondary-fixed-dim":"#6bd8cb","on-secondary-fixed-variant":"#005049","tertiary":"#532a00","background":"#faf8ff","tertiary-container":"#743d00","on-surface-variant":"#444653","secondary-fixed":"#89f5e7","surface-container":"#eaedff","tertiary-fixed-dim":"#ffb77d","on-secondary-fixed":"#00201d"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-sm":"0.5rem","margin-mobile":"1rem","space-md":"1rem","gutter":"1.5rem","space-xl":"2.5rem","space-xs":"0.25rem","space-lg":"1.5rem","margin":"2rem","gutter-mobile":"1rem"},fontFamily:{"body-xl":["Noto Sans"],"body-lg":["Noto Sans"],"headline-lg":["Noto Sans"],"headline-xl":["Noto Sans"],"label-sm":["Noto Sans"],"body-md":["Noto Sans"],"label-lg":["Noto Sans"],"headline-xl-mobile":["Noto Sans"],"display-lg-mobile":["Noto Sans"],"label-md":["Noto Sans"],"display-lg":["Noto Sans"],"headline-md":["Noto Sans"]},fontSize:{"body-xl":["18px",{"lineHeight":"30px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"34px","fontWeight":"600"}],"headline-xl":["32px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.03em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"24px","fontWeight":"400"}],"label-lg":["16px",{"lineHeight":"24px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-xl-mobile":["26px",{"lineHeight":"36px","fontWeight":"700"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg":["44px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"30px","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg" data-path="demand-hotspots" href="#"><img alt="Brand logo. - Primary color: #1e40af - Font: notoSans - Mode: light - Roundness: rounded-sm" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVjJ925tq55BlkY3rGLwvxzbUaDvK5hvKrUgckw6VNN_WFuzCTLjNJPjb8-jeBalOZKfQYjBBFI1CZLPSszywR2vnmzTUHyLL4BJ18rLxAUO8MEBIPFwbnl1_sFqka1v1sQAumiIetRAW79tgw6jhINV-BsHaQbbAvO4SfLDj1vBiRuSYAqw3_8XN6UFd-SXocjqEU_yF_R6Upubb3SP_WcWZZLCpjrW6YgYcA53ED0QQGqiU6usSY"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary tracking-tight leading-none">SETU</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider leading-none mt-1">Civic Intelligence</span></div></a><div aria-hidden="true" class="hidden xl:block h-8 w-[1px] bg-outline-variant"></div><nav aria-label="Primary Platform Navigation" class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary text-on-primary font-label-md rounded-lg"><a aria-current="page" class="px-space-md py-space-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary bg-primary text-on-primary font-label-md rounded-lg" data-path="demand-hotspots" href="#">Demand Hotspots</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" data-path="priority-queue" href="#">Priority Queue</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" data-path="evidence-explorer" href="#">Evidence Explorer</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" data-path="transparency-portal" href="#">Transparency Portal</a></nav></div><div class="flex items-center gap-space-sm"><button aria-label="Switch language. Current: हिन्दी / Hindi" class="h-12 px-space-md flex items-center gap-space-xs rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high hover:text-on-surface transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" type="button"><span aria-hidden="true" class="material-symbols-outlined text-secondary">translate</span><span class="font-label-md text-label-md">हिन्दी / Hindi</span><span aria-hidden="true" class="material-symbols-outlined text-outline">arrow_drop_down</span></button><div class="relative"><button aria-label="Select jurisdiction region. Current: Ward 48 - Indiranagar Central" class="h-12 px-space-md flex items-center gap-space-xs rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high hover:text-on-surface transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" type="button"><span aria-hidden="true" class="material-symbols-outlined text-secondary">location_on</span><div class="flex flex-col text-left"><span class="font-label-sm text-label-sm text-outline leading-none">Region</span><span class="font-label-md text-label-md text-on-surface leading-tight">Ward 48 - Central</span></div><span aria-hidden="true" class="material-symbols-outlined text-outline">expand_more</span></button></div><div aria-hidden="true" class="h-8 w-[1px] bg-outline-variant mx-space-xs hidden sm:block"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Top Accessibility Announcement / Telemetry Ribbon -->
+<aside aria-label="System Notice &amp; Accessibility Status" class="w-full bg-surface-container-high text-on-surface py-space-sm px-gutter">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+</span>
+<span class="font-label-md text-label-md">WCAG 2.1 Level AA Reference Implementation</span>
+<span class="text-outline mx-1">•</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Dual-encoding (Text + Glyph) mandatory across all 48px+ targets</span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant">
+<span class="inline-flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface shadow-sm font-semibold">Tab</kbd> Cycle Focus
+        </span>
+<span class="inline-flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface shadow-sm font-semibold">Esc</kbd> Close Active Menu
+        </span>
+<span class="inline-flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface shadow-sm font-semibold">↓ / ↑</kbd> Arrow Traverse
+        </span>
+</div>
+</div>
+</aside>
+<!-- Main Showcase Container -->
+<div class="w-full max-w-7xl mx-auto px-gutter py-space-lg flex flex-col gap-space-xl">
+<!-- Hero / Orientation Block -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg pb-space-md">
+<div class="flex flex-col max-w-3xl">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+            Pattern Library v2.4
+          </span>
+<span class="text-outline font-label-sm text-label-sm">Standard Specification for Digital Public Goods</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">
+          Accessible Dropdown &amp; Selector Menus
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
+          Engineered for international grassroots parity, high-friction outdoor field displays, and complete screen-reader compatibility. Every dropdown complies with ARIA Authoring Practices Guide (APG) menu pattern guidelines.
+        </p>
+</div>
+<!-- Live Interactive Controls Summary Pill -->
+<div class="flex items-center gap-space-md bg-surface-container-low p-space-sm rounded-lg shadow-sm">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline">Target Zone</span>
+<span class="font-label-md text-label-md text-secondary font-bold">≥ 48×48px Standard</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">touch_app</span>
+</div>
+</div>
+</header>
+<!-- Operational Context Bar (Active Interactive Filter Row) -->
+<section aria-labelledby="live-bar-title" class="bg-surface-container-lowest p-space-md rounded-xl shadow-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md mb-space-md border-b border-surface-container">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">tune</span>
+<h2 class="font-headline-md text-headline-md text-on-surface" id="live-bar-title">Live Dropdown System Toolbar</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Interact to examine focus rings, semantic tags, and popover anchors</span>
+</div>
+<!-- Dropdowns Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md relative">
+<!-- 1. MULTILINGUAL TRIGGER -->
+<div class="relative inline-block w-full text-left" id="dropdown-lang-container">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 font-bold" for="lang-select-btn">
+            1. Multilingual Script Switcher
+          </label>
+<button aria-controls="lang-menu" aria-expanded="false" aria-haspopup="true" class="w-full min-h-[56px] px-space-md py-space-sm bg-surface-container-low text-on-surface rounded-lg flex items-center justify-between gap-space-sm hover:bg-surface-container transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" id="lang-select-btn" type="button">
+<div class="flex items-center gap-space-sm min-w-0">
+<span aria-hidden="true" class="material-symbols-outlined text-primary text-[22px]">translate</span>
+<div class="flex flex-col text-left truncate">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate" id="current-lang-display">हिन्दी / Hindi</span>
+<span class="font-label-sm text-label-sm text-outline truncate">Devanagari (South Asia)</span>
+</div>
+</div>
+<span aria-hidden="true" class="material-symbols-outlined text-outline transition-transform duration-200" id="lang-chevron">expand_more</span>
+</button>
+<!-- Language Menu Popover (Toggled by JS) -->
+<div aria-label="Select Interface Language" class="hidden absolute z-30 mt-2 w-80 max-h-96 overflow-y-auto bg-surface-container-lowest rounded-xl shadow-xl p-space-xs focus:outline-none" id="lang-menu" role="menu">
+<div class="px-space-md py-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wide bg-surface-container-high rounded-md mb-1">
+              Select Sovereign Script &amp; Audio
+            </div>
+<!-- Item 1 (Selected) -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors focus:bg-surface-container-high focus:outline-none" data-lang="हिन्दी / Hindi" data-script="Devanagari (South Asia)" role="menuitem" tabindex="0" type="button">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold">हिन्दी</span>
+<span class="text-outline text-label-sm font-normal">Hindi</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-primary font-label-sm text-[10px]">IN-HI</span>
+</div>
+<span class="font-body-md text-label-sm text-outline">Devanagari Script • Indo-Aryan</span>
+</div>
+<div class="flex items-center gap-1">
+</div></button><button aria-label="Listen to Hindi pronunciation audio sample" class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center hover:opacity-80 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+</button>
+<span aria-hidden="true" class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+</div>
+<!-- Item 2 -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" data-lang="English" data-script="Latin (Global Reference)" role="menuitem" tabindex="-1" type="button">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold">English</span>
+<span class="text-outline text-label-sm font-normal">English</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-primary font-label-sm text-[10px]">EN-US</span>
+</div>
+<span class="font-body-md text-label-sm text-outline">Latin Script • Universal Auxiliary</span>
+</div>
+</button><button aria-label="Listen to English pronunciation" class="w-9 h-9 rounded-full hover:bg-surface-container text-on-surface-variant flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+</button>
+<!-- Item 3 -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" data-lang="Português" data-script="Latin (América do Sul)" role="menuitem" tabindex="-1" type="button">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold">Português</span>
+<span class="text-outline text-label-sm font-normal">Portuguese</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-primary font-label-sm text-[10px]">PT-BR</span>
+</div>
+<span class="font-body-md text-label-sm text-outline">Latin Script • Lusophone Cluster</span>
+</div>
+</button><button aria-label="Listen to Portuguese pronunciation" class="w-9 h-9 rounded-full hover:bg-surface-container text-on-surface-variant flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+</button>
+<!-- Item 4 -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" data-lang="Русский" data-script="Cyrillic (Eurasia)" role="menuitem" tabindex="-1" type="button">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold">Русский</span>
+<span class="text-outline text-label-sm font-normal">Russian</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-primary font-label-sm text-[10px]">RU-RU</span>
+</div>
+<span class="font-body-md text-label-sm text-outline">Cyrillic Script • Slavic Family</span>
+</div>
+</button><button aria-label="Listen to Russian pronunciation" class="w-9 h-9 rounded-full hover:bg-surface-container text-on-surface-variant flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+</button>
+<!-- Item 5 -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" data-lang="中文 (简体)" data-script="Simplified Han (East Asia)" role="menuitem" tabindex="-1" type="button">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold">中文</span>
+<span class="text-outline text-label-sm font-normal">Mandarin</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-primary font-label-sm text-[10px]">ZH-CN</span>
+</div>
+<span class="font-body-md text-label-sm text-outline">Simplified Han • Sinitic Cluster</span>
+</div>
+</button><button aria-label="Listen to Mandarin pronunciation" class="w-9 h-9 rounded-full hover:bg-surface-container text-on-surface-variant flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+</button>
+<!-- Item 6 -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" data-lang="Kiswahili" data-script="Latin (East Africa)" role="menuitem" tabindex="-1" type="button">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold">Kiswahili</span>
+<span class="text-outline text-label-sm font-normal">Swahili</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-primary font-label-sm text-[10px]">SW-TZ</span>
+</div>
+<span class="font-body-md text-label-sm text-outline">Bantu Sub-branch • African Union</span>
+</div>
+</button><button aria-label="Listen to Kiswahili pronunciation" class="w-9 h-9 rounded-full hover:bg-surface-container text-on-surface-variant flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+</button>
+<!-- Item 7 -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" data-lang="বাংলা" data-script="Bengali-Assamese (South Asia)" role="menuitem" tabindex="-1" type="button">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold">বাংলা</span>
+<span class="text-outline text-label-sm font-normal">Bengali</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-primary font-label-sm text-[10px]">BN-BD</span>
+</div>
+<span class="font-body-md text-label-sm text-outline">Eastern Nagari Script</span>
+</div>
+</button><button aria-label="Listen to Bengali pronunciation" class="w-9 h-9 rounded-full hover:bg-surface-container text-on-surface-variant flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+</button>
+</div>
+</div>
+<!-- 2. INFRASTRUCTURE SECTOR MULTI-CATEGORY MENU -->
+<div class="relative inline-block w-full text-left" id="dropdown-sector-container">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 font-bold" for="sector-select-btn">
+            2. Infrastructure &amp; Sector Domain
+          </label>
+<button aria-controls="sector-menu" aria-expanded="false" aria-haspopup="true" class="w-full min-h-[56px] px-space-md py-space-sm bg-surface-container-low text-on-surface rounded-lg flex items-center justify-between gap-space-sm hover:bg-surface-container transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" id="sector-select-btn" type="button">
+<div class="flex items-center gap-space-sm min-w-0">
+<span aria-hidden="true" class="material-symbols-outlined text-secondary text-[22px]">water_drop</span>
+<div class="flex flex-col text-left truncate">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate" id="current-sector-display">Water &amp; Sanitation</span>
+<span class="font-label-sm text-label-sm text-outline truncate">1,482 active signals</span>
+</div>
+</div>
+<span aria-hidden="true" class="material-symbols-outlined text-outline transition-transform duration-200" id="sector-chevron">expand_more</span>
+</button>
+<!-- Sector Menu Popover -->
+<div aria-label="Filter Civic Sector" class="hidden absolute z-30 mt-2 w-88 max-h-96 overflow-y-auto bg-surface-container-lowest rounded-xl shadow-xl p-space-xs focus:outline-none" id="sector-menu" role="menu">
+<div class="px-space-md py-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wide bg-surface-container-high rounded-md mb-1">
+              Public Goods Taxonomy
+            </div>
+<!-- Sector 1 -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors focus:bg-surface-container-high focus:outline-none" data-count="1,482 active signals" data-icon="water_drop" data-sector="Water &amp; Sanitation" role="menuitem" tabindex="0" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">water_drop</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold">Clean Water &amp; Sanitation</span>
+<span class="font-body-md text-label-sm text-outline">Pipeline supply, purification, borewells</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold whitespace-nowrap">
+                1,482
+              </span>
+</button>
+<!-- Sector 2 -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" data-count="932 active signals" data-icon="traffic" data-sector="Roads &amp; Transit" role="menuitem" tabindex="-1" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">traffic</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Roads &amp; Transit</span>
+<span class="font-body-md text-label-sm text-outline">Corridor repair, bus rapid transit, lights</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold whitespace-nowrap">
+                932
+              </span>
+</button>
+<!-- Sector 3 -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" data-count="614 active signals" data-icon="bolt" data-sector="Electrical &amp; Energy" role="menuitem" tabindex="-1" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Electrical Grid &amp; Energy</span>
+<span class="font-body-md text-label-sm text-outline">Substations, rural feeders, solar microgrids</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold whitespace-nowrap">
+                614
+              </span>
+</button>
+<!-- Sector 4 -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" data-count="380 active signals" data-icon="local_hospital" data-sector="Primary Healthcare" role="menuitem" tabindex="-1" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">local_hospital</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Primary Healthcare Clinics</span>
+<span class="font-body-md text-label-sm text-outline">Maternal wings, cold-chain vaccines</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold whitespace-nowrap">
+                380
+              </span>
+</button>
+<!-- Sector 5 -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" data-count="247 active signals" data-icon="school" data-sector="Education Facilities" role="menuitem" tabindex="-1" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Educational Facilities</span>
+<span class="font-body-md text-label-sm text-outline">Primary schools, mid-day kitchens, labs</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold whitespace-nowrap">
+                247
+              </span>
+</button>
+</div>
+</div>
+<!-- 3. SOVEREIGN REGION & JURISDICTION NODE SELECTOR -->
+<div class="relative inline-block w-full text-left" id="dropdown-region-container">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 font-bold" for="region-select-btn">
+            3. Sovereign Deployment Node
+          </label>
+<button aria-controls="region-menu" aria-expanded="false" aria-haspopup="true" class="w-full min-h-[56px] px-space-md py-space-sm bg-surface-container-low text-on-surface rounded-lg flex items-center justify-between gap-space-sm hover:bg-surface-container transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" id="region-select-btn" type="button">
+<div class="flex items-center gap-space-sm min-w-0">
+<span aria-hidden="true" class="material-symbols-outlined text-primary text-[22px]">lan</span>
+<div class="flex flex-col text-left truncate">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate" id="current-region-display">India Reference Pilot</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Data Sovereignty Compliant</span>
+</div>
+</div>
+<span aria-hidden="true" class="material-symbols-outlined text-outline transition-transform duration-200" id="region-chevron">expand_more</span>
+</button>
+<!-- Region Menu Popover -->
+<div aria-label="Switch Sovereign Deployment Node" class="hidden absolute z-30 mt-2 w-84 max-h-96 overflow-y-auto bg-surface-container-lowest rounded-xl shadow-xl p-space-xs focus:outline-none" id="region-menu" role="menu">
+<div class="px-space-md py-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wide bg-surface-container-high rounded-md mb-1">
+              Active Federated Nodes
+            </div>
+<!-- Node 1 -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors focus:bg-surface-container-high focus:outline-none" data-region="India Reference Pilot" data-status="Data Sovereignty Compliant" role="menuitem" tabindex="0" type="button">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold">India Reference Pilot</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<span class="font-body-md text-label-sm text-outline">NIC Cloud • MeitY Security Certified</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-semibold">
+                Tier 1
+              </span>
+</button>
+<!-- Node 2 -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" data-region="Brazil Sovereign Pilot" data-status="LGPD Boundary Enforced" role="menuitem" tabindex="-1" type="button">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold">Brazil Pilot</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<span class="font-body-md text-label-sm text-outline">Serpro Datacenter • Brasília D.F.</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">
+                Federated
+              </span>
+</button>
+<!-- Node 3 -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" data-region="South Africa Node" data-status="POPIA Guardrails Active" role="menuitem" tabindex="-1" type="button">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold">South Africa Node</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<span class="font-body-md text-label-sm text-outline">SITA Cluster • Pretoria Node</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">
+                Federated
+              </span>
+</button>
+<!-- Node 4 -->
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" data-region="Global Sandbox (UN-DPG)" data-status="Public Staging / Synthetic" role="menuitem" tabindex="-1" type="button">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold">Global Sandbox</span>
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+</div>
+<span class="font-body-md text-label-sm text-outline">Synthetic Citizens • Research Sandbox</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-[11px]">
+                Open Spec
+              </span>
+</button>
+</div>
+</div>
+<!-- 4. ACCESSIBLE ACTIONS & EXPORT MENU -->
+<div class="relative inline-block w-full text-left" id="dropdown-action-container">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 font-bold" for="action-select-btn">
+            4. System Actions &amp; Export
+          </label>
+<button aria-controls="action-menu" aria-expanded="false" aria-haspopup="true" class="w-full min-h-[56px] px-space-md py-space-sm bg-primary text-on-primary rounded-lg flex items-center justify-between gap-space-sm hover:opacity-95 transition-all shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" id="action-select-btn" type="button">
+<div class="flex items-center gap-space-sm min-w-0">
+<span aria-hidden="true" class="material-symbols-outlined text-on-primary text-[22px]">settings_accessibility</span>
+<span class="font-label-md text-label-md text-on-primary font-bold truncate">Accessibility &amp; Export</span>
+</div>
+<span aria-hidden="true" class="material-symbols-outlined text-on-primary transition-transform duration-200" id="action-chevron">expand_more</span>
+</button>
+<!-- Action Menu Popover -->
+<div aria-label="Universal Tools and Open Data" class="hidden absolute right-0 z-30 mt-2 w-84 bg-surface-container-lowest rounded-xl shadow-xl p-space-xs focus:outline-none" id="action-menu" role="menu">
+<div class="px-space-md py-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wide bg-surface-container-high rounded-md mb-1">
+              Display Adjustments
+            </div>
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" onclick="toggleHighContrast()" role="menuitem" tabindex="0" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">contrast</span>
+<span class="font-label-md text-label-md font-semibold">High Contrast Mode</span>
+</div>
+<kbd class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Alt + C</kbd>
+</button>
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" onclick="cycleTextScale()" role="menuitem" tabindex="-1" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">format_size</span>
+<span class="font-label-md text-label-md font-semibold">Text Scale (100% - 150%)</span>
+</div>
+<kbd class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Alt + T</kbd>
+</button>
+<div class="h-[1px] bg-surface-container my-1"></div>
+<div class="px-space-md py-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wide bg-surface-container-high rounded-md mb-1">
+              Public Ledger Exports
+            </div>
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" role="menuitem" tabindex="-1" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">download</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Download Open Data (.CSV)</span>
+<span class="font-body-md text-label-sm text-outline">Apache 2.0 / DPG verified dataset</span>
+</div>
+</div>
+<kbd class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Alt + D</kbd>
+</button>
+<button class="menu-item-target w-full text-left p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface hover:bg-surface-container transition-colors focus:bg-surface-container focus:outline-none" role="menuitem" tabindex="-1" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">feed</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Audit Ledger Proofs (.JSON)</span>
+<span class="font-body-md text-label-sm text-outline">Cryptographic ward timestamp</span>
+</div>
+</div>
+<kbd class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Alt + L</kbd>
+</button>
+</div>
+</div>
+</section></div>
+<!-- Active Selection Breadcrumb Ribbon -->
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex flex-wrap items-center justify-between gap-space-sm text-on-surface-variant">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold">Active Query Scope:</span>
+<span class="px-space-sm py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">location_on</span>
+<span id="breadcrumb-region">India Reference Pilot</span>
+</span>
+<span class="text-outline">/</span>
+<span class="px-space-sm py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">water_drop</span>
+<span id="breadcrumb-sector">Water &amp; Sanitation</span>
+</span>
+<span class="text-outline">/</span>
+<span class="px-space-sm py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-outline text-[16px]">translate</span>
+<span id="breadcrumb-lang">हिन्दी / Hindi</span>
+</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-1" onclick="resetAllDefaults()" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+          Reset All Selectors
+        </button>
+</div>
+<!-- Operational Context Demo Canvas: Bento Grid displaying results of selector filters -->
+<main class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg" id="live-canvas">
+<!-- Primary Data Card with Live Visual Metric -->
+<article class="lg:col-span-8 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Sovereign Stream Telemetry</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm bg-surface-container-high px-space-sm py-1 rounded">
+<span class="material-symbols-outlined text-[16px] text-secondary">update</span>
+              Synchronized 18s ago
+            </div>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-xs" id="display-card-title">
+            Clean Water Supply &amp; Pressure Distribution
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mb-space-lg">
+            Aggregated real-time civic demands mapped against sovereign telemetry pipelines. Public interest prioritisation is certified tamper-resistant via open cryptographic proofs.
+          </p>
+<!-- Metric Panels Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md mb-space-lg">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Validated Hotspots</span>
+<div class="flex items-baseline gap-2 my-1">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">148</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">+12%</span>
+</div>
+<span class="font-body-md text-label-sm text-outline">Across 42 ward sub-blocks</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avg Redressal Window</span>
+<div class="flex items-baseline gap-2 my-1">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">4.2</span>
+<span class="font-label-sm text-label-sm text-outline font-semibold">Days</span>
+</div>
+<span class="font-body-md text-label-sm text-outline">Target benchmark: ≤ 5.0 days</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Citizen Verification</span>
+<div class="flex items-baseline gap-2 my-1">
+<span class="font-headline-xl text-headline-xl text-secondary font-bold">98.4%</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">High</span>
+</div>
+<span class="font-body-md text-label-sm text-outline">Biometric/OTP attested</span>
+</div>
+</div>
+<!-- Inline Data Visualization (SVG Sparkline & Bar Distribution) -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm mb-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface">Weekly Demand Velocity (Current Jurisdiction)</span>
+<span class="font-label-sm text-label-sm text-outline">Daily incoming signals</span>
+</div>
+<div class="w-full h-28 flex items-end justify-between gap-3 pt-4">
+<!-- Bar Mon -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<div class="w-full bg-primary-fixed hover:bg-primary transition-colors rounded-t h-[40%]"></div>
+<span class="font-label-sm text-label-sm text-outline">M</span>
+</div>
+<!-- Bar Tue -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<div class="w-full bg-primary-fixed hover:bg-primary transition-colors rounded-t h-[55%]"></div>
+<span class="font-label-sm text-label-sm text-outline">T</span>
+</div>
+<!-- Bar Wed -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<div class="w-full bg-primary hover:bg-primary-container transition-colors rounded-t h-[85%]"></div>
+<span class="font-label-sm text-label-sm text-outline font-bold text-primary">W</span>
+</div>
+<!-- Bar Thu -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<div class="w-full bg-primary-fixed hover:bg-primary transition-colors rounded-t h-[70%]"></div>
+<span class="font-label-sm text-label-sm text-outline">T</span>
+</div>
+<!-- Bar Fri -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<div class="w-full bg-primary-fixed hover:bg-primary transition-colors rounded-t h-[60%]"></div>
+<span class="font-label-sm text-label-sm text-outline">F</span>
+</div>
+<!-- Bar Sat -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<div class="w-full bg-secondary-fixed-dim hover:bg-secondary transition-colors rounded-t h-[35%]"></div>
+<span class="font-label-sm text-label-sm text-outline">S</span>
+</div>
+<!-- Bar Sun -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<div class="w-full bg-secondary-fixed-dim hover:bg-secondary transition-colors rounded-t h-[25%]"></div>
+<span class="font-label-sm text-label-sm text-outline">S</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Foot Action Bar with Accessible Voice Read-Aloud -->
+<div class="pt-space-md border-t border-surface-container flex flex-wrap items-center justify-between gap-space-md">
+<button class="min-h-[56px] px-space-lg py-space-sm rounded-lg bg-surface-container-low text-secondary hover:bg-secondary-container transition-colors flex items-center gap-space-sm font-label-md text-label-md focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary" id="voice-read-btn" onclick="triggerAudioFeedback()" type="button">
+<span class="material-symbols-outlined text-[24px]">volume_up</span>
+<span id="voice-btn-label">Listen to Sector Briefing (हिन्दी Audio)</span>
+</button>
+<a class="min-h-[56px] px-space-lg py-space-sm rounded-lg bg-primary text-on-primary hover:opacity-95 transition-opacity flex items-center gap-space-sm font-label-md text-label-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" href="#">
+<span>Inspect Priority Queue</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Side Column: Universal Design Pattern Checklist & Field Inspector -->
+<aside aria-label="WCAG 2.1 AA Compliance Specifications" class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Checklist Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">rule</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">WCAG 2.1 AA Audit</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Verification metrics applied directly to all interactive menus above:
+          </p>
+<ul class="space-y-space-sm">
+<li class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">48px Touch Bounding Boxes</span>
+<span class="font-body-md text-label-sm text-outline">Guarantees precision for rural smartphone screens &amp; motor impairment.</span>
+</div>
+</li>
+<li class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">4.5:1 Minimum Contrast</span>
+<span class="font-body-md text-label-sm text-outline">Strict compliance: Dark slate text (#131B2E) over white base (#FFFFFF).</span>
+</div>
+</li>
+<li class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Dual Encoded Information</span>
+<span class="font-body-md text-label-sm text-outline">Never relies on color alone; paired always with explicit semantic icons.</span>
+</div>
+</li>
+<li class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Keyboard Focus Management</span>
+<span class="font-body-md text-label-sm text-outline">Esc closes popovers and refocuses trigger button cleanly.</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Field Hardware Resiliency Card with Image Placeholder -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Field Deployment Context</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mt-1">Direct Sunlight Legibility</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Tested on sub-$60 Android devices under high-glare conditions in rural administrative panchayats.
+            </p>
+</div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A public civic officer using a low-cost mobile tablet outdoors in bright daylight, demonstrating a clean accessible interface with crisp typography and high contrast buttons in a community center." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBban5qnYvOwkQbFtRBp62rj9VUZEbofYyjeh7htWUxq-Hd7xOD307o72Y78-YFk79HZDYvyN4JGIHQrcKM7Na9-HiYTBN9yO1ygQoZJKOQLfdaULy-8r9fnIbfHG8WPyCCuB7gB2hhFjPmHY0vu3Clj90YL0ZsYyO_qnhSziSU5ABNuJI7rWTmYZG9qw3igc76QagtxsTr30Pm2HbA_PetGCZ9sT0D_IVJuzr3dVK_mrXV6U01hM6n"/>
+<div class="absolute bottom-2 left-2 right-2 bg-inverse-surface/90 text-inverse-on-surface p-2 rounded backdrop-blur font-label-sm text-label-sm flex items-center justify-between">
+<span>Outdoor Luminance: 85,000 Lux</span>
+<span class="text-secondary-container font-bold">PASS: AA High Contrast</span>
+</div>
+</div>
+</div>
+</aside>
+</main>
+<!-- Operational Context Photographic Strip -->
+<section aria-label="Field Environments" class="w-full grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="relative h-60 rounded-xl overflow-hidden bg-surface-container shadow-sm group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Civic engineers collaborating over blueprints and an open tablet device in a municipal office with natural lighting, showing data visualization on screen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpAEm9JJm9gA8Hl_esUhenpN_WxoJlSL4CAZ47rO0etsouA3-VnHop8tnZSj8CTnQe2ckBbrHRtU1qQvaT9eJCxYIRcDMSOlVuPzS_t-8oxwBFQ6L3AzdR8KTW_2lskBqn15mrNzPrDpzhzlrbgeiKaQCxfEQmM0LZLudniwmjZv4PKGWovtdvNB4RnRSLOyJ2CToM0S91gh2ySqd2L6HxdVa-XVL05Q46ZvE0JlPRvRc35lbD_XYd"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/40 to-transparent p-space-md flex flex-col justify-end text-inverse-on-surface">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase font-bold">Municipal Infrastructure Redressal</span>
+<h4 class="font-headline-md text-headline-md text-on-primary">Frontline Public Good Allocation</h4>
+<p class="font-body-md text-label-sm text-surface-variant line-clamp-1">Civic officers access localized data drops in their regional mother tongue.</p>
+</div>
+</div>
+<div class="relative h-60 rounded-xl overflow-hidden bg-surface-container shadow-sm group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A rural village council gathering under an open community pavilion reviewing public telemetry records on a mounted ruggedized terminal screen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW2ofeRi9vBxGEqJjekxdGXMH9rSKkrkhRHHmkwA_yL-X3FDJyb1BLJzZ07H-_yuM9QYygxaB2bJs_mQwsrUkhomWWRwUotEbo2kwiUBYhxmrPqtKnmQEaUz6dCj_unOvffbKbvEhp8TzSOg2r2rnBhVbA2JdOmxX9Tmvv1cBQqbPEa5xWZWeKaBrA8CdnfVRxCfc434Vs8fpF5H9CtfFDcn8UkH5GFnY4sotevUOTkhO_srLWJw8p"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/40 to-transparent p-space-md flex flex-col justify-end text-inverse-on-surface">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase font-bold">Open Telemetry Transparency</span>
+<h4 class="font-headline-md text-headline-md text-on-primary">Community Attestation &amp; Verification</h4>
+<p class="font-body-md text-label-sm text-surface-variant line-clamp-1">Every demand point carries an open cryptographic timestamp on the public ledger.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Client-side Interactive JavaScript for Complete WCAG APG Menu Navigation -->
+<script>
+    (function() {
+      // Menu definitions
+      const menus = [
+        { btnId: 'lang-select-btn', menuId: 'lang-menu', chevronId: 'lang-chevron' },
+        { btnId: 'sector-select-btn', menuId: 'sector-menu', chevronId: 'sector-chevron' },
+        { btnId: 'region-select-btn', menuId: 'region-menu', chevronId: 'region-chevron' },
+        { btnId: 'action-select-btn', menuId: 'action-menu', chevronId: 'action-chevron' }
+      ];
+
+      function closeAllMenus() {
+        menus.forEach(({ btnId, menuId, chevronId }) => {
+          const btn = document.getElementById(btnId);
+          const menu = document.getElementById(menuId);
+          const chevron = document.getElementById(chevronId);
+          if (btn && menu) {
+            btn.setAttribute('aria-expanded', 'false');
+            menu.classList.add('hidden');
+            if (chevron) chevron.classList.remove('rotate-180');
+          }
+        });
+      }
+
+      function toggleMenu(btnId, menuId, chevronId) {
+        const btn = document.getElementById(btnId);
+        const menu = document.getElementById(menuId);
+        const chevron = document.getElementById(chevronId);
+        const isCurrentlyExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+        closeAllMenus();
+
+        if (!isCurrentlyExpanded) {
+          btn.setAttribute('aria-expanded', 'true');
+          menu.classList.remove('hidden');
+          if (chevron) chevron.classList.add('rotate-180');
+          
+          // Focus first focusable menuitem
+          const firstItem = menu.querySelector('[role="menuitem"]');
+          if (firstItem) {
+            firstItem.focus();
+          }
+        }
+      }
+
+      // Attach button clicks & keyboard triggers
+      menus.forEach(({ btnId, menuId, chevronId }) => {
+        const btn = document.getElementById(btnId);
+        const menu = document.getElementById(menuId);
+
+        if (btn) {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu(btnId, menuId, chevronId);
+          });
+
+          btn.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              toggleMenu(btnId, menuId, chevronId);
+            }
+          });
+        }
+
+        // Inside Menu Keyboard Navigation (Arrow keys & Esc)
+        if (menu) {
+          menu.addEventListener('keydown', (e) => {
+            const items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
+            const activeIndex = items.indexOf(document.activeElement);
+
+            if (e.key === 'Escape') {
+              e.preventDefault();
+              closeAllMenus();
+              btn.focus();
+            } else if (e.key === 'ArrowDown') {
+              e.preventDefault();
+              const nextIndex = (activeIndex + 1) % items.length;
+              items[nextIndex].focus();
+            } else if (e.key === 'ArrowUp') {
+              e.preventDefault();
+              const prevIndex = (activeIndex - 1 + items.length) % items.length;
+              items[prevIndex].focus();
+            } else if (e.key === 'Tab') {
+              closeAllMenus();
+            }
+          });
+        }
+      });
+
+      // Click outside to dismiss
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('[role="menu"]') && !e.target.closest('button[aria-haspopup="true"]')) {
+          closeAllMenus();
+        }
+      });
+
+      // Selection handlers for Menu 1: Language
+      const langItems = document.querySelectorAll('#lang-menu [role="menuitem"]');
+      langItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+          const lang = item.getAttribute('data-lang');
+          if (lang) {
+            document.getElementById('current-lang-display').textContent = lang;
+            document.getElementById('breadcrumb-lang').textContent = lang;
+            document.getElementById('voice-btn-label').textContent = 'Listen to Sector Briefing (' + lang.split('/')[0].trim() + ' Audio)';
+          }
+          closeAllMenus();
+          document.getElementById('lang-select-btn').focus();
+        });
+      });
+
+      // Selection handlers for Menu 2: Sector
+      const sectorItems = document.querySelectorAll('#sector-menu [role="menuitem"]');
+      sectorItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+          const sector = item.getAttribute('data-sector');
+          const count = item.getAttribute('data-count');
+          if (sector) {
+            document.getElementById('current-sector-display').textContent = sector;
+            document.getElementById('breadcrumb-sector').textContent = sector;
+            document.getElementById('display-card-title').textContent = sector + ' Distribution';
+          }
+          closeAllMenus();
+          document.getElementById('sector-select-btn').focus();
+        });
+      });
+
+      // Selection handlers for Menu 3: Region
+      const regionItems = document.querySelectorAll('#region-menu [role="menuitem"]');
+      regionItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+          const region = item.getAttribute('data-region');
+          if (region) {
+            document.getElementById('current-region-display').textContent = region;
+            document.getElementById('breadcrumb-region').textContent = region;
+          }
+          closeAllMenus();
+          document.getElementById('region-select-btn').focus();
+        });
+      });
+
+      // Reset Defaults
+      window.resetAllDefaults = function() {
+        document.getElementById('current-lang-display').textContent = 'हिन्दी / Hindi';
+        document.getElementById('breadcrumb-lang').textContent = 'हिन्दी / Hindi';
+        document.getElementById('current-sector-display').textContent = 'Water & Sanitation';
+        document.getElementById('breadcrumb-sector').textContent = 'Water & Sanitation';
+        document.getElementById('display-card-title').textContent = 'Clean Water Supply & Pressure Distribution';
+        document.getElementById('current-region-display').textContent = 'India Reference Pilot';
+        document.getElementById('breadcrumb-region').textContent = 'India Reference Pilot';
+        closeAllMenus();
+      };
+
+      // Contrast Toggle Micro-action
+      window.toggleHighContrast = function() {
+        document.documentElement.classList.toggle('contrast-more');
+        closeAllMenus();
+      };
+
+      // Text Scale Cycle Micro-action
+      let currentScale = 1;
+      window.cycleTextScale = function() {
+        const liveCanvas = document.getElementById('live-canvas');
+        if (currentScale === 1) {
+          liveCanvas.style.fontSize = '1.15rem';
+          currentScale = 1.15;
+        } else if (currentScale === 1.15) {
+          liveCanvas.style.fontSize = '1.3rem';
+          currentScale = 1.3;
+        } else {
+          liveCanvas.style.fontSize = '';
+          currentScale = 1;
+        }
+        closeAllMenus();
+      };
+
+      // Voice Audio Feedback
+      window.triggerAudioFeedback = function() {
+        const voiceBtn = document.getElementById('voice-read-btn');
+        const originalText = document.getElementById('voice-btn-label').textContent;
+        document.getElementById('voice-btn-label').textContent = 'Playing Audio Synthesized Stream...';
+        voiceBtn.classList.add('bg-secondary', 'text-on-secondary');
+
+        setTimeout(() => {
+          document.getElementById('voice-btn-label').textContent = originalText;
+          voiceBtn.classList.remove('bg-secondary', 'text-on-secondary');
+        }, 2200);
+      };
+
+      // Keyboard Shortcuts Listener (Alt + C, Alt + T, etc.)
+      document.addEventListener('keydown', (e) => {
+        if (e.altKey && e.key.toLowerCase() === 'c') {
+          e.preventDefault();
+          window.toggleHighContrast();
+        }
+        if (e.altKey && e.key.toLowerCase() === 't') {
+          e.preventDefault();
+          window.cycleTextScale();
+        }
+      });
+    })();
+  </script>
+</main><footer class="w-full bg-surface-container-low mt-space-xl py-space-xl"><div class="w-full px-gutter max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-primary">SETU</span><span class="font-body-md text-body-md text-on-surface-variant">— Open Civic Infrastructure &amp; Public Good Ledger</span></div><div class="flex items-center gap-space-lg font-label-md text-label-md text-on-surface-variant"><a class="hover:text-on-surface transition-colors" href="#">Audits &amp; Telemetry</a><a class="hover:text-on-surface transition-colors" href="#">Grievance Redressal</a><a class="hover:text-on-surface transition-colors" href="#">Open Data API</a><span class="text-outline">© 2025 Digital Public Good</span></div></div></footer></body></html>
